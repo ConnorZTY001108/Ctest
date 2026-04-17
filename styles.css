@@ -1,0 +1,294 @@
+:root {
+  --bg: #f3f6fb;
+  --panel: #ffffff;
+  --panel-alt: #eef4ff;
+  --text: #18212f;
+  --muted: #607086;
+  --line: #d7dfeb;
+  --accent: #1565d8;
+  --accent-soft: #dceafe;
+  --success: #1d8a52;
+  --danger: #c43d3d;
+  --shadow: 0 18px 40px rgba(16, 30, 54, 0.08);
+  --radius: 20px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: radial-gradient(circle at top left, #f9fbff, var(--bg));
+  color: var(--text);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 28px 20px;
+}
+
+.nav-links {
+  display: grid;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.nav-links button {
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--text);
+  padding: 12px 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-links button:hover,
+.nav-links button.is-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.content-area {
+  padding: 28px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid rgba(215, 223, 235, 0.7);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 22px;
+}
+
+.hero-card,
+.stats-card {
+  padding: 28px;
+}
+
+.bank-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.hero-card h2 {
+  margin: 8px 0 12px;
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+.hero-copy {
+  max-width: 52ch;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #fff;
+}
+
+.secondary-btn {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.stat-row:last-child {
+  border-bottom: 0;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 20px;
+}
+
+.question-panel,
+.navigator-panel {
+  padding: 24px;
+}
+
+.question-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.question-stem {
+  font-size: 27px;
+  line-height: 1.45;
+  margin: 18px 0 22px;
+}
+
+.option-list {
+  display: grid;
+  gap: 12px;
+}
+
+.option-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fbfcff;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.feedback {
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: 16px;
+}
+
+.feedback.is-correct {
+  background: #e8f7ef;
+  color: var(--success);
+}
+
+.feedback.is-wrong {
+  background: #feefef;
+  color: var(--danger);
+}
+
+.results-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+}
+
+.results-summary,
+.wrong-list {
+  padding: 24px;
+}
+
+.results-summary p,
+.wrong-list li,
+.exam-nav p {
+  color: var(--muted);
+}
+
+.mistakes-layout {
+  display: grid;
+  gap: 20px;
+}
+
+.mistakes-summary,
+.mistakes-empty,
+.archive-panel {
+  padding: 24px;
+}
+
+.mistake-list {
+  display: grid;
+  gap: 16px;
+}
+
+.mistake-card {
+  padding: 24px;
+}
+
+.mistake-card__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.mistake-card__stem {
+  margin: 14px 0 10px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.mistake-card__type {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.mistake-card__answers strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.mistake-card__answers ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.archive-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+
+.archive-panel h3 {
+  margin: 6px 0 12px;
+}
+
+.archive-status,
+.archive-meta {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.wrong-list ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+@media (max-width: 960px) {
+  .app-shell,
+  .hero-grid,
+  .workspace-grid,
+  .results-layout {
+    grid-template-columns: 1fr;
+  }
+}
