@@ -15,6 +15,7 @@ test('renderHomeView shows summary cards and action buttons', () => {
     banks: [
       { id: 'zh', label: '中文题库' },
       { id: 'en', label: 'English Question Bank' },
+      { id: 'core2', label: 'core2' },
     ],
   });
 
@@ -25,8 +26,10 @@ test('renderHomeView shows summary cards and action buttons', () => {
   assert.match(html, /data-action="select-bank"/);
   assert.match(html, /data-bank-id="zh"/);
   assert.match(html, /data-bank-id="en"/);
+  assert.match(html, /data-bank-id="core2"/);
   assert.match(html, /中文题库/);
   assert.match(html, /English Question Bank/);
+  assert.match(html, /core2/);
   assert.match(html, /100/);
   assert.match(html, /18 \/ 20/);
 });

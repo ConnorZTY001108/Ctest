@@ -1,0 +1,4214 @@
+[
+  {
+    "id": 1,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司通过使用 Amazon Elastic Kubernetes Service（Amazon EKS）和 Kubernetes Horizontal Pod Autoscaler 来运行容器应用。一天中的工作量并不稳定。解决方案架构师注意到当现有节点达到集群最大容量时，节点不会自动扩展，这会导致性能问题。哪种方案能以最少的行政负担解决这个问题？",
+    "options": [
+      {
+        "key": "A",
+        "text": "通过跟踪内存使用量来扩展节点。"
+      },
+      {
+        "key": "B",
+        "text": "使用Kubernetes集群自动扩展器管理集群中的节点数量。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS Lambda 函数自动调整 EKS 集群的大小。"
+      },
+      {
+        "key": "D",
+        "text": "使用亚马逊EC2自动扩展组来分配工作负载。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175623.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175623.png"
+  },
+  {
+    "id": 2,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家使用 AWS 组织的公司在 30 个不同的 AWS 账户中运行 150 个应用程序。公司使用AWS成本与使用报告在管理账户中创建了新报告。报告会被送到亚马逊S3桶中，该桶是复制到数据收集账户中的一个桶。公司的高级领导希望从当月初开始，每天提供一个自定义仪表盘，提供NAT网关费用。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "分享包含请求表格可视化的Amazon QuickSight仪表盘。配置QuickSight使用AWS DataSync查询新报告。"
+      },
+      {
+        "key": "B",
+        "text": "分享包含请求表格可视化的亚马逊QuickSight仪表盘。配置QuickSight使用Amazon Athena查询新报告。"
+      },
+      {
+        "key": "C",
+        "text": "分享包含请求表格可视化的亚马逊CloudWatch仪表盘。配置CloudWatch使用AWS DataSync查询新报告。"
+      },
+      {
+        "key": "D",
+        "text": "分享包含请求表格可视化的亚马逊CloudWatch仪表盘。配置CloudWatch使用Amazon Athena查询新报告。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175627.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175627.png"
+  },
+  {
+    "id": 3,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司拥有已接近生命期末期的本地本地卷备份解决方案。公司希望将AWS作为新备份解决方案的一部分，并在备份到AWS的同时保持对所有数据的本地访问权限。公司希望确保备份在AWS上的数据能够自动且安全地传输。哪种方案满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用AWS Snowball将本地解决方案的数据迁移到Amazon S3。配置本地系统安装 Snowball S3 端点，提供本地数据访问。"
+      },
+      {
+        "key": "B",
+        "text": "使用 AWS Snowball Edge 将本地解决方案的数据迁移到 Amazon S3。使用Snowball Edge文件接口为本地系统提供数据本地访问。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS 存储网关并配置缓存卷网关。在本地运行存储网关软件设备，配置一定比例的数据缓存到本地。挂载网关存储卷以提供本地数据访问。"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS 存储网关并配置存储卷网关。在本地运行存储网关软件设备，并将网关存储卷映射到本地存储。挂载网关存储卷以提供本地数据访问。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175641.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175641.png"
+  },
+  {
+    "id": 4,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司拥有一个由AWS湖形管理的Amazon S3数据湖。公司希望通过将数据湖中的数据与存储在亚马逊 Aurora MySQL数据库中的运营数据连接，创建亚马逊QuickSight中的可视化。公司希望强制执行列级授权，使公司营销团队只能访问数据库中的部分列。哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用亚马逊电子病历（EMR）直接从数据库导入数据到 QuickSight SPICE 引擎。只包含所需的列。"
+      },
+      {
+        "key": "B",
+        "text": "使用 AWS Glue Studio 将数据库中的数据导入到 S3 数据湖。将IAM策略附加给QuickSight用户，以强制列级访问控制。在QuickSight中使用Amazon S3作为数据源。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS Glue Elastic 视图，在 Amazon S3 中为数据库创建具体视图。创建一个S3桶策略，以强制QuickSight用户的列级访问控制。在QuickSight中使用Amazon S3作为数据源。"
+      },
+      {
+        "key": "D",
+        "text": "使用湖泊地层蓝图将数据库中的数据导入S3数据湖。利用Lake Formation为QuickSight用户强制执行列级访问控制。在QuickSight中使用Amazon Athena作为数据源。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175645.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175645.png"
+  },
+  {
+    "id": 5,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在亚马逊EC2按需实例上运行定制应用。该应用有前端节点需要全天候运行，后端节点则根据工作负载需要短时间运行。后端节点的数量在一天中会变化。公司需要根据工作负载扩展并在更多实例中扩展。哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "为前端节点使用预留实例。后端节点使用AWS Fargate。"
+      },
+      {
+        "key": "B",
+        "text": "为前端节点使用预留实例。后端节点使用点实例。"
+      },
+      {
+        "key": "C",
+        "text": "前端节点使用点实例。后端节点使用预留实例。"
+      },
+      {
+        "key": "D",
+        "text": "为前端节点使用点实例。后端节点使用AWS Fargate。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175648.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175648.png"
+  },
+  {
+    "id": 6,
+    "topic": "AWS SAA Screenshots",
+    "stem": "公司拥有跨多个AWS区域和账户的资源。一位新聘的解决方案架构师发现前员工未提供资源库存的详细信息。解决方案架构师需要构建并映射所有账户中各种工作负载的关系细节。哪种解决方案能以最高效的运营方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用AWS Systems Manager Inventory从详细视图报告生成地图视图。"
+      },
+      {
+        "key": "B",
+        "text": "使用 AWS Step Functions 收集工作负载详情。手动构建工作负载的架构图。"
+      },
+      {
+        "key": "C",
+        "text": "在AWS上使用工作负载发现功能生成工作负载的架构图。"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS X-Ray 查看工作负载详情。构建带有关系的架构图。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175651.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175651.png"
+  },
+  {
+    "id": 7,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司拥有一款具备TCP和UDP多人游戏功能的在线游戏应用。公司使用 Amazon Route 53 将应用流量指向不同AWS区域的多个网络负载均衡器（NLB）。公司需要提升应用性能并降低在线游戏的延迟，以应对用户增长。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在NLB前添加亚马逊CloudFront分布版。提高缓存控制最大年龄参数。"
+      },
+      {
+        "key": "B",
+        "text": "用应用负载均衡器（ALBs）替换NLB。配置53号路由为基于延迟的路由。"
+      },
+      {
+        "key": "C",
+        "text": "在NLBs前添加AWS全球加速器。配置一个全球加速器端点以使用正确的监听器端口。"
+      },
+      {
+        "key": "D",
+        "text": "在NLBs后面添加亚马逊API网关端点。启用API缓存。不同阶段的覆盖方法缓存。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175654.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175654.png"
+  },
+  {
+    "id": 8,
+    "topic": "AWS SAA Screenshots",
+    "stem": "公司有一个夜间批处理程序，分析本地文件系统通过SFTP每天接收的报告文件。公司希望将解决方案迁移到AWS云端。解决方案必须高度可得且具有韧性。解决方案还必须最大限度地减少运营负担。哪种方案满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "部署AWS Transfer用于SFTP，并部署亚马逊弹性文件系统（Amazon EFS）文件系统用于存储。在自动扩展组中使用亚马逊EC2实例，并设置计划扩展策略来执行批处理操作。"
+      },
+      {
+        "key": "B",
+        "text": "部署一个运行Linux和SFTP服务的Amazon EC2实例。使用亚马逊弹性块存储（Amazon EBS）卷作为存储。使用自动缩放组，将最小实例数和期望实例数设为1。"
+      },
+      {
+        "key": "C",
+        "text": "部署一个运行Linux和SFTP服务的Amazon EC2实例。使用亚马逊弹性文件系统（Amazon EFS）文件系统进行存储。使用自动缩放组，将最小实例数和期望实例数设为1。"
+      },
+      {
+        "key": "D",
+        "text": "部署AWS Transfer用于SFTP，并部署Amazon S3存储桶。修改应用程序，将批处理文件从Amazon S3拉取到Amazon EC2实例进行处理。在自动扩展组中使用一个带有定时扩展策略的EC2实例来执行批处理操作。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175657.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175657.png"
+  },
+  {
+    "id": 9,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在利用AWS Lake Formation在AWS上构建数据分析平台。平台将从不同来源（如 Amazon S3 和 Amazon RDS）接收数据。公司需要一种安全的解决方案，以防止访问包含敏感信息的数据部分。哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个包含访问湖泊地层表权限的IAM角色。"
+      },
+      {
+        "key": "B",
+        "text": "创建数据过滤器以实现行级安全和单元级安全。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个AWS Lambda函数，在Lake Formation数据导入前删除敏感信息。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个AWS Lambda函数，定期查询并删除湖泊地层表中的敏感信息。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175729.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175729.png"
+  },
+  {
+    "id": 10,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在使用应用负载均衡器（ALB）向互联网展示其应用。公司发现应用中存在异常的流量访问模式。解决方案架构师需要提升对基础设施的可视性，帮助公司更好地理解这些异常现象。满足这些要求、最高效的运营解决方案是什么？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在 Amazon Athena 中为 AWS CloudTrail 日志创建一个表。创建一个查询以获取相关信息。"
+      },
+      {
+        "key": "B",
+        "text": "启用 ALB 访问记录到 Amazon S3。在 Amazon Athena 创建一个表格，并查询日志。"
+      },
+      {
+        "key": "C",
+        "text": "启用 ALB 访问日志到 Amazon S3。在文本编辑器中打开每个文件，搜索每一行相关信息。"
+      },
+      {
+        "key": "D",
+        "text": "在专用的 Amazon EC2 实例上使用 Amazon EMR，直接查询 ALB 以获取流量访问日志信息。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175738.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175738.png"
+  },
+  {
+    "id": 11,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司通过AWS直接连接连接，从其企业数据中心连接到位于美国东部1区的VPC。该公司最近收购了一家拥有多个VPC和本地数据中心与欧盟西2区之间的直接连接公司。公司和公司VPC的CIDR区块不重叠。公司需要两个区域与数据中心之间的连接。公司需要一个可扩展且能降低运营开销的解决方案。解决方案架构师应如何满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在东1区的VPC与欧洲西2区的VPC之间建立区域间VPC对等。"
+      },
+      {
+        "key": "B",
+        "text": "从us-east-1的Direct Connect连接创建到eu-west-2的VPC的私有虚拟接口。"
+      },
+      {
+        "key": "C",
+        "text": "在由亚马逊EC2托管的全网状VPN网络中建立VPN设备。使用AWS VPN CloudHub在数据中心和每个VPC之间发送和接收数据。"
+      },
+      {
+        "key": "D",
+        "text": "将现有的直接连接连接连接到直接连接网关。将每个区域VPC的虚拟专用网关的流量路由到直接连接网关。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175741.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175741.png"
+  },
+  {
+    "id": 12,
+    "topic": "AWS SAA Screenshots",
+    "stem": "公司的应用程序运行在多个可用区的亚马逊EC2实例上。应用程序需要从第三方应用实时接收数据。公司需要一种数据摄取解决方案，将采集的原始数据放入亚马逊S3存储桶中。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建用于数据摄取的亚马逊Kinesis数据流。创建Amazon Kinesis数据Firehose的传输流，以消耗Kinesis的数据流。指定S3桶作为传输流的目的地。"
+      },
+      {
+        "key": "B",
+        "text": "在AWS数据库迁移服务（AWS DMS）中创建数据库迁移任务。指定EC2实例的复制实例作为源端点。指定 S3 桶作为目标端点。设置迁移类型以迁移现有数据并复制正在进行的变更。"
+      },
+      {
+        "key": "C",
+        "text": "在EC2实例上创建并配置AWS DataSync代理。配置DataSync任务，将数据从EC2实例传输到S3桶。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个 AWS 直接连接以进行数据摄取。创建Amazon Kinesis数据的Firehose传输流，直接消耗应用中的PUT操作。指定S3桶作为传输流的目的地。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175744.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175744.png"
+  },
+  {
+    "id": 13,
+    "topic": "AWS SAA Screenshots",
+    "stem": "灾害响应小组正在使用无人机收集近期风暴破坏的影像。响应团队的笔记本电脑缺乏传输图像和处理数据的存储和计算能力。虽然团队有Amazon EC2实例用于处理，Amazon S3桶用于存储，但网络连接时断续续且不稳定。需要处理图像以评估损伤情况。解决方案架构师应该建议什么？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 AWS Snowball Edge 设备来处理和存储图像"
+      },
+      {
+        "key": "B",
+        "text": "在间歇性连接EC2实例期间，将图像上传到亚马逊简单队列服务（Amazon SQS）"
+      },
+      {
+        "key": "C",
+        "text": "配置 Amazon Data Firehose，分别创建多个传输流，分别针对 S3 存储桶和 EC2 实例处理图像。"
+      },
+      {
+        "key": "D",
+        "text": "使用预装在硬件设备上的 AWS 存储网关，将图像缓存到本地，以便 Amazon S3 在连接时处理这些图像"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175747.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175747.png"
+  },
+  {
+    "id": 14,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司将其电子商务应用托管在AWS云中。该应用采用多区域主动方法和多种微服务。公司需要一种解决方案，以便在AWS区域内的资源无法使用时重新导向流量。公司希望确保故障切换区域能够在故障切换时处理流量。哪种解决方案以最少的运营开销提供应用弹性？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用亚马逊Route 53应用恢复控制器多区域恢复功能。"
+      },
+      {
+        "key": "B",
+        "text": "使用亚马逊Route 53健康检查来监控多区域端点以重定向流量。通过使用 Amazon EventBridge 调度器，确保故障切换区域已准备好处理流量，方法是在主区域安排偶尔的资源关闭。"
+      },
+      {
+        "key": "C",
+        "text": "使用AWS故障注入服务，如果某个区域的资源不可用，将流量重新路由到另一个区域。"
+      },
+      {
+        "key": "D",
+        "text": "在每个区域部署亚马逊API网关HTTP API。使用亚马逊CloudFront发行版。使用Lambda@Edge查询亚马逊53号路由，查找根据最低延迟转发请求的区域。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175750.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175750.png"
+  },
+  {
+    "id": 15,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在开发社交媒体应用。公司预计用户和数据量将快速且不可预测地增长。该应用需要持续处理大量用户请求。用户请求包括长期运行的进程，这些进程以关系格式存储大量用户生成内容和用户资料。流程必须按特定顺序运行。公司需要一个架构，能够在需求激增时不停机或性能下降地扩展资源。公司必须确保应用的各个组件能够独立演进，而不影响系统的其他部分。哪种 AWS 服务组合能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在亚马逊弹性容器服务（Amazon ECS）上部署应用，采用AWS Fargate启动类型。使用亚马逊RDS作为数据库。使用亚马逊简单队列服务（Amazon SQS）来在组件间解耦消息处理。"
+      },
+      {
+        "key": "B",
+        "text": "在亚马逊弹性容器服务（Amazon ECS）上部署应用，使用 AWS Fargate 启动类型。使用亚马逊RDS作为数据库。使用亚马逊简单通知服务（Amazon SNS）来在组件间解耦消息处理。"
+      },
+      {
+        "key": "C",
+        "text": "使用亚马逊DynamoDB作为数据库。使用AWS Lambda函数来实现应用。配置 Amazon DynamoDB Streams 以调用 Lambda 函数。使用AWS的Step Functions来管理服务之间的工作流程。"
+      },
+      {
+        "key": "D",
+        "text": "使用带有自动扩展功能的 AWS Elastic Beanstalk 环境来部署应用。使用亚马逊RDS作为数据库。使用亚马逊简单通知服务（Amazon SNS）来在组件间解耦消息处理。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175753.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175753.png"
+  },
+  {
+    "id": 16,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在两个AWS区域部署了一个应用程序。如果应用程序在某一区域不可用，应用必须切换到第二个区域。故障切换过程必须避免过时的DNS客户端缓存。公司希望用一个端点访问两个应用程序副本。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用具有多个来源的Amazon CloudFront发行版。将每个起源与各区域的申请相关联。"
+      },
+      {
+        "key": "B",
+        "text": "使用亚马逊Route 53加权路由策略，使用等权重将客户端请求路由到原区域无法使用时。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS Global Accelerator，并为应用端点分配一个静态任播 IP 地址。"
+      },
+      {
+        "key": "D",
+        "text": "使用亚马逊路由53基于IP的路由策略，如果应用在原区域无法使用，将请求路由到第二个区域。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175756.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175756.png"
+  },
+  {
+    "id": 17,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司运营在线照片分享服务，并将数据存储在AWS账户A中的集中式Amazon S3存储桶中。公司希望授予第二个名为账户B的AWS账户访问集中式S3桶的权限。公司拥有账户B。哪种方案能满足这一要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "启用 S3 传输加速，使账户 B 能够访问账户 A 中的集中式 S3 桶。"
+      },
+      {
+        "key": "B",
+        "text": "启用账户A和账户B之间的跨区域复制，以共享S3桶数据。"
+      },
+      {
+        "key": "C",
+        "text": "使用 Amazon CloudFront 分发 S3 桶内容。授予账户B通过签名URL访问桶内容。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个桶策略，允许账户B访问账户A中集中的S3桶。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175759.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175759.png"
+  },
+  {
+    "id": 18,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司管理一个应用程序，该应用将数据存储在亚马逊 RDS for PostgreSQL 多变数数据库实例上。应用流量高导致许多读查询延迟增加。解决方案架构师必须提升应用的性能。哪种方案能满足这一要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "启用亚马逊RDS性能洞察。配置存储容量自动扩展。"
+      },
+      {
+        "key": "B",
+        "text": "配置数据库实例使用DynamoDB加速器（DAX）。"
+      },
+      {
+        "key": "C",
+        "text": "创建数据库实例的读取副本。从读副本提供读取流量。"
+      },
+      {
+        "key": "D",
+        "text": "在应用和亚马逊RDS之间使用Amazon Data Firehose，以增加数据库请求的并发性。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175802.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175802.png"
+  },
+  {
+    "id": 19,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司希望优化其AWS基础设施的成本。 公司希望在实际成本或预测成本超过指定预算时收到通知。 公司不想开发定制解决方案。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用AWS Trusted Advisor设置预算通知。 配置亚马逊CloudWatch来监控费用。 将CloudWatch数据导出到Amazon S3。 利用机器学习（ML）根据CloudWatch数据估算未来趋势。"
+      },
+      {
+        "key": "B",
+        "text": "在 AWS Budgets 中创建一个设定特定成本门槛的预算。 创建一个AWS Lambda函数， 当成本达到指定阈值时， 向公司发送通知。 使用AW的计费与成本管理报告来监控成本。"
+      },
+      {
+        "key": "C",
+        "text": "使用AWS成本浏览器设定指定的预算门槛。 创建一个AWS Lambda函数来计算成本估算。 配置 Lambda 函数向亚马逊简易通知服务发送通知（Amazon SNS）主题， 如果预估费用超过指定阈值。"
+      },
+      {
+        "key": "D",
+        "text": "在 AWS Budgets 中创建一个设定特定成本门槛的预算。 配置AWS预算， 将预算提醒发送到亚马逊简易通知服务（Amazon SNS）主题。 使用AWS成本浏览器来监控成本。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175804.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175804.png"
+  },
+  {
+    "id": 20,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司有一个处理动态流量负载的网站。 网站架构基于亚马逊EC2实例， 并配置为使用计划缩放的自动扩展组。 每个EC2实例从亚马逊弹性文件系统（Amazon EFS）卷运行代码， 并将共享数据存储回同一个卷。 公司希望优化网站的成本。 哪种方案能满足这一要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "重新配置自动扩展组以设置期望的实例数量。 关闭定时缩放。"
+      },
+      {
+        "key": "B",
+        "text": "为自动缩放组创建一个新的启动模板版本， 使用更大的 EC2 实例。"
+      },
+      {
+        "key": "C",
+        "text": "重新配置自动缩放组以使用目标跟踪缩放策略。"
+      },
+      {
+        "key": "D",
+        "text": "用实例存储卷替换EFS卷。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175808.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175808.png"
+  },
+  {
+    "id": 21,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在为客户开发SaaS解决方案。 该解决方案运行在连接了 Amazon Elastic Block Store（Amazon EBS）卷的 Amazon EC2 实例上。 在SaaS应用中， 客户可以请求他们需要多少存储空间。 应用程序需要分配每个客户请求的块存储量。 解决方案架构师必须设计一个运行效率高、 满足存储扩展要求的解决方案。 哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将数据从 EBS 卷迁移到 Amazon S3 桶。 使用Amazon S3标准存储类别。"
+      },
+      {
+        "key": "B",
+        "text": "将数据从 EBS 卷迁移到 Amazon Elastic File System（Amazon EFS）文件系统。 使用EFS标准存储类别。 调用AWS Lambda函数， 根据用户输入增加EFS的容量。"
+      },
+      {
+        "key": "C",
+        "text": "将EBS卷的数据迁移到Amazon FSx for Windows文件服务器文件系统。 调用 AWS Lambda 函数， 根据用户输入增加文件系统的容量。"
+      },
+      {
+        "key": "D",
+        "text": "调用AWS Lambda函数， 通过使用EBS弹性卷， 根据用户输入增加EBS卷的大小。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175810.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175810.png"
+  },
+  {
+    "id": 22,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在构建一个无服务器应用， 能够处理来自移动应用的大量数据。 该应用使用 AWS Lambda 函数处理数据并将数据存储在 Amazon DynamoDB 表中。 公司需要确保应用程序能够从故障中恢复， 并继续处理数据而不丢失任何记录。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置 Lambda 函数使用死符队列， 配合亚马逊简单队列服务（Amazon SQS）队列。 配置 Lambda 从死符队列中重试失败记录。 通过实现指数退回算法来使用重试机制。"
+      },
+      {
+        "key": "B",
+        "text": "配置 Lambda 函数以读取 Amazon Data Firehose 的记录。 如果出现故障， 请重新播放消防水管记录。"
+      },
+      {
+        "key": "C",
+        "text": "使用 Amazon OpenSearch 服务来存储失败的记录。 配置AWS Lambda以重新尝试OpenSearch Service中失败的记录。 用Amazon EventBridge来协调重试逻辑。"
+      },
+      {
+        "key": "D",
+        "text": "使用亚马逊简单通知服务（Amazon SNS）来存储失败记录。 配置 Lambda 重试 SNS 主题中失败的记录。 使用Amazon API Gateway来协调重试调用。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175813.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175813.png"
+  },
+  {
+    "id": 23,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司使用亚马逊53号线作为其DNS提供商。 公司既在本地运营， 也在AWS云中托管网站。 公司的本地数据中心位于美国西部1区附近。 公司在欧盟中部第一区的AWS上托管网站。 公司希望尽可能优化网站的加载时间。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个带有故障切换路由策略的DNS记录， 将所有主流量路由到eu-central-1。 配置路由策略， 使本地数据中心作为次要位置。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个基于IP的路由策略的DNS记录。 配置特定的IP范围以返回eu-central-1网站的值。 配置所有其他IP范围返回本地网站的值。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个基于延迟的路由策略的 DNS 记录。 将本地数据中心的记录关联到us-west-1。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个带有加权路由策略的 DNS 记录。 将流量均匀分配到eu-central-1和本地数据中心。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175816.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175816.png"
+  },
+  {
+    "id": 24,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家医疗公司正在设计一个系统， 用于在AWS云中存储和管理日志。 系统会接收并存储以JSON格式的日志。 日志中包含敏感的患者信息。 公司必须识别任何敏感数据。 公司必须能够通过SQL查询搜索日志数据。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "Store 日志放在亚马逊S3桶里。 配置亚马逊Macie以发现敏感数据。 用亚马逊雅典娜查询日志。"
+      },
+      {
+        "key": "B",
+        "text": "Store 日志存放在亚马逊弹性块存储（Amazon EBS）卷中。 创建一个使用亚马逊SageMaker AI检测敏感数据的应用程序。 用亚马逊RDS查询日志。"
+      },
+      {
+        "key": "C",
+        "text": "Store 亚马逊DynamoDB里的日志。 使用 AWS 密钥管理服务（AWS KMS）来发现敏感数据。 使用亚马逊Redshift Spectrum查询日志。"
+      },
+      {
+        "key": "D",
+        "text": "Store 日志放在亚马逊S3桶里。 使用亚马逊检查器来发现敏感数据。 用亚马逊雅典娜查询日志。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175819.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175819.png"
+  },
+  {
+    "id": 25,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在开发一个新的网络应用， 通过API提供静态和动态内容。 公司希望最大限度地减少来自全球用户访问该应用的用户的延迟。 哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将静态内容部署到亚马逊S3桶中。 使用Amazon API网关HTTP API来提供动态内容。 创建一个Amazon CloudFront分发版， 使用S3桶和HTTP API作为起点。 启用静态内容缓存。"
+      },
+      {
+        "key": "B",
+        "text": "将静态内容部署到亚马逊S3桶中。 向用户提供桶网站端点。 使用启用缓存的Amazon API网关HTTP API来提供动态内容。"
+      },
+      {
+        "key": "C",
+        "text": "将静态内容部署到亚马逊S3桶中。 使用两个亚马逊EC2实例作为网页服务器。 部署应用负载均衡器以分配流量。 在S3桶前创建一个Amazon CloudFront分发版来缓存静态内容。"
+      },
+      {
+        "key": "D",
+        "text": "将静态内容部署到亚马逊S3桶中。 向用户提供桶网站端点。 在S3桶前创建一个Amazon CloudFront分发版来缓存静态内容。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175822.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175822.png"
+  },
+  {
+    "id": 26,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司计划为其非生产应用部署托管的MySQL数据库解决方案。 公司计划在AWS上运行该系统数年。 哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个亚马逊RDS的MySQL实例。 购买一个预留实例。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个亚马逊 RDS for MySQL 实例。 按需使用实例。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个带有写入节点和读取节点的 Amazon Aurora MySQL 集群。 按需使用集群。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个亚马逊EC2实例。 手动在实例上安装并配置 MySQL Server。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175826.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175826.png"
+  },
+  {
+    "id": 27,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司对其亚马逊RDS数据库表示担忧。 工作负载难以预测， 周期性的新用户注册激增可能导致公司存储空间不足。 数据库运行在一个拥有300 GiB存储空间的通用实例上。 解决方案架构师应该向公司提出什么建议？",
+    "options": [
+      {
+        "key": "A",
+        "text": "启用RDS存储自动扩展功能。"
+      },
+      {
+        "key": "B",
+        "text": "调度垂直实例扩展。"
+      },
+      {
+        "key": "C",
+        "text": "将数据库改为存储优化的实例类型并垂直扩展数据库。"
+      },
+      {
+        "key": "D",
+        "text": "配置一个AWS Lambda函数， 在存储空间不足时增加1 GiB的RDS存储。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175829.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175829.png"
+  },
+  {
+    "id": 28,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在运行亚马逊Linux的Amazon EC2实例上托管网站。 这些实例位于应用负载均衡器（ALB）之后， 属于自动扩展组。 每个实例都使用 Amazon EBS 卷来存储产品手册。 新实例通常数据过时。 新实例有时需要长达30分钟才能接收来自外部来源的更新。 公司必须确保所有实例都有最新的产品手册。 公司需要一个能够快速适应不断增长需求的解决方案。 解决方案不得对应用代码进行修改。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "Store 实例产品手册中会将附加到每个EC2实例的存储卷。"
+      },
+      {
+        "key": "B",
+        "text": "Store 亚马逊S3桶里的产品说明书。 配置EC2实例从S3桶下载更新。"
+      },
+      {
+        "key": "C",
+        "text": "Store 亚马逊EFS卷中的产品手册。 将EFS卷安装到EC2实例上。"
+      },
+      {
+        "key": "D",
+        "text": "Store 亚马逊S3的资料桶里的产品说明书。 使用S3标准-不频繁访问（S3 Standard-IA）存储类。 配置EC2实例从S3桶下载更新。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175832.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175832.png"
+  },
+  {
+    "id": 29,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司希望大规模部署其容器化应用。 公司还希望采用Kubernetes开源社区的软件解决方案。 哪种方案能以最小的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将应用部署到亚马逊EKS集群上。 使用EKS托管的节点组配合Amazon EC2实例。"
+      },
+      {
+        "key": "B",
+        "text": "将应用部署到亚马逊EKS集群上。 使用EKS自动模式。"
+      },
+      {
+        "key": "C",
+        "text": "在运行于 Amazon EC2 实例上的自托管 Kubernetes 集群上运行应用。"
+      },
+      {
+        "key": "D",
+        "text": "将容器化应用作为 AWS Lambda 函数运行。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175835.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175835.png"
+  },
+  {
+    "id": 30,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在开发一款移动金融应用， 允许用户注册并存储个人信息。 该应用使用亚马逊DynamoDB表来存储用户信息和偏好。 该应用利用存储在DynamoDB中的数据生成信用评分报告。 该应用每月向用户发送一次信用报告。 公司需要为用户提供删除数据和偏好的选项。 应用必须在收到删除请求后一个月内删除客户数据。 哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个 AWS Lambda 函数来删除用户信息。 创建一个亚马逊事件桥规则， 在指定的TTL到期时运行。 配置 EventBridge 规则调用 Lambda 函数。"
+      },
+      {
+        "key": "B",
+        "text": "创建 DynamoDB 流。 创建一个AWS Lambda函数来删除用户信息。 当指定的 TTL 到期时， 从 DynamoDB 表写入用户信息流。 配置 DynamDB 流调用 Lambda 函数以删除用户信息。"
+      },
+      {
+        "key": "C",
+        "text": "在 DynamoDB 中启用 TTL。 把过期日期设为属性。 创建一个AWS Lambda函数， 根据到期日值设置TTL。 当用户请求删除个人数据时， 调用 Lambda 函数。"
+      },
+      {
+        "key": "D",
+        "text": "在DynamoDB中启用TTL。 创建一个AWS Lambda函数来删除用户信息。 配置AWS Config， 在TTL到期时检测DynamoDB阶段的变化， 并调用Lambda函数。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175840.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175840.png"
+  },
+  {
+    "id": 31,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家全球公导在林个AWS区域运营， 以速员数据驻留要求。 公导使用 AWS 组织异理账户。 公导希望限制IAM含色和对性定区域的访端， 以防止跨自理招限的意参数据操作。 哪种方案能速员这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置服务控制策略（SCP）， 拒绝不合规区域中的ec2： RunInstances操作。"
+      },
+      {
+        "key": "B",
+        "text": "通过使用 aws： RequestedRegion 条件配置 IAM 策略。"
+      },
+      {
+        "key": "C",
+        "text": "配置使用 aws： SourceIp 条件的 IAM 角色信任策略。"
+      },
+      {
+        "key": "D",
+        "text": "配置AWS配置以检测跨区域的不想要访问。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175843.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175843.png"
+  },
+  {
+    "id": 32,
+    "topic": "AWS SAA Screenshots",
+    "stem": "用于夜间日志处理的数据科学存储。 原木的大小和数量尚不清楚， 仅会持续24小时。 最经济实惠的解决方案是什么？",
+    "options": [
+      {
+        "key": "A",
+        "text": "Amazon S3 冰川深层档案"
+      },
+      {
+        "key": "B",
+        "text": "Amazon S3标准"
+      },
+      {
+        "key": "C",
+        "text": "Amazon S3 智能分层"
+      },
+      {
+        "key": "D",
+        "text": "Amazon S3 One Zone-Infrequent Access（S3 One Zone-IA）"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175845.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175845.png"
+  },
+  {
+    "id": 33,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家保险公司正在开发一个应用程序来记录个人用户数据。 这些数据包括用户的姓名、 年龄和健康状况。 公司希望在AWS的私有子网中运行该应用。 由于数据安全要求， 公司必须能够访问运行该应用层的计算资源的操作系统。 公司必须使用低延迟的NoSQL数据库来存储数据。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "应用层使用Amazon EC2实例。 数据库层使用亚马逊DynamoDB表。 为DynamoDB创建一个VPC端点。 为实例分配一个实例配置文件， 允许访问DynamoDB。"
+      },
+      {
+        "key": "B",
+        "text": "应用层使用AWS Lambda函数。 数据库层使用亚马逊DynamoDB表。 为Lambda函数分配一个合适的IAM角色以访问该表。"
+      },
+      {
+        "key": "C",
+        "text": "应用层使用AWS Fargate。 在数据库层的私有子网里创建一个亚马逊Aurora PostgreSQL实例。"
+      },
+      {
+        "key": "D",
+        "text": "应用层使用Amazon EC2实例。 用亚马逊S3桶来以JSON格式存储数据。 配置应用使用Amazon Athena来读取和写入S3存储桶的数据。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175848.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175848.png"
+  },
+  {
+    "id": 34,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在亚马逊S3存储了文件。 文件包含的IP地址允许公司未部署在AWS上的防火墙能够读取该文件。 公司希望限制对该文件的访问仅限防火墙的IP地址。 公司已为该AWS账户配置了Amazon S3 Block Public Access功能。 哪种方案满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将S3桶配置为静态网站。 创建一个桶策略， 限制网站访问仅限防火墙的IP地址。 把静态网站的网址添加到防火墙设置中。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个桶策略， 明确允许仅允许防火墙IP地址访问。 把文件的URL添加到防火墙设置中。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个亚马逊CloudFront分发版。 把S3桶加为原点。 创建一个源访问控制（OAC）， 允许仅防火墙IP解决方案访问以满足这些要求。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个能够访问该文件的AWS Lambda函数。 配置 Lambda 函数， 确认请求中的 IP 地址是否来自某个防火墙， 并返回列表。 把 Lambda 函数的 URL 添加到防火墙设置中。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175851.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175851.png"
+  },
+  {
+    "id": 35,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在开发一款使用亚马逊Aurora MySQL数据库的应用程序。 公司计划定期对 MySQL 数据库模式进行修改， 以测试新功能。 测试不得影响现有的生产数据库。 当公司完成测试后， 开发人员需要将这些更改复制到生产数据库。 解决方案必须减少停机时间。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "基于现有数据库创建一个新的临时Aurora MySQL数据库集群。 对新的临时数据库集群进行结构修改以测试新功能。"
+      },
+      {
+        "key": "B",
+        "text": "基于现有的Aurora MySQL数据库创建一个读副本。 对读取副本进行模式修改。 测试成功后， 将读副本提升为主副本。"
+      },
+      {
+        "key": "C",
+        "text": "创建 Aurora MySQL 数据库的蓝/绿部署。 在预设环境中进行结构性修改以测试新功能。 测试完成后， 将流量从绿色环境引导到蓝色环境。"
+      },
+      {
+        "key": "D",
+        "text": "将Aurora MySQL数据库复制到亚马逊DynamoDB表中。 对DynamoDB表进行结构修改以测试新功能。 测试完成后配置应用使用DynamoDB表。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175854.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175854.png"
+  },
+  {
+    "id": 36,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司的解决方案架构师正在构建一个静态网站， 准备部署在 Amazon S3 上用于生产环境。 该网站通过使用 AWS Lambda 函数与亚马逊 Aurora PostgreSQL 数据库集成。 部署到生产环境的网站会使用指向特定版本的 Lambda 别名。 公司必须每两周轮换一次数据库凭证。 公司之前部署的Lambda函数必须能够使用最新的凭证。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "Store AWS Secrets Manager中的数据库凭证。 开启旋转。 在 Lambda 函数中编写代码， 从 Secrets Manager 获取凭证。"
+      },
+      {
+        "key": "B",
+        "text": "将数据库凭证作为 Lambda 函数代码的一部分包含。 定期更新凭证并部署新的 Lambda 函数。"
+      },
+      {
+        "key": "C",
+        "text": "使用Lambda环境变量。 当有新的凭证可用时， 更新环境变量。"
+      },
+      {
+        "key": "D",
+        "text": "Store AWS Systems Manager参数存储中的数据库凭证。 开启旋转。 在 Lambda 函数中编写代码， 从 Systems Manager 参数存储中获取凭证。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175857.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175857.png"
+  },
+  {
+    "id": 37,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司希望使用 AWS Systems Manager 来管理一批 Amazon EC2 实例。根据公司的安全要求，任何 EC2实例都不能访问互联网。解决方案架构师需要设计从EC2实例到Systems Manager的网络连接，同时履行这一安全义务。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将EC2实例部署到一个没有互联网路由的私有子网中。"
+      },
+      {
+        "key": "B",
+        "text": "配置一个 Systems Manager 的接口 VPC 端点。更新路由以使用该端点。"
+      },
+      {
+        "key": "C",
+        "text": "将NAT网关部署到公共子网。配置私有子网，设置一条通往NAT网关的默认路由。"
+      },
+      {
+        "key": "D",
+        "text": "部署互联网网关。配置网络ACL，拒绝所有目的地的流量，唯独系统管理器。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175900.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175900.png"
+  },
+  {
+    "id": 38,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家零售公司将客户行为和会话活动存储在亚马逊DynamoDB中。公司希望在亚马逊Redshift中运行SQL查询，通过定期更新来跟踪客户趋势。公司需要自动将数据复制到 Amazon Redshift，而无需开发或管理提取、转换和加载（ETL）流水线。哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 AWS Glue 按计划运行 ETL 作业，从 DynamoDB 提取数据并加载到 Amazon Redshift。"
+      },
+      {
+        "key": "B",
+        "text": "使用 DynamoDB Streams 配合 AWS Lambda 函数，向亚马逊 Redshift 发送近乎实时的更新。"
+      },
+      {
+        "key": "C",
+        "text": "使用 Amazon Redshift Spectrum 查询从 DynamoDB 导出到 Amazon S3 的数据。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个DynamoDB和亚马逊Redshift之间的零ETL集成。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175902.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175902.png"
+  },
+  {
+    "id": 39,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家全球电商公司正在AWS上设计一个三层应用。该应用包含一个网页层，用于提供静态内容。应用层负责业务逻辑。数据库层存储产品信息和用户数据。该应用程序与关系型数据库交互。公司需要一个高可用性的应用架构，以低延迟服务全球用户。哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将亚马逊EC2实例部署到应用层的自动扩展组，同时在同一AWS区域内的网页层。使用应用负载均衡器来分发网页流量。数据库层使用亚马逊RDS数据库和多可数部署。"
+      },
+      {
+        "key": "B",
+        "text": "建立一个使用 Amazon S3 桶作为起点的 Amazon CloudFront 分发版。在AWS Fargate上使用Amazon ECS容器，将应用层部署到公司运营的每个AWS区域。数据库层级使用Amazon Aurora全球数据库。"
+      },
+      {
+        "key": "C",
+        "text": "使用亚马逊S3桶来存储静态网页内容。应用层使用Amazon EC2自动扩展和EC2点实例。使用Amazon RDS for MySQL并使用数据库层的读副本。使用 AWS DMS 将数据复制到二级 AWS 区域。"
+      },
+      {
+        "key": "D",
+        "text": "使用亚马逊S3桶来存储静态网页内容。使用AWS Lambda函数来处理应用层的无服务器后端逻辑。使用 Amazon API Gateway调用Lambda函数来处理网页请求。数据库层级使用亚马逊DynamoDB数据库。将DynamoDB数据库部署到多个AWS区域。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175905.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175905.png"
+  },
+  {
+    "id": 40,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一位解决方案架构师设计了一个应用程序，允许用户访问存储在亚马逊S3桶中的图像。该应用使用托管在私有 VPC 中的 Amazon EC2 实例，VPC ID 为 vpc-11aabb22。解决方案架构师启用了S3桶上的块公共访问功能。该桶托管在账户 123456789012 的 us-west-2 区域。解决方案架构师需要确保只有托管 EC2 实例的 VPC 内的资源才能访问 S3 桶。哪种方案能满足这一要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个带有拒绝效果和包含 “StringNotEquals” 的条件的S3桶策略语句： { “aws: SourceVpc” : “vpc-11aabb22” }。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个具有 Allow 效果和资源 of “arn: aws: ec2: us-west- 的 S3 桶策略语句 2: 123456789012: vpc/vpc-11aabb22 ”。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个带有 Allow 效果和包含 “StringNotEquals” 的条件的 S3 桶策略语句： { “aws: SourceVpc” : “vpc-11aabb22” }。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个带有拒绝效果和包含 “StringNotEquals” : { “aws: PrincipalAccount” : “123456789012” }的S3桶策略语句。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175908.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175908.png"
+  },
+  {
+    "id": 41,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在亚马逊EC2实例上运行多个应用程序。公司将配置文件存储在亚马逊S3存储桶中。解决方案架构师必须为公司的应用程序提供配置文件访问权限。解决方案架构师必须遵循AWS的安全最佳实践。哪种解决方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用AWS账户的root用户访问密钥。"
+      },
+      {
+        "key": "B",
+        "text": "使用AWS访问密钥ID和EC2秘密访问密钥。"
+      },
+      {
+        "key": "C",
+        "text": "使用IAM角色为应用程序授予必要的权限。"
+      },
+      {
+        "key": "D",
+        "text": "激活S3桶的多因素认证（MFA）和版本控制。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175912.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175912.png"
+  },
+  {
+    "id": 42,
+    "topic": "AWS SAA Screenshots",
+    "stem": "应用程序因需求增加而出现性能问题。这种增长的需求来自于从亚马逊RDS托管数据库中拉取的只读历史记录，这些记录带有自定义视图和查询。解决方案架构师必须在不改变数据库结构的情况下提升性能。哪种方法能提升性能并最小化管理开销？",
+    "options": [
+      {
+        "key": "A",
+        "text": "部署亚马逊DynamoDB，移动所有并指向"
+      },
+      {
+        "key": "B",
+        "text": "部署亚马逊ElastiCache（Redis OSS）并缓存应用的数据。"
+      },
+      {
+        "key": "C",
+        "text": "在亚马逊EC2上部署Memcached并缓存应用的数据。"
+      },
+      {
+        "key": "D",
+        "text": "在亚马逊 RDS 上部署 Amazon DynamoDB 加速器（DAX）以提升缓存性能。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175915.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175915.png"
+  },
+  {
+    "id": 43,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司必须给予一小群审计员只读访问权限，访问存储敏感审计日志的亚马逊S3桶。审计员每月会审查日志一次。公司为每个审计员都配备了一个IAM用户。公司必须使用以下规范：桶对账户保持私有。凭证是临时的，会自动轮换ASS。访问权限在每月审核期结束时失效，所有活动均可追溯到AWS CloudTrail中的个人用户。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "为审核期结束时到期的所需对象生成预签名的URL。在每次审查日前将物品发送给审计员。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个带有只读 S3 桶访问权限的 IAM 角色。包含一项条件，允许审计人员在月度审查期间假定访问此类权限。"
+      },
+      {
+        "key": "C",
+        "text": "将每个审计员的 IAM 用户添加到带有读取权限的桶 ACL。审核期结束后，将每个审计员的IAM用户从桶 ACL中移除。"
+      },
+      {
+        "key": "D",
+        "text": "启用S3静态网站托管。通过使用一个允许访问的桶策略，限制每个审计师的企业IP地址范围访问，条件仅允许在审核期间访问。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175918.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175918.png"
+  },
+  {
+    "id": 44,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司通过使用 Amazon Kinesis 数据流和 AWS Lambda 函数处理流数据。流媒体数据来自连接互联网的设备。公司正面临扩展性问题，需要实现分片级控制和自定义检查点。哪种方案能以最小的延迟满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将Kinesis数据流连接到Amazon Data Firehose，将入站数据导入Amazon S3桶。配置 S3 事件通知以调用 Lambda 函数。"
+      },
+      {
+        "key": "B",
+        "text": "pany 处理 Lambda 函数的预设并发设置。将Kinesis数据流的数据流式传输到亚马逊SQS标准队列。调用Lambda函数来处理这些消息。"
+      },
+      {
+        "key": "C",
+        "text": "在运行于 AWS Fargate 上的 Amazon ECS 容器中运行 Lambda 函数代码。将代码更改为使用 Kinesis 客户端库（KCL）。"
+      },
+      {
+        "key": "D",
+        "text": "增加 Lambda 函数的内存和配置并发设置。将Kinesis Data Streams的数据流式传输到Amazon SQS FIFO队列。配置 Lambda 函数被 SQS 队列调用。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175921.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175921.png"
+  },
+  {
+    "id": 45,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司希望保护其托管在AWS上的资源，包括应用负载均衡器和亚马逊云前端分发版。公司希望有一个能够近实时监控攻击资源的AWS服务。服务还必须配备专门的AWS团队来协助应对DDoS攻击。哪个AWS服务能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "AWS WAF"
+      },
+      {
+        "key": "B",
+        "text": "AWS Shield 标准"
+      },
+      {
+        "key": "C",
+        "text": "亚马逊有"
+      },
+      {
+        "key": "D",
+        "text": "AWS Shield Advanced"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175924.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175924.png"
+  },
+  {
+    "id": 46,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家媒体出版公司正在AWS上开发一个应用程序，让用户能够打印自己的书籍。应用前端运行在 Docker 容器上。进货量差异很大。收到的订单有时会暂时超过公司图书印刷机的吞吐量。订单处理有效载荷最大可达4MB。公司需要开发一个能够扩展处理新订单的解决方案。哪种方案能满足这一要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用亚马逊SQS来排队接收订单。创建一个 AWS Lambda@Edge 函数来处理订单。在亚马逊EKS上部署前端应用。"
+      },
+      {
+        "key": "B",
+        "text": "使用亚马逊SQS来排队接收订单。创建一个AWS Lambda函数来处理订单。在AWS Fargate上部署前端应用。"
+      },
+      {
+        "key": "C",
+        "text": "使用亚马逊SQS来排队接收订单。创建一个AWS Lambda函数来处理订单。在亚马逊 ECS 上部署前端应用，使用 AWS Fargate 启动类型。"
+      },
+      {
+        "key": "D",
+        "text": "用亚马逊SNS来排队进单。创建一个 AWS Lambda@Edge 函数来处理订单。将前端应用部署在 Amazon EC2 实例上。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175928.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175928.png"
+  },
+  {
+    "id": 47,
+    "topic": "AWS SAA Screenshots",
+    "stem": "公司需要将其客户交易数据库从本地迁移到 AWS。数据库运行在Linux服务器上的Oracle数据库实例上。根据新的安全要求，公司必须每年更换数据库密码。哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用AWS SCT将数据库转换为Amazon DynamoDB。将密码存储在 AWS 系统管理器的参数存储中。创建 Amazon CloudWatch 闹钟，调用 AWS Lambda 函数进行年度密码轮换。"
+      },
+      {
+        "key": "B",
+        "text": "将数据库迁移到 Amazon RDS for Oracle。密码存储在 AWS Secrets 管理器中。开启自动旋转。安排年度轮岗时间表。"
+      },
+      {
+        "key": "C",
+        "text": "将数据库迁移到 Amazon EC2 实例。使用AWS Systems Manager参数存储，通过AWS Lambda函数按年度计划保留和轮换连接字符串。"
+      },
+      {
+        "key": "D",
+        "text": "通过使用 AWS SCT 将数据库迁移到 Amazon Neptune。创建一个亚马逊CloudWatch闹钟，调用AWS Lambda函数进行年度密码轮换。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175931.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175931.png"
+  },
+  {
+    "id": 48,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在存储在AWS云中不会经常访问的数据。如果公司需要访问数据，必须在12小时内取回数据。公司希望为每GB存储成本提供经济实惠的解决方案。哪个亚马逊S3存储类别能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "S3标准"
+      },
+      {
+        "key": "B",
+        "text": "S3 冰川柔性提取"
+      },
+      {
+        "key": "C",
+        "text": "S3 单区域罕见访问（S3 一区域 IA）"
+      },
+      {
+        "key": "D",
+        "text": "S3 标准-偶尔访问（S3 标准-IA）"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175934.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175934.png"
+  },
+  {
+    "id": 49,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司拥有电子商务应用，用户通过多个移动应用和网络应用访问。公司需要一个解决方案，能够通过API接收来自移动应用和网页应用的请求。请求流量在每天变化较大。销售活动期间流量激增。解决方案必须是松耦合的，并确保没有丢失请求。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个应用负载均衡器（ALB）。创建一个 AWS Elastic Beanstalk 端点来处理请求。将弹性豆茎端点添加到ALB的目标组中。"
+      },
+      {
+        "key": "B",
+        "text": "搭建一个 Amazon API Gateway REST API，并与 Amazon SQS 队列集成。配置死号队列。创建一个AWS Lambda函数来轮询队列以处理请求。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个应用负载均衡器（ALB）。创建一个 AWS Lambda 函数来处理请求。将 Lambda 函数作为 ALB 的目标添加。"
+      },
+      {
+        "key": "D",
+        "text": "建立一个亚马逊API网关HTTP API，并集成到亚马逊SNS主题。创建一个AWS Lambda函数来处理这些请求。订阅 SNS 主题的功能以处理请求。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175937.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175937.png"
+  },
+  {
+    "id": 50,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家金融公司正在将其银行应用迁移到由AWS组织管理的一组AWS账户。这些应用将存储在亚马逊EBS卷中的敏感客户数据。公司会定期拍摄快照以备备份。公司希望在所有 AWS账户中实施控制措施，以防止公开分享EBS快照。哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "为组织中的每个组织单位（OU）启用 AWS 配置规则，以监控 EBS 快照权限。"
+      },
+      {
+        "key": "B",
+        "text": "在组织层面启用对 EBS 快照的公共访问。"
+      },
+      {
+        "key": "C",
+        "text": "在组织的根账户创建一个 IAM 策略，防止用户修改快照权限。"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS CloudTrail 来跟踪快照权限的变更。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175940.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175940.png"
+  },
+  {
+    "id": 51,
+    "topic": "AWS SAA Screenshots",
+    "stem": "A 公司运行 Amazon EC2 实例作为网页服务器。网络服务器每天两次出现峰值流量负载。当天剩余时间，网络服务器都处于空闲状态。解决方案架构师需要管理网络服务器并保持容错能力。哪种解决方案能以最具成本效益的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用EC2自动扩展组根据需求扩展实例。"
+      },
+      {
+        "key": "B",
+        "text": "购买预留实例以确保全天候的高峰容量。"
+      },
+      {
+        "key": "C",
+        "text": "在流量需求低时使用cron作业来停止EC2实例。"
+      },
+      {
+        "key": "D",
+        "text": "使用脚本在高峰流量需求期间垂直扩展EC2实例。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175943.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175943.png"
+  },
+  {
+    "id": 52,
+    "topic": "AWS SAA Screenshots",
+    "stem": "公司在美国东1区的单一可用性区内，部署了一个三层级的Web应用，运行在单一亚马逊EC2实例上。该应用的使用量正在增长。解决方案架构师需要确保应用能够处理不断增长的流量。解决方案架构师还需要确保应用具有弹性。哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建两个额外的EC2实例，分布在两个不同的可用区。创建一个应用负载均衡器（ALB）。配置ALB将流量路由到包含所有三个实例的目标组。创建亚马逊CloudWatch警报，垂直扩展EC2实例以处理应用流量。"
+      },
+      {
+        "key": "B",
+        "text": "创建八个额外的EC2实例，分布在三个不同的可用性区。创建一个应用负载均衡器（ALB）。配置ALB将流量路由到包含全部九个实例的目标组。创建一个亚马逊CloudWatch闹钟，横向扩展EC2实例以处理应用流量。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个包含至少三个 EC2 实例的 EC2 自动扩展组，在同一可用性区内，创建应用负载均衡器（ALB），配置 ALB 将流量路由到包含所有实例的目标组。为自动扩展组配置定时缩放。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个包含至少三个分布在可用区的EC2实例的EC2自动缩放组。创建一个应用负载均衡器（ALB）。配置ALB将流量路由到目标ALB，再路由流量到包含所有实例的目标组。创建亚马逊CloudWatch警报，垂直扩展EC2实例以处理应用流量。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175947.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175947.png"
+  },
+  {
+    "id": 53,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在开发一个使用 AWS Lambda 函数的数据处理应用。应用的 Lambda 函数需要与部署在同一 AWS 账户内 VPC 内的 Amazon RDS 数据库实例通信。哪种解决方案能以最安全的方式满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置数据库实例以允许公共访问。更新数据库实例安全组，允许从AWS区域的Lambda公共地址空间访问。"
+      },
+      {
+        "key": "B",
+        "text": "在 VPC 内部署 Lambda 函数。将网络ACL连接到Lambda子网。仅提供对VPC CIDR范围的出站规则访问。更新数据库实例安全组，允许来自0.0.0.0/0的流量。"
+      },
+      {
+        "key": "C",
+        "text": "在 VPC 内部部署 Lambda 函数。在 Lambda 函数上附加一个安全组。仅提供对VPC CIDR范围的出站规则访问。更新数据库实例安全组，允许来自 Lambda 安全组的流量。"
+      },
+      {
+        "key": "D",
+        "text": "将 Lambda 默认 VPC 与托管数据库实例的 VPC 进行对接，允许直接网络访问而无需安全组。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175951.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175951.png"
+  },
+  {
+    "id": 54,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家家庭安防公司正在全球扩展业务。公司需要加密客户数据。公司不想自己管理密钥。公司需要密钥在多个 AWS 区域都能使用，并且需要控制密钥的访问。哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 AWS KMS 创建多区域密钥。应用标签来识别每个密钥。使用基于属性的访问控制（ABAC）条件键来控制对键的访问。"
+      },
+      {
+        "key": "B",
+        "text": "使用 AWS KMS 通过导入密钥材料来创建多个密钥。应用标签来识别每个密钥。使用基于属性的访问控制（ABAC）条件键来控制对键的访问。钥匙的访问权。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS CloudHSM 在公司主区域创建 CloudHSM 集群。通过使用CloudHSM管理工具（CMU）将 CloudHSM集群同步到其他区域。"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS CloudHSM 来创建用户。使用CloudHSM管理工具（CMU）与用户共享密钥。使用shareKey命令与每个区域的其他用户共享或取消共享密钥。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175954.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175954.png"
+  },
+  {
+    "id": 55,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在开发解决方案，为客户提供访问金融数据的 API。 API后端需要为每个请求计算税务数据。 公司预计每年最后三个月对数据访问的需求将增加。 解决方案架构师需要设计一个可扩展的解决方案，能够满足每年年底的常规需求和峰值需求。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将API托管在运行第三方软件的Amazon EC2实例上。 配置EC2实例以执行税务计算。"
+      },
+      {
+        "key": "B",
+        "text": "部署亚马逊API网关REST API。 创建一个AWS Lambda函数来执行税务计算。 将 Lambda 函数与 REST API 集成。"
+      },
+      {
+        "key": "C",
+        "text": "在两个亚马逊EC2实例前创建一个应用负载均衡器（ALB）。 配置EC2实例以执行税务计算。"
+      },
+      {
+        "key": "D",
+        "text": "部署亚马逊API网关REST API。 配置一个亚马逊EC2实例来执行税务计算。 将EC2实例与REST API集成。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 175957.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 175957.png"
+  },
+  {
+    "id": 56,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在AWS上托管数十个多层应用。 表示层和逻辑层由使用 Amazon EBS 卷的 Amazon EC2 Linux 实例组成。 公司需要解决方案，确保在部署新功能时不会引入操作系统漏洞到EC2实例。 公司使用自定义AMI在自动扩展组中部署EC2实例。 解决方案必须能够支持公司托管的所有应用程序。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用Amazon Inspector修补操作系统漏洞。 当部署新的 AMI 时调用 Amazon Inspector。"
+      },
+      {
+        "key": "B",
+        "text": "使用 AWS Backup 备份每个更新实例的 EBS 卷。 利用EBS备份卷创建新的AMI。 使用现有的自动缩放组来部署新的AMI。"
+      },
+      {
+        "key": "C",
+        "text": "使用AWS Systems Manager补丁管理器来修补自定义AMI中的操作系统漏洞。"
+      },
+      {
+        "key": "D",
+        "text": "公司部署新功能时，使用 EC2 图像构建器创建新的 AMI。 在新AMI的构建组件中包含update-linuxcomponent。 使用现有的自动扩展组来部署新的AMIs."
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180000.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180000.png"
+  },
+  {
+    "id": 57,
+    "topic": "AWS SAA Screenshots",
+    "stem": "公司需要为管理员提供安全的远程访问，以管理位于私有子网中的亚马逊EC2实例。 公司需要一个采用以下规范的解决方案： 所有shell命令和会话活动都集中记录以便审计。 管理员通过多因素认证（MFA）进行身份验证。 实例没有公共IP地址，也不允许来自互联网的入站访问。 哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 AWS Systems Manager 会话管理器，并启用会话日志到 Amazon CloudWatch 日志。 要求强制执行多重身份验证的IAM策略。 确保 EC2 实例安装了 AWS 系统管理器代理（SSM 代理）。"
+      },
+      {
+        "key": "B",
+        "text": "配置一个EC2实例连接端点。 强制执行基于IAM的多重身份验证。 使用 AWS CloudTrail 来捕捉会话活动。"
+      },
+      {
+        "key": "C",
+        "text": "安装并配置 OpenSSH，每个 EC2 实例都记录本地壳历史记录。 使用NAT网关进行出站访问，并在SSH层面强制执行多重身份验证。"
+      },
+      {
+        "key": "D",
+        "text": "在公共子网部署一个堡垒主机，并启用多重身份验证（MFA）访问SSH。 在堡垒主机上安装CloudWatch代理。 配置CloudWatch代理以流式传输SSH会话日志。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180006.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180006.png"
+  },
+  {
+    "id": 58,
+    "topic": "AWS SAA Screenshots",
+    "stem": "解决方案架构师拥有应用容器、AWS Lambda函数和亚马逊SQS队列。 Lambda函数使用SQS队列作为事件源。 当调用该函数时，Lambda函数会调用第三方机器学习（ML） API。 第三方API的响应可能需要长达60秒才能返回。 Lambda函数的超时值目前为65秒。 解决方案架构师注意到 Lambda 函数有时会处理来自 SQS 队列的重复消息。 解决方案架构师应如何确保Lambda函数不会处理重复消息？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将Lambda函数配置为更大的内存。"
+      },
+      {
+        "key": "B",
+        "text": "配置增加 Lambda 函数的超时值。"
+      },
+      {
+        "key": "C",
+        "text": "将SQS队列的传输延迟值配置为大于调用第三方API的最大时间。"
+      },
+      {
+        "key": "D",
+        "text": "将SQS队列的可见性超时值配置为大于调用第三方API的最大时间。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180010.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180010.png"
+  },
+  {
+    "id": 59,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在升级其关键的基于网络的应用程序。 该应用托管在亚马逊EC2实例上，这些实例属于应用负载均衡器（ALB）背后的自动扩展组。 公司希望在开始将所有流量路由到升级应用之前，先用特定流量量测试新配置。 解决方案架构师应如何设计架构以满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个新的启动模板。 将新的启动模板与自动扩展组关联。 把自动缩放组附加到ALB上。 通过使用重定向规则分配流量。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个新的启动模板。 创建一个额外的自动缩放组。 将新的启动模板与额外的自动缩放组关联起来。 将额外的自动缩放组附加到ALB上。 通过加权目标群体来分配流量。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个新的启动模板。 创建一个额外的自动缩放组。 将新的启动模板与额外的自动缩放组关联起来。 创建一个额外的ALB。 将额外的自动缩放组附加到额外的ALB上。 使用亚马逊Route 53的故障切换路由策略来路由流量。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个新的启动模板。 创建一个额外的自动缩放组。 将新的启动模板与额外的自动缩放组关联起来。 创建一个额外的ALB。 将额外的自动缩放组附加到额外的ALB上。 使用亚马逊Route 53加权路由策略来路由流量。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180013.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180013.png"
+  },
+  {
+    "id": 60,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在利用 AWS Lake Formation 构建一个数据分析平台。 平台将从不同来源（如 Amazon S3 和 Amazon RDS）接收数据。 公司需要一种安全的解决方案，以防止访问包含敏感信息的数据部分。 哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个包含访问湖泊地层表权限的IAM角色。"
+      },
+      {
+        "key": "B",
+        "text": "创建数据过滤器以实现行级安全和单元级安全。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个AWS Lambda函数，在Lake Formation数据导入前删除敏感信息。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个AWS Lambda函数，定期查询并删除湖泊地层表中的敏感信息。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180015.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180015.png"
+  },
+  {
+    "id": 61,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家活动公司在亚马逊EKS上部署了网页应用。 该应用使用亚马逊DynamoDB表。 公司为DynamoDB表提供了1000个读容量单元（RCU）和500个写容量单元（WCU）。 应用程序最终会对表进行一致的读取。 该应用的流量通常较低，但偶尔会显著增长。 在这些流量突然增加时，DynamoDB 会返回限速错误。 结果是错误页面会显示给终端用户。 解决方案架构师应如何减少这些错误？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将DynamoDB表改为按需容量模式。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个 DynamoDB 读副本，以水平扩展阅读流量。"
+      },
+      {
+        "key": "C",
+        "text": "购买DynamoDB预留了1000个RCU和500个WCU的容量。"
+      },
+      {
+        "key": "D",
+        "text": "配置应用程序使用强一致性读取以处理 DynamoDB 查询。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180018.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180018.png"
+  },
+  {
+    "id": 62,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司有一项生成事件数据的服务。 该公司希望使用 AWS 在收到事件数据时对其进行处理。 数据按特定顺序写入，必须在整个处理过程中保持该顺序。 该公司希望实施一种解决方案，以最大限度地减少运营开销。 解决方案架构师应该如何做到这一点？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建 Amazon Simple Queue Service （Amazon SQS） FIFO 队列来保存消息。 设置 AWS Lambda 函数来处理来自队列的消息。"
+      },
+      {
+        "key": "B",
+        "text": "创建 Amazon Simple Notification Service （Amazon SNS） 主题，以发送包含要处理的有效负载的通知。 将 AWS Lambda 函数配置为订阅者。"
+      },
+      {
+        "key": "C",
+        "text": "创建 Amazon Simple Queue Service （Amazon SQS） 标准队列来保存消息。 设置 AWS Lambda 函数以独立处理来自队列的消息。"
+      },
+      {
+        "key": "D",
+        "text": "创建 Amazon Simple Notification Service （Amazon SNS） 主题以发送包含要处理的有效负载的通知。 将 Amazon Simple Queue Service （Amazon SQS） 队列配置为订阅者。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180021.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180021.png"
+  },
+  {
+    "id": 63,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司每天从位于单个工厂的多台机器接收 10 TB 的仪器数据。 数据由存储在工厂内本地数据中心的存储区域网络（SAN）上的 JSON 文件组成。 该公司希望将这些数据发送到 Amazon S3，在那里可以由几个提供关键近实时分析的其他系统访问这些数据。 安全传输很重要，因为数据被认为是敏感的。 哪种解决方案提供最可靠的数据传输？",
+    "options": [
+      {
+        "key": "A",
+        "text": "通过公共互联网的 AWS DataSync"
+      },
+      {
+        "key": "B",
+        "text": "基于 AWS Direct Connect 的 AWS DataSync"
+      },
+      {
+        "key": "C",
+        "text": "通过公共互联网的 AWS 数据库迁移服务 （AWS DMS）"
+      },
+      {
+        "key": "D",
+        "text": "通过 AWS Direct Connect 的 AWS 数据库迁移服务 （AWS DMS）"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180024.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180024.png"
+  },
+  {
+    "id": 64,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司希望降低其现有三层 Web 架构的成本。 Web、应用程序和数据库服务器在 Amazon EC2 实例上运行，用于开发、测试和生产环境。 EC2 实例在高峰时段的平均 CPU 利用率为 30%，在非高峰时段的平均 CPU 利用率为 10%。 生产 EC2 实例每天 24 小时运行。 开发和测试 EC2 实例每天至少运行 8 小时。 该公司计划实施自动化以停止开发并在不使用 EC2 实例时对其进行测试。 哪种 EC2 实例购买解决方案最经济高效地满足公司的要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将竞价型实例用于生产 EC2 实例。 将预留实例用于开发和测试 EC2 实例。"
+      },
+      {
+        "key": "B",
+        "text": "对生产 EC2 实例使用预留实例。 将按需实例用于开发和测试 EC2 实例。"
+      },
+      {
+        "key": "C",
+        "text": "对生产 EC2 实例使用 Spot 块。 将预留实例用于开发和测试 EC2 实例。"
+      },
+      {
+        "key": "D",
+        "text": "对生产 EC2 实例使用按需实例。 将竞价型块用于开发和测试 EC2 实例。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180027.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180027.png"
+  },
+  {
+    "id": 65,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司创建了一个图像分析应用程序，用户可以在其中上传照片并在他们的图像中添加相框。 用户上传图像和元数据以指示他们要将哪些相框添加到图像中。 该应用程序使用单个 Amazon EC2 实例和 Amazon DynamoDB 来存储元数据。 该应用程序越来越受欢迎，用户数量也在增加。 该公司预计并发用户数量会根据一天中的时间和一周中的某一天而有很大差异。 公司必须确保应用程序可以扩展以满足不断增长的用户群的需求。 哪种解决方案满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 AWS Lambda 处理照片。 将照片和元数据存储在 DynamoDB 中。"
+      },
+      {
+        "key": "B",
+        "text": "使用 Amazon Kinesis Data Firehose 处理照片并存储照片和元数据。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS Lambda 处理照片。 将照片存储在 Amazon S3 中。 保留 DynamoDB 以存储元数据。"
+      },
+      {
+        "key": "D",
+        "text": "将 EC2 实例的数量增加到 3 个。 使用预置 IOPS SSD （io2） Amazon Elastic Block Store （Amazon EBS） 卷来存储照片和元数据。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180030.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180030.png"
+  },
+  {
+    "id": 66,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在 Amazon EC2 实例上运行应用程序。 公司需要为应用程序实施灾难恢复（DR）解决方案。 DR 解决方案的恢复时间目标（RTO）需要小于 4 小时。 灾难恢复解决方案还需要在正常作期间使用尽可能少的 AWS 资源。 哪种解决方案将以最高效的运营方式满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建 Amazon 系统映像（AMI）以备份 EC2 实例。 将 AMI 复制到辅助 AWS 区域。 使用 AWS Lambda 和自定义脚本在辅助区域中自动部署基础设施。"
+      },
+      {
+        "key": "B",
+        "text": "创建 Amazon 系统映像（AMI）以备份 EC2 实例。 将 AMI 复制到辅助 AWS 区域。 使用 AWS CloudFormation 在辅助区域中自动部署基础设施。"
+      },
+      {
+        "key": "C",
+        "text": "在辅助 AWS 区域中启动 EC2 实例。 始终保持辅助区域中的 EC2 实例处于活动状态。"
+      },
+      {
+        "key": "D",
+        "text": "在辅助可用区中启动 EC2 实例。 始终使辅助可用区中的 EC2 实例保持活动状态。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180033.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180033.png"
+  },
+  {
+    "id": 67,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在本地运行的 Windows 文件服务器上拥有超过 5 TB 的文件数据。 用户和应用程序每天都与数据交互。 该公司正在将其 Windows 工作负载迁移到 AWS。 随着公司继续此过程，公司需要以最小的延迟访问 AWS 和本地文件存储。 该公司需要一种解决方案，该解决方案可以最大限度地减少运营开销，并且不需要对现有文件访问模式进行重大更改。 该公司使用 AWS 站点到站点 VPN 连接连接到 AWS。 解决方案架构师应该做些什么来满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在 AWS 上部署和配置 Amazon FSx for Windows File Server。 将本地文件数据移动到 FSx for Windows File Server。 重新配置工作负载以在 AWS 上使用 FSx for Windows File Server。"
+      },
+      {
+        "key": "B",
+        "text": "在本地部署和配置 Amazon S3 文件网关。 将本地文件数据移动到 S3 文件网关。 重新配置本地工作负载和云工作负载以使用 S3 文件网关。"
+      },
+      {
+        "key": "C",
+        "text": "在本地部署和配置 Amazon S3 文件网关。 将本地文件数据移动到 Amazon S3。 重新配置工作负载以直接使用 Amazon S3 或 S3 文件网关。 取决于每个工作负载的位置。"
+      },
+      {
+        "key": "D",
+        "text": "在 AWS 上部署和配置 Amazon FSx for Windows File Server。 在本地部署和配置 Amazon FSx 文件网关。 将本地文件数据移动到 FSx 文件网关。 将云工作负载配置为在 AWS 上使用 FSx for Windows File Server。 将本地工作负载配置为使用 FSx 文件网关。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180036.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180036.png"
+  },
+  {
+    "id": 68,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家金融公司在 AWS 上托管一个 Web 应用程序。 该应用程序使用 Amazon API Gateway 区域 API 终端节点，使用户能够检索当前股票价格。 该公司的安全团队注意到 API 请求数量有所增加。 安全团队担心 HTTP 洪水攻击可能会使应用程序脱机。 解决方案架构师必须设计一个解决方案来保护应用程序免受此类攻击。 哪种解决方案以最少的运营开销满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在 API Gateway 区域 API 终端节点前面创建 Amazon CloudFront 分配，最大 TTL 为 24 小时。"
+      },
+      {
+        "key": "B",
+        "text": "使用基于速率的规则创建区域 AWS WAF Web ACL。 将 Web ACL 与 API 网关阶段相关联。"
+      },
+      {
+        "key": "C",
+        "text": "使用 Amazon CloudWatch 指标监控 Count 指标，并在达到预定义速率时提醒安全团队。"
+      },
+      {
+        "key": "D",
+        "text": "在 API Gateway 区域 API 终端节点前面创建带有 Lambda@Edge 的 Amazon CloudFront 分发。 创建一个 AWS Lambda 函数来阻止来自超过预定义速率的 IP 地址的请求。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180039.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180039.png"
+  },
+  {
+    "id": 69,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在构建一个游戏系统，需要同时向单独的排行榜、匹配和身份验证服务发送独特的事件。 该公司需要一个 AWS 事件驱动的系统来保证事件的顺序。 哪种解决方案可以满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "Amazon EventBridge 事件总线"
+      },
+      {
+        "key": "B",
+        "text": "Amazon Simple Notification Service （Amazon SNS） FIFO 主题"
+      },
+      {
+        "key": "C",
+        "text": "Amazon Simple Notification Service （Amazon SNS） 标准主题"
+      },
+      {
+        "key": "D",
+        "text": "Amazon Simple Queue Service （Amazon SQS） FIFO 队列"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180042.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180042.png"
+  },
+  {
+    "id": 70,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在 VPC 中运行一个公共三层 Web 应用程序。 该应用程序在跨多个可用区的 Amazon EC2 实例上运行。 在私有子网中运行的 EC2 实例需要通过互联网与许可证服务器通信。 该公司需要一个托管解决方案，以最大限度地减少运营维护。 哪种解决方案满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在公共子网中配置NAT实例。 使用指向 NAT 实例的默认路由修改每个专用子网的路由表。"
+      },
+      {
+        "key": "B",
+        "text": "在私有子网中配置NAT实例。 使用指向 NAT 实例的默认路由修改每个专用子网的路由表。"
+      },
+      {
+        "key": "C",
+        "text": "在公共子网中配置 NAT 网关。 使用指向 NAT 网关的默认路由修改每个专用子网的路由表。"
+      },
+      {
+        "key": "D",
+        "text": "在专用子网中置备 NAT 网关。 使用指向 NAT 网关的默认路由修改每个专用子网的路由表。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180044.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180044.png"
+  },
+  {
+    "id": 71,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家气象初创公司有一个定制的 Web 应用程序，可以在线向其用户出售天气数据。 该公司使用 Amazon DynamoDB 来存储其数据，并希望构建一项新服务，每次记录新的天气事件时，都会向四个内部团队的经理发送警报。 该公司不希望这项新服务影响当前应用程序的性能。 解决方案架构师应该做些什么来以最少的运营开销满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 DynamoDB 事务将新事件数据写入表。 配置事务以通知内部团队。"
+      },
+      {
+        "key": "B",
+        "text": "让当前应用程序向四个 Amazon Simple Notification Service （Amazon SNS） 主题发布消息。 让每个团队订阅一个主题。"
+      },
+      {
+        "key": "C",
+        "text": "在表上启用 Amazon DynamoDB Streams。 使用触发器写入团队可以订阅的单个 Amazon Simple Notification Service （Amazon SNS） 主题。"
+      },
+      {
+        "key": "D",
+        "text": "向每条记录添加自定义属性以标记新项目。 编写一个 cron 作业，每分钟扫描一次表以查找新项目，并通知团队可以订阅的 Amazon Simple Queue Service （Amazon SQS） 队列。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180047.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180047.png"
+  },
+  {
+    "id": 72,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司希望使用 AWS 云来使现有应用程序具有高可用性和弹性。 应用程序的当前版本驻留在公司的数据中心。 最近，由于意外断电，数据库服务器崩溃，应用程序出现数据丢失。 公司需要一个能够避免任何单点故障的解决方案。 解决方案必须使应用程序能够扩展以满足用户需求。 哪种解决方案可以满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用跨多个可用区的 Auto Scaling 组中的 Amazon EC2 实例部署应用程序服务器。 在多可用区配置中使用 Amazon RDS 数据库实例。"
+      },
+      {
+        "key": "B",
+        "text": "使用单个可用区中 Auto Scaling 组中的 Amazon EC2 实例部署应用程序服务器。 在 EC2 实例上部署数据库。 启用 EC2 自动恢复。"
+      },
+      {
+        "key": "C",
+        "text": "使用跨多个可用区的 Auto Scaling 组中的 Amazon EC2 实例部署应用程序服务器。 将 Amazon RDS 数据库实例与单个可用区中的只读副本一起使用。 在主数据库实例发生故障时，提升只读副本以替换主数据库实例。"
+      },
+      {
+        "key": "D",
+        "text": "使用跨多个可用区的 Auto Scaling 组中的 Amazon EC2 实例部署应用程序服务器。 跨多个可用区在 EC2 实例上部署主数据库和辅助数据库服务器。 使用 Amazon Elastic Block Store （Amazon EBS） Multi-Attach 在实例之间创建共享存储。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180050.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180050.png"
+  },
+  {
+    "id": 73,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在启用了粘性会话的 Application Load Balancer 后面的 Auto Scaling 组中的 Amazon EC2 实例上运行 Web 应用程序。 Web 服务器当前托管用户会话状态。 该公司希望确保高可用性并避免在 Web 服务器中断时丢失用户会话状态。 哪种解决方案可以满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 Amazon ElastiCache for Memcached 实例来存储会话数据。 更新应用程序以使用 ElastiCache for Memcached 来存储会话状态。"
+      },
+      {
+        "key": "B",
+        "text": "使用 Amazon ElastiCache for Redis 存储会话状态。 更新应用程序以使用 ElastiCache for Redis 来存储会话状态。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS Storage Gateway 缓存卷存储会话数据。 更新应用程序以使用 AWS Storage Gateway 缓存卷来存储会话状态。"
+      },
+      {
+        "key": "D",
+        "text": "使用 Amazon RDS 存储会话状态。 更新应用程序以使用 Amazon RDS 存储会话状态。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180053.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180053.png"
+  },
+  {
+    "id": 74,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司使用 Amazon S3 将高分辨率图片存储在 S3 存储桶中。 为了尽量减少应用程序更改， 该公司将图片存储为 S3 对象的最新版本。 该公司只需要保留两个最新版本的图片。 该公司希望降低成本。 该公司已将 S3 存储桶确定为一笔大笔费用。 哪种解决方案可以以最少的运营开销降低 S3 成本？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 S3 生命周期删除过期的对象版本并保留两个最新版本。"
+      },
+      {
+        "key": "B",
+        "text": "使用 AWS Lambda 函数检查旧版本并删除除两个最新版本之外的所有版本。"
+      },
+      {
+        "key": "C",
+        "text": "使用 S3 批量作业删除非当前对象版本，并仅保留两个最新版本。"
+      },
+      {
+        "key": "D",
+        "text": "停用 S3 存储桶上的版本控制并保留两个最新版本。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180056.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180056.png"
+  },
+  {
+    "id": 75,
+    "topic": "AWS SAA Screenshots",
+    "stem": "解决方案架构师正在创建一个每天运行一次的数据处理作业， 最多可能需要 2 小时才能完成。 如果作业中断， 则必须从头开始。 解决方案架构师应该如何以最具成本效益的方式解决这个问题？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个在由 cron 作业触发的 Amazon EC2 预留实例上本地运行的脚本。"
+      },
+      {
+        "key": "B",
+        "text": "创建由 Amazon EventBridge 计划事件触发的 AWS Lambda 函数。"
+      },
+      {
+        "key": "C",
+        "text": "使用由 Amazon EventBridge 计划事件触发的 Amazon Elastic Container Service （Amazon ECS） Fargate 任务。"
+      },
+      {
+        "key": "D",
+        "text": "使用由 Amazon EventBridge 计划事件触发的 Amazon EC2 上运行的 Amazon Elastic Container Service （Amazon ECS） 任务。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180059.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180059.png"
+  },
+  {
+    "id": 76,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在 Amazon S3 存储桶中存储了大量图像文件。 这些图像需要在前 180 天内随时可用。 在接下来的 180 天内， 这些图像很少被访问。 360 天后， 图像需要存档， 但必须根据要求立即可用。 5 年后， 只有审计员才能访问图像。 审核员必须能够在 12 小时内检索图像。 在此过程中不会丢失图像。 开发人员将在前 180 天内使用 S3 标准存储。 开发人员需要配置 S3 生命周期规则。 哪种解决方案最经济高效地满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "180 天后将对象转换为 S3 单区 - 不频繁访问 （S3 单区 - IA）。 S3 Glacier Instant Retrieval 360 天后， S3 Glacier Deep Archive 5 天后。"
+      },
+      {
+        "key": "B",
+        "text": "180 天后将对象转换为 S3 单区 - 不频繁访问 （S3 单区 - IA）。 360 天后 S3 Glacier Flexible Retrieval， 5 年后 S3 Glacier Deep Archive。"
+      },
+      {
+        "key": "C",
+        "text": "180 天后将对象转换为 S3 标准-不频繁访问 （S3 Standard-IA）， 在 360 天后转换为 S3 Glacier Instant Retrieval， 在 5 年后转换为 S3 Glacier Deep Archive。"
+      },
+      {
+        "key": "D",
+        "text": "180 天后将对象转换为 S3 标准-不频繁访问 （S3 标准-IA）， 在 360 天后将对象转换为 S3 Glacier Flexible Retrieval， 在 5 年后将对象转换为 S3 Glacier Deep Archive。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180102.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180102.png"
+  },
+  {
+    "id": 77,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司希望分析和排除与 IAM 权限相关的拒绝访问错误和未经授权的错误。 该公司已启用 AWS CloudTrail。 哪种解决方案将以最少的努力满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 AWS Glue 并编写自定义脚本来查询 CloudTrail 日志中的错误。"
+      },
+      {
+        "key": "B",
+        "text": "使用 AWS Batch 并编写自定义脚本来查询 CloudTrail 日志中的错误。"
+      },
+      {
+        "key": "C",
+        "text": "使用 Amazon Athena 查询搜索 CloudTrail 日志以识别错误。"
+      },
+      {
+        "key": "D",
+        "text": "使用 Amazon QuickSight 搜索 CloudTrail 日志。 创建仪表板以识别错误。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180105.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180105.png"
+  },
+  {
+    "id": 78,
+    "topic": "AWS SAA Screenshots",
+    "stem": "某公司网站每天处理数百万个请求， 而且请求数量不断增加。 解决方案架构师需要提高 Web 应用程序的响应时间。 解决方案架构师确定应用程序在从 Amazon DynamoDB 表检索产品详细信息时需要减少延迟。 哪种解决方案将以最少的运营开销满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "设置 DynamoDB 加速器 （DAX） 集群。 通过 DAX 路由所有读取请求。"
+      },
+      {
+        "key": "B",
+        "text": "在 DynamoDB 表和 Web 应用程序之间设置 Amazon ElastiCache for Redis。 通过 Redis 路由所有读取请求。"
+      },
+      {
+        "key": "C",
+        "text": "在 DynamoDB 表和 Web 应用程序之间为 Memcached 设置 Amazon ElastiCache。 通过 Memcached 路由所有读取请求。"
+      },
+      {
+        "key": "D",
+        "text": "在表上设置 Amazon DynamoDB Streams， 并让 AWS Lambda 从表中读取并填充 Amazon ElastiCache。 通过 ElastiCache 路由所有读取请求。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180108.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180108.png"
+  },
+  {
+    "id": 79,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在 AWS Organizations 中有一个组织， 该组织启用了所有功能。 该公司要求必须对任何现有或新的 AWS 账户中的所有 API 调用和登录进行审计。 公司需要一个托管解决方案来防止额外的工作并最大限度地降低成本。 该公司还需要知道何时有任何 AWS 账户不符合 AWS 基础安全最佳实践 （FSBP） 标准。 哪种解决方案可以满足这些要求， 同时运营开销最小？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在 Organizations 管理账户中部署 AWS Control Tower 环境。 在环境中启用 AWS Security Hub 和 AWS Control Tower Account Factory。"
+      },
+      {
+        "key": "B",
+        "text": "在专用的 Organizations 成员账户中部署 AWS Control Tower 环境。 在环境中启用 AWS Security Hub 和 AWS Control Tower Account Factory。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS Managed Services （AMS） Accelerate 构建多账户着陆区 （MALZ）。 提交 RFC 以在 MALZ 中自助预置 Amazon GuardDuty。"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS Managed Services （AMS） Accelerate 构建多账户着陆区 （MALZ）。 提交 RFC 以在 MALZ 中自助预置 AWS Security Hub。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180111.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180111.png"
+  },
+  {
+    "id": 80,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司的软件开发团队需要一个 Amazon RDS 多可用区集群。 RDS 集群将充当部署在本地的桌面客户端的后端。 桌面客户端需要直接连接到 RDS 集群。 公司必须让开发团队能够在团队在办公室时使用客户端连接到集群。 哪种解决方案最安全地提供所需的连接？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个 VPC 和两个公有子网。 在公共子网中创建 RDS 集群。 将 AWS 站点到站点 VPN 与公司办公室的客户网关一起使用。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个 VPC 和两个私有子网。 在专用子网中创建 RDS 集群。 将 AWS 站点到站点 VPN 与公司办公室的客户网关一起使用。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个 VPC 和两个私有子网。 在专用子网中创建 RDS 集群。 使用 RDS 安全组允许公司的办公室 IP 范围访问集群。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个 VPC 和两个公共子网。 在公共子网中创建 RDS 集群。 为每个开发人员创建一个集群用户。 使用 RDS 安全组允许用户访问集群。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180114.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180114.png"
+  },
+  {
+    "id": 81,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在为托管在非本地数据中心的游戏应用实施共享存储解决方案。 公司需要能够使用 Lustre 客户端访问数据， 解决方案必须得到全面管理。 哪种方案满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个 AWS Storage Gateway 文件网关。 创建一个使用所需客户端协议的文件共享。 将应用服务器连接到文件共享。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个亚马逊EC2 Windows实例。 在实例上安装并配置Windows文件共享角色。 将应用服务器连接到文件共享。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个亚马逊弹性文件系统 （Amazon EFS） 文件系统， 并配置支持Lustre。 将文件系统连接到原始服务器。 将应用服务器连接到文件系统。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个亚马逊FSx用于Lustre的文件系统。 将文件系统连接到原服务器， 将应用服务器连接到文件系统。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180118.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180118.png"
+  },
+  {
+    "id": 82,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司有一个使用模式不稳定的网页应用。 每个月初使用量较大， 每周初使用量适中， 平日使用则不可预测。 该应用程序由运行在数据中心内的 Web 服务器和 MySQL 数据库服务器组成。 公司希望将应用迁移到AWS云端， 需要选择一个成本效益高且不需数据库修改的数据库平台。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "亚马逊 DynamoDB"
+      },
+      {
+        "key": "B",
+        "text": "Amazon RDS for MySQL"
+      },
+      {
+        "key": "C",
+        "text": "兼容MySQL的亚马逊Aurora Serverless"
+      },
+      {
+        "key": "D",
+        "text": "MySQL 部署于 Amazon EC2 上的自动扩展组"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180120.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180120.png"
+  },
+  {
+    "id": 83,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司雇佣了外部供应商在公司AWS账户中进行工作。 供应商使用托管在其拥有的AWS账户中的自动化工具。 供应商没有对该公司AWS账户的IAM访问权限。 解决方案架构师应如何将访问权限授予供应商？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在公司账户中创建一个IAM角色， 将访问权限委托给供应商IAM角色。 将供应商要求的权限对角色附加相应的IAM策略。"
+      },
+      {
+        "key": "B",
+        "text": "在公司账户中创建一个符合密码复杂度要求的 IAM 用户。 为用户附加供应商所需的权限所需的相应IAM策略。"
+      },
+      {
+        "key": "C",
+        "text": "在公司账户创建一个IAM组。 把供应商账户里的工具IAM用户添加到群组。 将供应商要求的权限关联到组中相应的IAM策略。"
+      },
+      {
+        "key": "D",
+        "text": "在 IAM 控制台中选择 WS 账户作为提供者类型， 创建新的身份提供者。 提供供应商的AWS账户ID和用户名。 将供应商所需的权限， 将相应的IAM策略附加到新提供商上。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180123.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180123.png"
+  },
+  {
+    "id": 84,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司运营一个应用， 用于存储和分享照片。 用户将照片上传到亚马逊S3的桶中。 每天， 用户大约上传150张照片。 公司想设计一种解决方案， 为每张新照片创建一个缩略图， 并将缩略图存储在第二个S3桶中。 哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置一个亚马逊事件桥定时规则， 在运行中的亚马逊电子病历集群中每分钟调用一个脚本。 配置脚本为没有缩略图的照片生成缩略图。 配置脚本将缩略图上传到第二个S3桶。"
+      },
+      {
+        "key": "B",
+        "text": "配置一个亚马逊事件桥计划规则， 在始终在线的内存优化型 Amazon EC2 实例中每分钟调用脚本。 配置脚本为没有缩略图的照片生成缩略图。 配置脚本将缩略图上传到第二个S3桶"
+      },
+      {
+        "key": "C",
+        "text": "配置 S3 事件通知， 每次用户上传新照片到应用时调用 AWS Lambda 函数。 配置 Lambda 函数生成缩略图， 并将缩略图上传到第二个 S3 桶"
+      },
+      {
+        "key": "D",
+        "text": "配置 S3 Storage Lens， 每次用户上传新照片到应用时都会调用 AWS Lambda 函数。 配置 Lambda 函数生成缩略图， 并将缩略图上传到第二个 S3 桶"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180126.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180126.png"
+  },
+  {
+    "id": 85,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在AWS组织中有一个组织， 启用了所有功能。 公司要求所有现有或新 AWS 账户的 API 调用和登录都必须进行审计。 公司需要一种可控的解决方案， 以防止额外工作并降低成本。 公司还需要知道任何AWS账户不符合AWS基础安全最佳实践 （FSBP） 标准。 哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在组织管理账户中部署AWS控制塔环境。 在环境中启用 AWS 安全中心和 AWS 控制塔账户工厂"
+      },
+      {
+        "key": "B",
+        "text": "在专门的组织成员账户中部署AWS控制塔环境。 启用AWS 环境中的安全枢纽和AWS控制塔账户工厂"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS 托管服务 （AMS） 加速构建多账户着陆区 （MALZ）。 提交 RFC 以自助服务配置 Amazon GuardDuty 在 MALZ 中"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS 托管服务 （AMS） 加速构建多账户着陆区 （MALZ）。 提交 RFC， 在 MALZ 中自助配置 AWS 安全中心"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180129.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180129.png"
+  },
+  {
+    "id": 86,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在AWS上设计一个网页应用。 该应用将通过公司现有数据中心与VPC之间的VPN连接。 公司使用亚马逊53号路由作为其DNS服务。 应用程序必须使用私有DNS记录与本地服务从VPC通信。 哪种解决方案能以最安全的方式满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个Route 53 Resolver的出站端点。 创建一个解析器规则。 将解析器规则与VPC关联"
+      },
+      {
+        "key": "B",
+        "text": "创建一个 Route 53 Resolver 的入站端点。 创建一个解析器规则。 将解析器规则与VPC关联"
+      },
+      {
+        "key": "C",
+        "text": "创建一个53号公路私人托管区。 将私有托管区与VPC关联"
+      },
+      {
+        "key": "D",
+        "text": "创建一个53号公路公共托管区。 为每个服务创建一个记录以支持服务通信"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180131.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180131.png"
+  },
+  {
+    "id": 87,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司有一个应用程序， 使用亚马逊 DynamoDB 表作为存储。 一位解决方案架构师发现许多对表的请求未能返回最新数据。 公司用户未报告数据库性能的其他问题。 延迟在可接受范围内。 解决方案架构师应该推荐哪种设计变更？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将已读副本添加到表中"
+      },
+      {
+        "key": "B",
+        "text": "使用全球二级指数 （GSI）"
+      },
+      {
+        "key": "C",
+        "text": "请求表格的读值高度一致"
+      },
+      {
+        "key": "D",
+        "text": "请求表的一致性读数"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180134.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180134.png"
+  },
+  {
+    "id": 88,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司通过使用 Amazon Elastic Kubernetes Service 运行容器应用 （亚马逊EKS）。 该应用包含管理客户和下单的微服务。 公司需要将收到的请求路由到相应的微服务。 哪种解决方案最能满足这一需求， 成本效益最高？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用AWS负载均衡器控制器来配置网络负载均衡器。"
+      },
+      {
+        "key": "B",
+        "text": "使用AWS负载均衡器控制器来配置应用负载均衡器。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS Lambda 函数将请求连接到 Amazon EKS。"
+      },
+      {
+        "key": "D",
+        "text": "使用亚马逊API网关将请求连接到亚马逊EKS。 ： Amazon API网关」 Amazon EKS。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180137.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180137.png"
+  },
+  {
+    "id": 89,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司的应用使用网络负载均衡器、 自动扩展组、 Amazon EC2 实例以及部署在亚马逊VPC中的数据库。 公司希望在其亚马逊VPC中近实时捕获网络接口之间的流量信息。 公司希望将这些信息发送给亚马逊OpenSearch Service进行分析。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在亚马逊CloudWatch Logs中创建一个日志组。 配置 VPC 流日志， 将日志数据发送到日志组。 使用 Amazon Kinesis数据流将日志从日志组流向OpenSearch Service。"
+      },
+      {
+        "key": "B",
+        "text": "在 Amazon CloudWatch Logs 中创建一个日志组。 配置 VPC 流日志， 将日志数据发送到日志组。 使用 Amazon Kinesis Data Firehose将日志组的日志流向OpenSearch Service。"
+      },
+      {
+        "key": "C",
+        "text": "在 AWS CloudTrail 中创建一个跟踪。 配置VPC流程日志， 将日志数据发送到跟踪记录。 使用Amazon Kinesis数据流将日志从线路流向OpenSearch服务。"
+      },
+      {
+        "key": "D",
+        "text": "在 AWS CloudTrail 中创建一个轨迹。 配置VPC流程日志， 将日志数据发送到跟踪记录。 使用Amazon Kinesis Data Firehose将日志从追踪线流传输到OpenSearch服务。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180139.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180139.png"
+  },
+  {
+    "id": 90,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家在线视频游戏公司必须为其游戏服务器保持超低延迟。 游戏服务器运行在亚马逊EC2实例上。 公司需要一个能够每秒处理数百万UDP互联网流量请求的解决方案。 哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置一个应用负载均衡器， 配备所需的协议和互联网流量端口。 指定EC2实例作为目标。"
+      },
+      {
+        "key": "B",
+        "text": "配置一个网关负载均衡器用于互联网流量。 指定EC2实例作为目标。"
+      },
+      {
+        "key": "C",
+        "text": "配置一个网络负载均衡器， 配备所需的协议和端口以传输互联网流量。 指定EC2实例作为目标。"
+      },
+      {
+        "key": "D",
+        "text": "在不同AWS区域的EC2实例上启动一套相同的游戏服务器。 将互联网流量路由到两组EC2实例。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180142.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180142.png"
+  },
+  {
+    "id": 91,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司需用解决刻术， 防止含有不受欢迎内容的照片基传高公司的网页飞要中。 解决刻术不得涉及训之机持击习（ML）但型。 哪种刻术保满足这些用求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "通过亚马逊SageMaker Autopilot创建并部署模型。 创建一个实时端点， 当新照片上传时， 网页应用会调用它。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个使用 Amazon Rekognition 检测不需要内容的 AWS Lambda 函数。 创建一个 Lambda 函数的 URL， 当新照片上传时， 网页应用会调用它。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个亚马逊CloudFront功能， 利用亚马逊理解来检测不需要的内容。 将该功能与网页应用关联起来。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个AWS Lambda函数， 利用Amazon Rekognition Video检测不需要的内容。 创建一个 Lambda函数的 URL， 当新照片上传时， 网页应用会调用它。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180145.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180145.png"
+  },
+  {
+    "id": 92,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司使用 AWS 来运行其电子商务平台。 该平台对公司的运营至关重要， 拥有大量流量和交易量。 该公司配置了多因素认证（MFA）设备以保护其AWS账户的根用户凭证。 公司希望确保如果多重身份验证设备丢失， 不会失去对根用户账户的访问权限。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "建立一个备用管理员账户， 以便公司丢失多重身份验证设备时登录。"
+      },
+      {
+        "key": "B",
+        "text": "为根用户账户添加多个多重身份验证设备以应对灾难场景。"
+      },
+      {
+        "key": "C",
+        "text": "当公司无法访问根账户时， 创建新的管理员账户。"
+      },
+      {
+        "key": "D",
+        "text": "当公司无法访问根账户时， 将管理员策略附加到另一个IAM用户。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180147.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180147.png"
+  },
+  {
+    "id": 93,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司运行其工作负载于亚马逊弹性容器服务（Amazon ECS）上。 ECS任务定义中使用的容器镜像需要扫描常见漏洞和暴露（CVE）。 新创建的容器镜像也需要扫描。 哪种解决方案能以最少的工作负载变化满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用亚马逊弹性容器注册表（Amazon ECR）作为私有的图像仓库来存储容器映像。 在ECR基础扫描时指定按压滤波器的扫描。"
+      },
+      {
+        "key": "B",
+        "text": "Store Amazon S3 桶里的容器图片。 用亚马逊Macie扫描图片。 使用 S3 事件通知， 对每个带有 s3: ObjectCreated: Put 事件类型的事件发起 Macie 扫描。"
+      },
+      {
+        "key": "C",
+        "text": "将工作负载部署到 Amazon Elastic Kubernetes Service（Amazon EKS）。 使用 Amazon Elastic Container Registry（Amazon ECR）作为私有映像仓库。 为ECR增强扫描指定推送滤波器扫描。"
+      },
+      {
+        "key": "D",
+        "text": "Store Amazon S3 桶中的容器镜像， 该桶启用了版本控制。 配置 s3: ObjectCreated: *events 的 S3 事件通知， 以调用 AWS Lambda 函数。 配置 Lambda 功能以启动 Amazon Inspector 扫描。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180150.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180150.png"
+  },
+  {
+    "id": 94,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家电子商务公司正在将其本地工作负载迁移到AWS云。 目前工作负载包括一个网页应用程序和一个后端 Microsoft SQL 数据库作为存储。 公司预计促销活动期间会有大量客户。 AWS云中的新基础设施必须高度可用且可扩展。 哪种方案能以最少的行政开销满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将网页应用迁移到两个跨越两个可用区的亚马逊EC2实例， 并置于应用负载均衡器后面。 将数据库迁移到 Amazon RDS for Microsoft SQL Server， 同时在两个可用区都有读取副本。"
+      },
+      {
+        "key": "B",
+        "text": "将网页应用迁移到一个亚马逊EC2实例， 该实例在两个可用区的自动扩展组中运行， 该组位于应用负载均衡器后面。 将数据库迁移到跨不同AWS区域的两个EC2实例， 并进行数据库复制。"
+      },
+      {
+        "key": "C",
+        "text": "将网页应用迁移到运行在两个可用区的 Amazon EC2 实例中， 这些实例在应用负载均衡器后面的两个可用区内。 将数据库迁移到带有多可用区部署的亚马逊RDS。"
+      },
+      {
+        "key": "D",
+        "text": "将网页应用迁移到三个亚马逊EC2实例， 分布在三个可用区， 并置于应用负载均衡器后面。 将数据库迁移到三个 EC2 实例， 分布在三个可用区。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180153.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180153.png"
+  },
+  {
+    "id": 95,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在 AWS 云中运行其关键存储应用。 该应用在两个 AWS 区域使用Amazon S3。 公司希望应用能够将远程用户数据发送到最近的S3存储桶， 且不会造成公共网络拥堵。 公司还希望应用能以最少的管理方式完成故障切换， 管理比亚马逊S3更少。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在两个区域之间实施主动-主动设计。 配置应用程序使用离用户最近的区域S3端点。"
+      },
+      {
+        "key": "B",
+        "text": "使用主动-被动配置搭配S3多区域接入点。 为每个区域创建一个全局端点。"
+      },
+      {
+        "key": "C",
+        "text": "将用户数据发送到离用户最近的区域 S3 端点。 配置一个S3跨账户复制规则， 保持S3桶的同步。"
+      },
+      {
+        "key": "D",
+        "text": "设置亚马逊S3， 以激活-主动配置使用多区域接入点， 并配备单一全局终端。 配置S3跨区域复制。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180156.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180156.png"
+  },
+  {
+    "id": 96,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在亚马逊EC2实例上托管一个网站， 置于应用负载均衡器（ALB）之后。 该网站提供静态内容。 网站流量正在增加。 公司希望最大限度地降低网站托管成本。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "把网站迁移到亚马逊S3桶里。 为 S3 桶配置一个 Amazon CloudFront 分发版。"
+      },
+      {
+        "key": "B",
+        "text": "把网站迁移到亚马逊S3的桶里。 为 S3 桶配置一个 Amazon ElastiCache 集群。"
+      },
+      {
+        "key": "C",
+        "text": "把网站迁移到 AWS Amplify。 配置一个ALB以解析到Amplify网站。"
+      },
+      {
+        "key": "D",
+        "text": "把网站迁移到 AWS Amplify。 配置EC2实例来缓存网站。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180159.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180159.png"
+  },
+  {
+    "id": 97,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在将其工作负载迁移到 AWS。 公司在运行于SQL Server实例上的本地关系数据库中拥有敏感且关键的数据。 公司希望利用AWS云来提升安全性并减少数据库的运营开销。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将数据库迁移到亚马逊EC2实例。 使用AWS密钥管理服务（AWS KMS）管理密钥进行加密。"
+      },
+      {
+        "key": "B",
+        "text": "将数据库迁移到多可用 Amazon RDS for SQL Server DB 实例。 使用AWS密钥管理服务（AWS KMS）管理密钥进行加密。"
+      },
+      {
+        "key": "C",
+        "text": "将数据迁移到亚马逊S3存储桶。 使用Amazon Macie来确保数据安全。"
+      },
+      {
+        "key": "D",
+        "text": "将数据库迁移到亚马逊DynamoDB表。 使用Amazon CloudWatch Logs来确保数据安全。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180202.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180202.png"
+  },
+  {
+    "id": 98,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在AWS上运行数据库工作负载， 这些工作负载是公司客户门户的后台。 公司在亚马逊 RDS 上运行一个多可用区数据库集群， 用于 PostgreSQL。 公司需要实施30天备份保留政策。 公司目前既有自动 RDS 备份， 也有手动 RDS 备份。 公司希望维护这两种不足30天的现有RDS备份。 哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将RDS备份保留策略设置为30天， 用于使用AWS Backup进行自动备份。 手动删除超过30天的手动备份。"
+      },
+      {
+        "key": "B",
+        "text": "禁用RDS自动备份。 删除超过30天的自动备份和手动备份。 将RDS备份保留策略设置为30天以实现自动备份。"
+      },
+      {
+        "key": "C",
+        "text": "将RDS备份保留策略设置为30天以实现自动备份。 手动删除超过30天的手动备份"
+      },
+      {
+        "key": "D",
+        "text": "禁用RDS自动备份。 通过AWS CloudFormation， 自动删除超过30天的自动备份和手动备份。 将RDS备份保留策略设置为30天以实现自动备份。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180205.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180205.png"
+  },
+  {
+    "id": 99,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司的费用跟踪应用允许用户上传收据图片。 该应用分析收据以提取信息， 并将原始图像存储在亚马逊S3中。 该应用用 Java 编写， 运行在 Amazon EC2 按需实例的自动扩展组中， 背后有应用负载均衡器。 随着应用的普及， 计算成本和存储成本也随之增加。 哪种解决方案能在不影响应用性能的前提下， 提供最多的成本节约？",
+    "options": [
+      {
+        "key": "A",
+        "text": "购买计算节省计划， 以获得最大数量的EC2实例。 将上传的文件存储在亚马逊弹性文件系统（Amazon EFS）中。"
+      },
+      {
+        "key": "B",
+        "text": "减少自动缩放组中EC2实例的最低数量。 使用按需实例实现峰值扩展。 将上传的文件存储在亚马逊弹性文件系统（Amazon EFS）中。"
+      },
+      {
+        "key": "C",
+        "text": "减少自动缩放组中EC2实例的最大数量。 设置S3生命周期策略， 将原始图像在30天后归档到低成本存储层。"
+      },
+      {
+        "key": "D",
+        "text": "购买计算节省计划， 满足最低数量的必要EC2实例。 使用按需实例实现峰值扩展。 设置S3生命周期策略， 将原始图像在30天后归档到低成本存储层级"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180208.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180208.png"
+  },
+  {
+    "id": 100,
+    "topic": "AWS SAA Screenshots",
+    "stem": "公司需要设计一个有弹性的网页应用来处理客户订单。 网页应用必须自动处理网页流量和应用使用量的增加， 同时不影响客户体验或丢失客户订单。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用NAT网关来管理网页流量。 使用Amazon EC2自动扩展组来接收、 处理和存储已处理的客户订单。 使用AWS Lambda函数来捕获并存储未处理的订单。"
+      },
+      {
+        "key": "B",
+        "text": "使用网络负载均衡器（NLB）来管理网络流量。 使用应用负载均衡器接收来自 NLUse Amazon Redshift 的客户订单， 并部署多可用区， 以存储未处理和处理中的客户订单。"
+      },
+      {
+        "key": "C",
+        "text": "使用网关负载均衡器（GWLB）来管理网页流量。 使用亚马逊弹性容器服务（AmazonECS）接收和处理客户订单。 使用GWLB来捕获和存储未处理的订单。 使用亚马逊DynamoDB来存储已处理的客户订单。"
+      },
+      {
+        "key": "D",
+        "text": "使用应用负载均衡器管理网页流量。 使用Amazon EC2自动扩展组来接收和处理客户订单。 使用亚马逊简单队列服务（Amazon SQS）来存储未处理的订单。 使用Amazon RDS配合多可用部署来存储已处理的客户订单。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180212.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180212.png"
+  },
+  {
+    "id": 101,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司需要实施新的数据保留政策以符合监管要求。 作为该政策的一部分， 存储在亚马逊S3桶中的敏感文档必须在一定时间内受到删除或修改保护。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "激活所需对象的S3对象锁定并启用治理模式。"
+      },
+      {
+        "key": "B",
+        "text": "激活所需对象的S3对象锁定并启用合规模式。"
+      },
+      {
+        "key": "C",
+        "text": "在 S3 桶上启用版本控制。 设置生命周期策略， 在指定时间段后删除对象。"
+      },
+      {
+        "key": "D",
+        "text": "配置S3生命周期策略， 使对象在保留期间转换为S3冰川灵活检索。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180216.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180216.png"
+  },
+  {
+    "id": 102,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在开发一个无服务器应用， 用于处理来自电商网站的订单。 该应用需要在高峰使用时段处理流量突发并保持高可用性。 订单必须按照应用程序接收订单的顺序异步处理。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用亚马逊简易通知服务（Amazon SNS）topic来接收订单。 使用AWS Lambda函数来处理订单。"
+      },
+      {
+        "key": "B",
+        "text": "使用亚马逊简单队列服务（Amazon SQS）FIFO队列来接收订单。 使用AWS Lambda函数来处理订单。"
+      },
+      {
+        "key": "C",
+        "text": "使用亚马逊简单队列服务（Amazon SQS）标准队列来接收订单。 用AWS批处理作业来处理订单。"
+      },
+      {
+        "key": "D",
+        "text": "使用亚马逊简易通知服务（Amazon SNS）topic来接收订单。 用AWS批处理作业来处理订单。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180220.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180220.png"
+  },
+  {
+    "id": 103,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在通过使用 Amazon RDS for MySQL 部署一个关键应用。 应用程序必须高度可用， 并且必须自动恢复。 公司需要支持交互式用户（事务性查询）和批量报告（分析性查询）， 延迟不超过4小时。 分析查询不得影响事务查询的性能。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在多变数数据库实例部署中配置Amazon RDS for MySQL并配备一个备用实例。 将事务查询指向主数据库实例。 将分析查询指向运行在不同可用性区的次级数据库实例。"
+      },
+      {
+        "key": "B",
+        "text": "在多变数数据库集群部署中配置 Amazon RDS for Mymy， 配备两个备用实例。 将事务查询指向主数据库实例。 将分析查询指向读取端点。"
+      },
+      {
+        "key": "C",
+        "text": "配置 Amazon RDS for MySQL 使用跨多个可用区的多个读副本。 将事务查询指向主数据库实例。 将分析查询指向不同可用性区中的某个副本。"
+      },
+      {
+        "key": "D",
+        "text": "将 Amazon RDS for MySQL 配置为事务查询的主数据库， 并启用自动备份。 配置自动备份。 每天晚上， 从最近的快照创建一个只读数据库， 以支持分析查询。 终止之前创建的数据库。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180223.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180223.png"
+  },
+  {
+    "id": 104,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在 AWS 上托管一个公开的网络应用。 网站采用三层架构。 前端网页层由自动扩展组中的 Amazon EC2 实例组成。 应用层是第二个自动扩展组。 数据库层级是亚马逊RDS数据库。 公司已配置自动扩展组以应对应用的正常需求水平。 在需求意外激增期间， 公司注意到启动时间在前端和应用层扩展时出现了较长的延迟。 公司需要在不影响用户体验的前提下， 提升应用的扩展性能。 哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "减少两个自动缩放组的EC2实例数量。 增加所需的实例数量以满足峰值需求。"
+      },
+      {
+        "key": "B",
+        "text": "配置两个自动缩放组的最大实例数， 使其达到满足峰值需求所需的数量。 创造一个温暖的水池。"
+      },
+      {
+        "key": "C",
+        "text": "增加两个自动缩放组的最大EC2实例数， 以满足正常需求要求。 创造一个温暖的水池。"
+      },
+      {
+        "key": "D",
+        "text": "重新配置两个自动扩展组， 使其使用定时扩展策略。 增加EC2实例类型和RDS实例类型的规模。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180226.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180226.png"
+  },
+  {
+    "id": 105,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家保险公司希望将计算保险费率的应用程序迁移到AWS。 当客户通过应用程序提交信息时， 公司需要立即进行计算。 应用通常需要10秒钟完成计算。 解决方案架构师需要在AWS上开发架构来处理该应用。 哪种方案能满足这一要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "建立一个亚马逊API网关HTTP API来接收数据。 使用AWS Lambda函数立即处理数据。"
+      },
+      {
+        "key": "B",
+        "text": "将客户数据上传到亚马逊S3存储桶中。 启动一个亚马逊EC2点实例来处理所有数据上传。"
+      },
+      {
+        "key": "C",
+        "text": "设置 AWS Transfer Family 以接收客户数据。 配置一个亚马逊弹性Kubernetes服务（Amazon EKS）作业， 按计划处理客户数据。"
+      },
+      {
+        "key": "D",
+        "text": "将数据上传到亚马逊S3桶。 调用AWS批处理作业来处理每一次客户数据上传。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180228.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180228.png"
+  },
+  {
+    "id": 106,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司使用一组 Amazon EC2 实例来托管网站。 网站使用亚马逊S3桶来存储图片和媒体文件。 公司希望自动化网站基础设施建设， 以便将网站部署到多个AWS区域。 公司还希望为EC2实例提供S3桶的访问权限， 以便实例能够通过AWS身份与访问管理（IAM）来存储和访问数据。 哪种解决方案最安全地满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "为Web服务器EC2实例创建一个AWS CloudFormation模板。 在CloudFormation模板中AWS：： EC2：： instance实体的UserData部分保存IAM访问密钥。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个包含IAM秘密访问密钥和访问密钥ID的文件。 将文件存储在新的S3桶中。 创建一个AWS CloudFormation模板。 在模板中， 创建参数指定包含访问密钥和访问密钥ID的S3对象的位置。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个 IAM 角色和一个 IAM 访问策略， 允许 Web 服务器 EC2 实例访问 S3 桶。 为Web服务器EC2实例创建一个AWS CloudFormation模板， 包含一个引用IAM角色和访问策略的IAM实例配置文件实体。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个脚本， 从IAM获取IAM的秘密访问密钥和访问密钥ID， 并将其存储在Web服务器的EC2实例中。 在 AWS CloudFormation 模板中的 AWS：： EC2：： Instance 实体的 UserData 部分中包含该脚本。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180231.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180231.png"
+  },
+  {
+    "id": 107,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家电商公司正在重新设计一款网络应用以运行在AWS云上。 该应用需要存储静态网站内容， 并且必须使用 Microsoft SQL Server 数据库来存储客户数据。 公司需要以弹性的方式在多个可用区部署该应用。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用Amazon S3桶来存储静态内容。 为数据库部署一个亚马逊RDS Custom for SQL Server数据库实例。"
+      },
+      {
+        "key": "B",
+        "text": "使用亚马逊S3桶来存储静态内容。 为数据库创建一个亚马逊 RDS for SQL Server 多可数部署。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个亚马逊弹性块存储（Amazon EBS）多连接卷来存储静态内容。 为数据库部署一个亚马逊RDS for SQL Server DB 实例。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个亚马逊弹性块存储（Amazon EBS）多连接卷来存储静态内容。 在两个不同的可用性区的 Amazon EC2 实例上部署 SQL Server。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180233.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180233.png"
+  },
+  {
+    "id": 108,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一个分析应用运行在多个使用 Amazon Elastic File System（Amazon EFS）标准存储的 Amazon EC2 Linux 实例上。 应用程序使用的文件大小和访问频率各不相同。 公司在30天后很少访问这些文件。 然而， 用户有时会请求较旧的文件来生成报告。 公司希望降低访问频率较低的文件存储成本。 公司还希望吞吐量能根据文件系统的大小进行调整。 公司希望利用 TransitionToIA Amazon EFS 生命周期策略， 在 30 天后将文件转移到不频繁访问（IA）存储。 哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置文件在用户再次访问文件时切换回标准存储。 指定配置吞吐量模式。"
+      },
+      {
+        "key": "B",
+        "text": "仅指定已配置的吞吐量模式。"
+      },
+      {
+        "key": "C",
+        "text": "配置文件在用户再次访问文件时切换回标准存储。 指定突发吞吐模式。"
+      },
+      {
+        "key": "D",
+        "text": "仅指定突发吞吐模式。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180236.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180236.png"
+  },
+  {
+    "id": 109,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在本地数据中心运行一个两层的基于网页的应用程序。应用层由运行有状态应用的单一服务器组成。该应用程序连接到运行在独立服务器上的 PostgreSQL 数据库。预计该应用的用户基础将大幅增长，因此公司正在将应用和数据库迁移到 AWS。该解决方案将使用 Amazon Aurora PostgreSQL、Amazon EC2 自动扩展和弹性负载均衡。哪种解决方案能提供一致的用户体验，使应用和数据库层级能够扩展？",
+    "options": [
+      {
+        "key": "A",
+        "text": "启用 Aurora 自动缩放以 Aurora 复制品。使用一个网络负载均衡器，启用最少未完成的请求路由算法并启用粘性会话。"
+      },
+      {
+        "key": "B",
+        "text": "为 Aurora 写手启用 Aurora 自动标配。使用应用负载均衡器，启用轮询路由算法和粘性会话。"
+      },
+      {
+        "key": "C",
+        "text": "启用极光复制品的自动缩放。使用应用负载均衡器，启用轮询路由算法和粘性会话。"
+      },
+      {
+        "key": "D",
+        "text": "为极光写手启用 Aurora 自动比例。使用一个网络负载均衡器，启用最少未完成的请求路由算法并启用粘性会话。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180239.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180239.png"
+  },
+  {
+    "id": 110,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在单一 AWS 区域内运行 Amazon EC2 实例的企业资源规划（ERP）系统。用户通过托管在 EC2 实例上的公共 API 连接到 ERP 系统。国际用户报告其数据中心的 API 响应时间较慢。解决方案架构师需要改善国际所有用户的 API 响应时间。哪种解决方案能以最经济的方式满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "建立一个带有公共虚拟接口（VIF）的 AWS Direct Connect 连接，将每个用户的数据中心连接到 EC2 实例。为 ERP 系统 API 创建一个直接连接网关，用于路由用户 API 请求。"
+      },
+      {
+        "key": "B",
+        "text": "在多个区域部署亚马逊 API 网关终端。使用亚马逊 53 号基于延迟的路由，将请求路由到最近的端点。配置一个 VPC 对等连接，连接区域之间的 ERP 系统。"
+      },
+      {
+        "key": "C",
+        "text": "设置 AWS 全球加速器。为必要的端口配置监听器。为相应的区域配置终端组以分发流量。在每个组中为 API 创建一个端点。"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS 站点对站点 VPN，建立多个区域和用户网络之间的专用 VPN 隧道。通过 VPN 连接将流量路由到 API。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180242.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180242.png"
+  },
+  {
+    "id": 111,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在 Amazon EC2 实例上运行一个网页应用。该应用还使用了亚马逊 DynamoDB 表。该应用程序会不定期地生成 HTTP 500 错误。DynamoDB 表以按需模式运行，其他应用程序也无碍使用该表。解决方案架构师希望在不干扰网页应用的情况下解决 HTTP 500 错误。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置 DynamoDB 以支持更大的写入请求以提升吞吐量。"
+      },
+      {
+        "key": "B",
+        "text": "启用 DynamoDB Streams 以监控表中的变更。"
+      },
+      {
+        "key": "C",
+        "text": "配置应用程序使用指数退让，并重新尝试查询表。"
+      },
+      {
+        "key": "D",
+        "text": "配置应用程序使用强一致性的读取。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180248.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180248.png"
+  },
+  {
+    "id": 112,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在将一个基于 Linux 的网络服务器组迁移到 AWS。网页服务器必须通过 NFS 协议访问共享文件。公司不得对网页服务器应用做任何更改。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个亚马逊 S3 桶，用 S3 标准格式存储共享文件。授予 S3 桶访问网页服务器的权限。"
+      },
+      {
+        "key": "B",
+        "text": "配置一个亚马逊 CloudFront 发行版。设置一个亚马逊 S3 桶作为起点。把共享文件存储在 S3 桶里。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个亚马逊弹性文件系统（Amazon EFS）文件系统。将 EFS 文件系统挂载到网页服务器上。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个 Windows 文件服务器的 Amazon FSx 文件系统。为 Web 服务器配置 SMB 协议访问。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180251.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180251.png"
+  },
+  {
+    "id": 113,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司想使用 AWS Systems Manager 来管理一批 Amazon EC2 实例。根据公司的安全要求，任何 EC2 实例都不能访问互联网。解决方案架构师需要设计从 EC2 实例到 Systems Manager 的网络连接，同时履行这一安全义务。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将 EC2 实例部署到一个没有互联网路由的私有子网中。"
+      },
+      {
+        "key": "B",
+        "text": "配置一个 Systems Manager 的接口 VPC 端点。更新路由以使用该端点。"
+      },
+      {
+        "key": "C",
+        "text": "将 NAT 网关部署到公共子网。配置私有子网，设置一条通往 NAT 网关的默认路由。"
+      },
+      {
+        "key": "D",
+        "text": "部署互联网网关。配置网络 ACL，拒绝所有目的地的流量，唯独系统管理器。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180255.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180255.png"
+  },
+  {
+    "id": 114,
+    "topic": "AWS SAA Screenshots",
+    "stem": "解决方案架构师设计包含网页、应用和数据库层级的架构。网页版必须具备自动扩展功能。解决方案架构师决定将每个层级划分为独立的子网。设计包括两个公共子网和四个私有子网。安全团队要求各层仅在有业务需求时才能相互通信，其他所有网络流量必须被阻断。解决方案架构师应如何满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个亚马逊 创建 Amazon GuardDuty 的源/目的地规则集来控制通信。"
+      },
+      {
+        "key": "B",
+        "text": "为所有层级创建一个安全组，限制流量仅限于所需的源和目的地。"
+      },
+      {
+        "key": "C",
+        "text": "为每个层级创建专门的安全组，限制流量仅限于所需的源和目的地。"
+      },
+      {
+        "key": "D",
+        "text": "在所有六个子网中创建网络 ACL，以限制流量至应用运行所需的源和目的地。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180258.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180258.png"
+  },
+  {
+    "id": 115,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司托管在 AWS 上的应用程序。该应用在过去 12 年中生成了约 2.5 TB 的数据。公司目前将数据存储在亚马逊 EBS 上。公司希望为长期存储提供性价比的备份解决方案。公司必须能够在审计时几分钟内检索数据。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建 EBS 快照来备份数据。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个亚马逊 S3 桶。使用 S3 冰川深层档案存储类来备份数据。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个亚马逊 S3 桶。使用 S3 Glacier Flexible Retrieval 存储类来备份数据。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个亚马逊 EFS 文件系统来备份数据。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180301.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180301.png"
+  },
+  {
+    "id": 116,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司希望使用 AWS Direct Connect 将本地网络连接到 AWS 云。该公司在单一 AWS 区域内运行多个 VPC。公司计划扩展其 VPC 群，涵盖数百个 VPC。解决方案架构师需要简化和扩展公司的网络基础设施，以适应未来的 VPC。哪种服务或资源将满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "VPC 端点"
+      },
+      {
+        "key": "B",
+        "text": "AWS 中转网关"
+      },
+      {
+        "key": "C",
+        "text": "亚马逊 53 号公路"
+      },
+      {
+        "key": "D",
+        "text": "AWS Secrets Manager"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180304.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180304.png"
+  },
+  {
+    "id": 117,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家电商公司在 AWS 上运行一个多层次应用。前端和后端层都在亚马逊 EC2 实例上运行。数据库层运行在亚马逊 RDS for MySQL DB 实例上。后端层与 RDS 数据库实例通信。应用程序经常调用以返回数据库中的相同数据集。数据库频繁调用会导致性能变慢。解决方案架构师必须提升应用后端的性能。哪种方案能满足这一要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在 EC2 实例和 RDS DB 实例之间配置一个 Amazon SNS 主题。"
+      },
+      {
+        "key": "B",
+        "text": "配置一个亚马逊 ElastiCache（Redis OSS）缓存。配置后端 EC2 实例读取缓存。"
+      },
+      {
+        "key": "C",
+        "text": "配置一个 Amazon DynamoDB 加速器（DAX）集群。配置后端 EC2 实例读取集群数据。"
+      },
+      {
+        "key": "D",
+        "text": "配置 Amazon Data Firehose 将通话流式传输到数据库。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180307.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180307.png"
+  },
+  {
+    "id": 118,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在亚马逊 S3 上运营一个数据湖，存储多种格式的大型数据集。该公司有一个应用程序，可以根据过滤条件检索并处理数据湖中多个对象的数据子集。对于每个数据查询，应用程序当前下载整个 S3 对象并进行转换。当前的工艺需要大量转化时间。公司希望有一个解决方案，能够让应用程序能够直接查询和过滤 S3 对象，而无需下载对象。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 Amazon Athena 查询和筛选 Amazon S3 中的对象。"
+      },
+      {
+        "key": "B",
+        "text": "使用亚马逊电子病历来处理和筛选这些对象。"
+      },
+      {
+        "key": "C",
+        "text": "使用 Amazon API Gateway 创建一个 API 来获取从 Amazon S3 过滤的结果。"
+      },
+      {
+        "key": "D",
+        "text": "使用 Amazon ElastiCache（Valkey）来缓存这些对象。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180310.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180310.png"
+  },
+  {
+    "id": 119,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司从第三方提供商生成 SSL 证书。公司将证书导入 AWS 证书管理器（ACM），用于公共网络应用。解决方案架构师必须在导入证书到期前 30 天内实施解决方案，通知公司安全团队。公司已经有了亚马逊 SQS 队列。公司还有一个亚马逊 SNS 主题，安全团队的邮箱地址是订阅用户。哪种解决方案能向安全团队提供关于证书的必要通知？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个 AWS Lambda 函数来扫描即将过期的证书。编写 Lambda 函数，将证书列入 JSON 消息，并将消息传递到 SQS 队列。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个 AWS Lambda 函数来扫描即将过期的证书。编写 Lambda 函数，在 JSON 消息中列出证书，并将消息传递到 SNS 主题。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个亚马逊事件桥规则，指定 ACM 证书接近到期事件类型。将 SQS 队列设为规则的目标。"
+      },
+      {
+        "key": "D",
+        "text": "创建一条亚马逊事件桥规则，指定 ACM 证书接近到期事件类型。将 SNS 主题设为规则的目标。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180313.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180313.png"
+  },
+  {
+    "id": 120,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司有一个应用，运行在 Amazon EC2 实例的自动扩展组中。该应用使用硬编码的凭证访问亚马逊 RDS 数据库。为了符合新法规，公司需要每 90 天自动更换应用服务账户的数据库密码。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个 AWS Lambda 函数来生成新的随机密码。配置亚马逊事件桥规则，每 90 天调用一次 Lambda 函数。配置 Lambda 函数，通过 SSH 上传包含新密码的 JSON 文件到现有的 EC2 实例。"
+      },
+      {
+        "key": "B",
+        "text": "在 AWS Secrets Manager 中为数据库凭证创建一个秘密。在 Secrets Manager 中安排一个 AWS Lambda 函数，每 90 天轮换一次密钥。修改应用程序以读取 Secrets Manager 中的数据库凭证。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个新的亚马逊 ECS 任务以生成新的随机密码。将任务配置为每 90 天启动一次。配置任务，通过 SSH 将包含新密码的 JSON 文件上传到现有 EC2 实例。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个新的 EC2 实例，每 90 天运行一次 cron 作业。使用 cron 作业生成新的随机密码。配置新的 EC2 实例，通过 SSH 上传包含新密码的 JSON 文件到现有的 EC2 实例。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180316.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180316.png"
+  },
+  {
+    "id": 121,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司有一个应用运行在 Amazon EC2 实例上，并使用 Amazon Aurora 数据库。EC2 实例通过公司本地存储在文件中的用户名和密码连接到 Aurora 数据库。公司每月都会更改用户名和密码。公司希望最大限度地减少凭证管理的运营开销。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "Store 将凭据作为 AWS 秘密管理器中的秘密。为秘密分配 IAM 权限。重新配置应用程序以调用密钥。启用秘密轮换，并配置轮换按月进行。"
+      },
+      {
+        "key": "B",
+        "text": "公司每个月都会更改用户名和密码。公司希望最大限度地减少凭证管理的运营开销。到参数。重新配置应用程序以访问该参数。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个亚马逊 S3 桶来存储对象。使用 AWS KMS 密钥来加密这些对象。将凭据文件迁移到 S3 桶。更新应用程序以获取 S3 桶中的凭证文件。"
+      },
+      {
+        "key": "D",
+        "text": "为每个 EC2 实例创建一个加密的 Amazon EBS 卷。将加密的 EBS 卷连接到 EC2 实例。将凭据文件迁移到新的 EBS 卷。将应用程序指向加密的 EBS 卷。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180320.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180320.png"
+  },
+  {
+    "id": 122,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司通过在私有子网中使用 Amazon Linux 的 Amazon 机器镜像（AMI）部署了一个非生产型的 Amazon EC2 实例。该公司希望允许一组开发者通过 SSH 远程连接 EC2 实例，而不暴露 EC2 实例于互联网。开发者必须能够通过 AWS 管理控制台连接到 EC2 实例。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在与 EC2 实例同一个子网内为 AWS Systems Manager 创建一个 VPC 端点。允许端点安全组对 22 端口的 EC2 实例安全组进行入站访问。为 EC2 实例创建一个 IAM 角色，并附加 AmazonSSMManagedInstanceCore 策略。"
+      },
+      {
+        "key": "B",
+        "text": "在与 EC2 实例相同的子网内创建一个 EC2 实例连接端点。在端点上附加一个安全组，允许端口 443 上的入站连接。将 AmazonEC2InstanceConnect 的 IAM 管理策略分配给开发者组。"
+      },
+      {
+        "key": "C",
+        "text": "在与 EC2 实例相同的子网内创建一个 EC2 实例连接端点。在端点上附加一个安全组，允许 22 端口的入站连接。将 AmazonEC2InstanceConnect IAM 管理策略分配给开发者组。"
+      },
+      {
+        "key": "D",
+        "text": "在与 EC2 实例同一个子网内为 AWS Systems Manager 创建一个 VPC 端点。允许端点安全组的入站访问到 EC2 实例安全组的端口 22。为 EC2 实例创建一个 IAM 角色，并附加 AmazonSSMReadOnlyAccess 策略。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180323.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180323.png"
+  },
+  {
+    "id": 123,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司网站运行在亚马逊 EC2 实例上，背后是应用负载均衡器（ALB）。这些实例在多个可用性区的自动扩展组中运行。ALB 前面有一个亚马逊 CloudFront 分发版。用户报告了性能问题。一位解决方案架构师发现网站收到来自一系列源 IP 地址的高频率请求，这些请求来自 CloudFront 分发版。解决方案架构师应如何解决这个问题？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 AWS Shield，配置一个带有 IP 匹配条件的拒绝规则，包含不需要请求的源 IP。"
+      },
+      {
+        "key": "B",
+        "text": "使用自动扩展，将最大实例数设置为增加，以吸收不需要的请求。"
+      },
+      {
+        "key": "C",
+        "text": "利用亚马逊 VPC 网络 ACL，为每个不需要请求的源 IP 的 CIDR 地址配置一个入站拒绝规则。"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS WAF，在 CloudFront 分发版上配置基于 Web ACL 速率的规则，速率限制低于不需要请求者的速率。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180326.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180326.png"
+  },
+  {
+    "id": 124,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在使用基于 Active Directory 的身份服务，支持 SAML 2.0。该公司希望利用现有的认证解决方案访问 AWS 管理控制台。解决方案架构师需要配置联邦认证。哪种方案能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用 AWS Verified Access 创建一个新的信任提供者。将现有的 Active Directory IdP 服务连接到已验证访问的端点。"
+      },
+      {
+        "key": "B",
+        "text": "使用亚马逊 Cognito 创建一个身份池。将现有的 Active Directory IdP 添加到用户池。上传 SAML 元数据。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS Amplify 通过 Amplify Auth 配置自定义认证后端。搭建一个 Amazon EC2 实例，运行一个 Node.js 应用，通过 LDAP 将 AWS IAM 身份中心与本地 Active Directory 连接起来。"
+      },
+      {
+        "key": "D",
+        "text": "配置 AWS IAM Identity Center 以使用外部 IdP。提供身份提供者提供的 SAML 元数据。"
+      }
+    ],
+    "answer": [
+      "D"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180329.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180329.png"
+  },
+  {
+    "id": 125,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司计划在 AWS 云端部署一个关键业务应用。该应用需要耐用的存储，且性能稳定且低延迟。解决方案架构师应推荐哪种存储类型以满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "实例存储卷"
+      },
+      {
+        "key": "B",
+        "text": "Amazon ElastiCache（Memcached）集群"
+      },
+      {
+        "key": "C",
+        "text": "配置的 IOPS SSD Amazon EBS 卷"
+      },
+      {
+        "key": "D",
+        "text": "吞吐量优化硬盘 Amazon EBS 卷"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180332.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180332.png"
+  },
+  {
+    "id": 126,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家金融公司通过其 AWS 基础设施处理来自多个支付提供商的交易。公司需要实施一个系统，将高额交易发送到欺诈检测服务。系统必须将失败的事务路由到重试队列。系统还必须将国际交易复制到合规监控系统，并将所有交易归档以供审计。哪种解决方案能以最少的运营开销满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "在对事件类型进行基本过滤之前，先配置 Amazon EventBridge 输入变换器修改事件结构。"
+      },
+      {
+        "key": "B",
+        "text": "为每个支付提供商创建独立的亚马逊 EventBridge 活动总线。使用符合条件的事件模式的基于上下文的路由。"
+      },
+      {
+        "key": "C",
+        "text": "使用 Amazon EventBridge Pipes 来过滤事件并将事件路由到不同的目标系统。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个带有多规则的 Amazon EventBridge 事件总线。配置每个规则以使用事件模式匹配以匹配给出的条件。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180336.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180336.png"
+  },
+  {
+    "id": 127,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司有一个运行在 AWS 云端的亚马逊 MySQL 数据库。公司需要实施灾难恢复（DR）计划。公司希望定期备份数据库。灾难恢复计划还必须在公司本地的灾难恢复数据中心保留副本，如有需要可在本地灾难恢复环境中恢复。哪种解决方案以最低的运营开销满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建单独的RDS数据库快照，并将快照导出到Amazon S3。通过使用 AWS s3 同步命令将快照同步到本地的灾难恢复数据中心。"
+      },
+      {
+        "key": "B",
+        "text": "配置AWS备份以运行和管理RDS备份。将备份复制到本地灾难恢复数据中心的保险库。"
+      },
+      {
+        "key": "C",
+        "text": "使用mysqldump工具导出数据库，存储在Amazon S3中，并每天同步到本地的灾难恢复数据中心。"
+      },
+      {
+        "key": "D",
+        "text": "创建单独的RDS数据库快照，并导出到Amazon S3。使用AWS DataSync将快照传输到本地的灾难恢复数据中心。"
+      }
+    ],
+    "answer": [
+      "A"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180339.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180339.png"
+  },
+  {
+    "id": 128,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在单个 VPC 中运行多个应用程序，运行在 Amazon EC2 实例上。应用程序需要加密和解密应用程序之间交换记录中的特定数据项。哪种方案能满足这一要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "加密与每个应用EC2实例关联的亚马逊EBS存储。"
+      },
+      {
+        "key": "B",
+        "text": "使用AWS KMS AWS拥有的对称密钥。"
+      },
+      {
+        "key": "C",
+        "text": "使用AWS KMS客户管理的对称密钥。"
+      },
+      {
+        "key": "D",
+        "text": "使用虚拟专用网关加密应用之间的流量。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180341.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180341.png"
+  },
+  {
+    "id": 129,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司管理着数百个 Amazon S3 桶中的数百万文档，分布在多个 AWS 区域。公司必须确定S3桶中是否有个人身份信息（PII）。哪种解决方案能以最低的运营开销满足这一要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用Amazon Detective检测S3桶中的PII。"
+      },
+      {
+        "key": "B",
+        "text": "使用 AWS Trusted Advisor 生成 PII 通知。"
+      },
+      {
+        "key": "C",
+        "text": "使用 Amazon Macie 检测 S3 桶中的 PII。"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS Lambda 函数审查 S3 桶中的每个文件以识别 PII。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180343.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180343.png"
+  },
+  {
+    "id": 130,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在部署一个能够近实时处理流数据的应用程序。公司计划使用Amazon EC2实例来完成工作负载。网络架构必须可配置，以提供节点间的最低延迟。哪种网络解决方案满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "将EC2实例放置在多个VPC中，并配置VPC对等。"
+      },
+      {
+        "key": "B",
+        "text": "在每个EC2实例上安装一个弹性织物适配器（EFA）。"
+      },
+      {
+        "key": "C",
+        "text": "将EC2实例运行在一个扩散放置组中。"
+      },
+      {
+        "key": "D",
+        "text": "使用亚马逊 EBS 优化的实例类型。"
+      }
+    ],
+    "answer": [
+      "B"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180348.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180348.png"
+  },
+  {
+    "id": 131,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司使用亚马逊云前端分发来为其网站提供内容页面。公司需要确保客户在访问公司网站时使用TLS证书。公司希望自动化TLS证书的创建和续期。哪种解决方案能以最高的运营效率满足这些需求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用CloudFront安全策略创建证书。"
+      },
+      {
+        "key": "B",
+        "text": "使用CloudFront的起始访问控制（OAC）来创建证书。"
+      },
+      {
+        "key": "C",
+        "text": "使用 AWS 证书管理器（ACM）创建证书。使用域名的DNS验证。"
+      },
+      {
+        "key": "D",
+        "text": "使用 AWS 证书管理器（ACM）来创建证书。使用电子邮件验证域名。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180351.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180351.png"
+  },
+  {
+    "id": 132,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一个解决方案架构师拥有 AWS Lambda 函数，需要访问公司的内部数据科学库和参考数据。独立团队负责管理库和数据。团队必须能够独立更新和上传新数据。Lambda 功能连接到公司的中央 VPC。哪种解决方案能为Lambda函数提供库和数据的访问权限？",
+    "options": [
+      {
+        "key": "A",
+        "text": "通过在中央VPC中使用EBS Multi-Attach，将亚马逊EBS卷连接到Lambda函数。更新 Lambda 函数执行角色，使其能够访问 EBS 卷。更新 Lambda 函数代码以引用 EBS 卷中的文件。"
+      },
+      {
+        "key": "B",
+        "text": "将库和参考数据压缩在 Lambda/tmp 文件夹中。更新 Lambda 函数代码，引用 /tmp 文件夹中的文件。"
+      },
+      {
+        "key": "C",
+        "text": "在中央 VPC 中建立一个带有挂载目标的 Amazon EFS 文件系统。配置 Lambda 函数以挂载 EFS 文件系统。更新 Lambda 函数执行角色，使其能够访问 EFS 文件系统。"
+      },
+      {
+        "key": "D",
+        "text": "在中央 VPC 中建立一个 Amazon FSx for Windows File Server 的文件系统，并设置挂载目标。配置 Lambda 函数以挂载 Amazon FSx 文件系统。更新 Lambda 函数执行角色，使其能够访问 Amazon FSx 文件系统。"
+      }
+    ],
+    "answer": [
+      "C"
+    ],
+    "type": "single",
+    "source": "屏幕截图 2026-05-02 180355.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180355.png"
+  },
+  {
+    "id": 133,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司运行多个亚马逊RDS用于Oracle On-Demand数据库实例，这些实例利用率很高。RDS 数据库实例运行在 AWS 组织中某个组织中的成员账户中。公司的财务团队可以访问组织的管理账户和会员账户。财务团队希望通过使用AWS Trusted Advisor来优化成本。哪种步骤组合能满足这些要求？（选两个。）",
+    "options": [
+      {
+        "key": "A",
+        "text": "在管理账户中使用可信顾问的推荐。"
+      },
+      {
+        "key": "B",
+        "text": "在运行 RDS DB 实例的成员账户中使用 Trusted Advisor 推荐。"
+      },
+      {
+        "key": "C",
+        "text": "审查可信顾问的亚马逊RDS预留实例优化检查。"
+      },
+      {
+        "key": "D",
+        "text": "审查 Amazon RDS 闲置数据库实例的可信顾问检查。"
+      },
+      {
+        "key": "E",
+        "text": "审查可信顾问的计算优化检查。使用AWS Compute Optimizer交叉核对结果。"
+      }
+    ],
+    "answer": [
+      "A",
+      "C"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180358.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180358.png"
+  },
+  {
+    "id": 134,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司使用Microsoft SQL Server数据库。公司的应用程序与数据库相连。公司希望迁移到亚马逊 Aurora PostgreSQL数据库，应用代码几乎不变动。哪种步骤组合能满足这些要求？（选两个。）",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用AWS模式转换工具（AWS SCT）重写应用程序中的SQL查询。"
+      },
+      {
+        "key": "B",
+        "text": "在Aurora PostgreSQL上启用Babelfish，以运行应用程序中的SQL查询。"
+      },
+      {
+        "key": "C",
+        "text": "通过使用AWS模式转换工具（AWS SCT）和AWS数据库迁移服务（AWS DMS）迁移数据库模式和数据。"
+      },
+      {
+        "key": "D",
+        "text": "使用亚马逊RDS代理将应用连接到Aurora PostgreSQL。"
+      },
+      {
+        "key": "E",
+        "text": "使用 AWS 数据库迁移服务（AWS DMS）重写应用程序中的 SQL 查询。"
+      }
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180401.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180401.png"
+  },
+  {
+    "id": 135,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在AWS组织中拥有组织。公司在根组织单元（OU）的四个AWS账户上运行亚马逊EC2实例。共有三个非生产账户和一个生产账户。公司想禁止用户在非生产账户中启动一定规模的EC2实例。公司创建了服务控制策略（SCP），拒绝访问使用禁止类型的启动实例。哪些部署Scp的解决方案将满足这些要求？（选择两个。）",
+    "options": [
+      {
+        "key": "A",
+        "text": "将SCP绑定到组织的根OU上。"
+      },
+      {
+        "key": "B",
+        "text": "将SCP绑定到三个非生产组织成员账户上"
+      },
+      {
+        "key": "C",
+        "text": "将SCP绑定到组织管理账户。"
+      },
+      {
+        "key": "D",
+        "text": "为生产账户创建一个开放单元。把SCP连接到OU。将生产成员账户转移到新的OU中。"
+      },
+      {
+        "key": "E",
+        "text": "为所需账户创建一个开放单位。把SCP连接到OU。将非生产成员账户迁移到新的OU中。"
+      }
+    ],
+    "answer": [
+      "B",
+      "E"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180404.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180404.png"
+  },
+  {
+    "id": 136,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在亚马逊弹性容器服务（Amazon ECS）集群中运行一个应用程序作为任务。应用程序必须对特定一组 Amazon S3 桶拥有读写权限。S3 桶和 ECS 集群属于同一个 AWS 区域和 AWS 账户。公司需要根据最小权限原则授予应用对S3桶的访问权限。哪种解决方案组合能满足这些要求？（选择TwO）",
+    "options": [
+      {
+        "key": "A",
+        "text": "给每个桶添加一个标签。创建一个包含StringEquals条件的IAM策略，该条件与桶的标签和值匹配。"
+      },
+      {
+        "key": "B",
+        "text": "创建一个IAM策略，列出每个S3桶的完整亚马逊资源名称（ARN）。"
+      },
+      {
+        "key": "C",
+        "text": "将IAM策略附加到ECS任务的实例角色上。"
+      },
+      {
+        "key": "D",
+        "text": "创建一个包含通配符 Amazon 资源名（ARN）的 IAM 策略，该策略能匹配所有 S3 桶名称的组合。"
+      },
+      {
+        "key": "E",
+        "text": "将IAM策略附加到ECS任务的任务角色中。"
+      }
+    ],
+    "answer": [
+      "B",
+      "E"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180407.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180407.png"
+  },
+  {
+    "id": 137,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司拥有一个单一的AWS账户。该公司在一个AWS区域的多个VPC中运行工作负载。公司还在本地数据中心运行工作负载，通过AWS Direct Connect连接到公司的AWS账户。公司需要VPC中的所有EC2实例，才能将 internal.example.com 域的DNS查询解析到位于本地数据中心的权威SS DNS服务器。解决方案必须使用VPC与本地网络之间的私有通信。AWS与本地数据中心之间的所有路由表、网络ACL和安全组配置正确。哪种行动组合能满足这些要求？（选择三项。）",
+    "options": [
+      {
+        "key": "A",
+        "text": "在所有工作负载VPC中创建一个Amazon Route 53的入站端点。"
+      },
+      {
+        "key": "B",
+        "text": "在其中一个工作负载VPC中创建一个亚马逊Route 53的出站终端。"
+      },
+      {
+        "key": "C",
+        "text": "创建一条带有转发类型（Forward）类型的亚马逊53号解析器规则，用于将查询转发到本地DNS服务器 internal.example.com。"
+      },
+      {
+        "key": "D",
+        "text": "创建亚马逊Route 53解析器规则，系统类型配置为将 internal.example.com 查询转发到本地DNS服务器。"
+      },
+      {
+        "key": "E",
+        "text": "将亚马逊Route 53解析器规则关联到所有工作负载VPC。"
+      },
+      {
+        "key": "F",
+        "text": "将亚马逊Route 53解析器规则与新的Route 53端点的工作负载VPC关联。"
+      }
+    ],
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180410.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180410.png"
+  },
+  {
+    "id": 138,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司将敏感用户信息存储在 Amazon S3 存储桶中。该公司希望从 VPC 内的 Amazon EC2 实例上运行的应用程序层提供对此存储桶的安全访问。解决方案架构师应该采取哪些步骤组合来实现这一目标？（选择两个。）",
+    "options": [
+      {
+        "key": "A",
+        "text": "在 VPC 中为 Amazon S3 配置 VPC 网关终端节点。"
+      },
+      {
+        "key": "B",
+        "text": "创建存储桶策略，将 S3 存储桶中的对象设为公共。"
+      },
+      {
+        "key": "C",
+        "text": "创建一个存储桶策略，将访问限制为仅在 VPC 中运行的应用程序层。"
+      },
+      {
+        "key": "D",
+        "text": "使用 S3 访问策略创建 IAM 用户，并将 IAM 凭证复制到 EC2 实例。"
+      },
+      {
+        "key": "E",
+        "text": "创建一个 NAT 实例，让 EC2 实例使用 NAT 实例访问 S3 存储桶。"
+      }
+    ],
+    "answer": [
+      "A",
+      "C"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180413.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180413.png"
+  },
+  {
+    "id": 139,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家社交媒体公司允许用户上传图片到其网站。该网站运行在 Amazon EC2instances 上。上传请求时，网站会将图片调整为标准大小，并将调整后的图片存储在 Amazon S3 中。用户在上传请求时遇到上传请求变慢的情况。公司需要减少应用内的耦合并提升网站性能。解决方案架构师必须设计出图像上传的运营效率最高的流程。解决方案架构师应采取哪种措施组合以满足这些要求？（选择两项。）",
+    "options": [
+      {
+        "key": "A",
+        "text": "配置应用程序将图像上传到 S3 Glacier"
+      },
+      {
+        "key": "B",
+        "text": "配置网页服务器将原始图片上传到 Amazon S3"
+      },
+      {
+        "key": "C",
+        "text": "配置应用程序通过预签名URL直接从每个用户浏览器上传图片到Amazon S3。"
+      },
+      {
+        "key": "D",
+        "text": "配置 S3 事件通知，在上传图片时调用 AWS Lambda 函数。使用该函数来调整图片大小。"
+      },
+      {
+        "key": "E",
+        "text": "创建一个 Amazon EventBridge（Amazon CloudWatch Events）规则，按计划调用 AWS Lambda 函数来调整上传图片大小。"
+      }
+    ],
+    "answer": [
+      "C",
+      "D"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180416.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180416.png"
+  },
+  {
+    "id": 140,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司正在使用 Amazon Elastic Kubernetes Service（Amazon EKS）集群。公司必须通过使用服务账户的 IAM 角色（IRSA）确保 EKS 集群中的 Kubernetes 服务账户能够安全且细致地访问特定的 AWS 资源。哪种解决方案组合能满足这些要求？",
+    "options": [
+      {
+        "key": "A",
+        "text": "创建一个定义所需权限的 IAM 策略，将该策略直接附加到 EKS 节点的 IAM 角色中。"
+      },
+      {
+        "key": "B",
+        "text": "在EKS集群内实施网络策略，防止Kubernetes服务账户访问特定的AWS服务。"
+      },
+      {
+        "key": "C",
+        "text": "修改EKS集群的IAM角色，以包含每个Kubernetes服务账户的权限。确保IAM角色与Kubernetes角色之间实现一对一的映射。"
+      },
+      {
+        "key": "D",
+        "text": "定义包含必要权限的IAM角色。用 IAM 角色的 Amazon 资源名（ARN）标注 Kubernetes 服务账户。"
+      },
+      {
+        "key": "E",
+        "text": "建立服务账户的IAM角色与OpenID Connect（OIDC）身份提供者之间的信任关系。"
+      }
+    ],
+    "answer": [
+      "D",
+      "E"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180419.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180419.png"
+  },
+  {
+    "id": 141,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司在 AWS 上托管一个应用程序。该应用允许用户上传照片并将照片存储在亚马逊S3的存储桶中。公司希望使用亚马逊CloudFront和自定义域名，将照片文件上传到欧洲西部1区的S3桶。哪种方案能满足这些要求？（选择两个。）",
+    "options": [
+      {
+        "key": "A",
+        "text": "使用AWS证书管理器（ACM）在美国东1区创建公共证书。在CloudFront中使用该证书。"
+      },
+      {
+        "key": "B",
+        "text": "使用 AWS 证书管理器（ACM）创建 eu-west-1 的公共证书。在CloudFront中使用该证书。"
+      },
+      {
+        "key": "C",
+        "text": "配置亚马逊S3以允许从CloudFront上传。配置S3传输加速。"
+      },
+      {
+        "key": "D",
+        "text": "配置亚马逊S3，允许CloudFront的原始访问控制（OAC）上传。"
+      },
+      {
+        "key": "E",
+        "text": "配置亚马逊S3，允许CloudFront上传。配置一个亚马逊S3网站端点。"
+      }
+    ],
+    "answer": [
+      "A",
+      "D"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180422.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180422.png"
+  },
+  {
+    "id": 142,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司使用 AWS 来运行其工作负载。公司使用 AWS 组织管理账户。公司需要确定哪些部门负责具体成本。组织账户结构中不断创建新账户。组织的持续集成与持续交付（CI/CD）框架已经在AWS资源中添加了“填充部门”标签。公司希望使用AWS成本浏览器报告，识别所有AWS账户按部门划分的服务成本。哪种步骤组合能以最高的运营效率满足这些要求？（选择两项。）",
+    "options": [
+      {
+        "key": "A",
+        "text": "在管理账户中激活aws： createdBy 成本分配标签和部门成本分配标签。"
+      },
+      {
+        "key": "B",
+        "text": "在成本浏览器中创建新的成本和使用报告。按部门成本分摊标签分组。应用筛选器查看所有关联账户和服务。"
+      },
+      {
+        "key": "C",
+        "text": "只激活管理账户中的部门成本分配标签。"
+      },
+      {
+        "key": "D",
+        "text": "在成本浏览器中创建新的成本和使用报告。按部门分组成本分配标签，无需其他筛选。"
+      },
+      {
+        "key": "E",
+        "text": "只激活管理账户中的aws： createdBy 成本分配标签。"
+      }
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180425.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180425.png"
+  },
+  {
+    "id": 143,
+    "topic": "AWS SAA Screenshots",
+    "stem": "一家公司创建一个包含一个公共子网和一个私有子网的 VPC。公司在VPC上附加了一个互联网网关。公网中的应用负载均衡器（ALB）与私有子网中的 Amazon EC2 实例通信。私有子网中的EC2实例必须能够从互联网下载操作系统（OS）和应用程序的更新。这些实例不得从互联网访问。哪种步骤组合能满足这些要求？（选择三个。）",
+    "options": [
+      {
+        "key": "A",
+        "text": "将弹性IP地址关联到NAT网关。"
+      },
+      {
+        "key": "B",
+        "text": "将路由 0.0.0.0/0 添加到私有子网路由表中。将NAT网关设为目标。"
+      },
+      {
+        "key": "C",
+        "text": "在公共子网部署NAT网关。"
+      },
+      {
+        "key": "D",
+        "text": "在私有子网部署NAT网关。"
+      },
+      {
+        "key": "E",
+        "text": "将路由 0.0.0.0/0 添加到公共子网路由表中。将NAT网关设为目标。"
+      },
+      {
+        "key": "F",
+        "text": "将弹性IP地址与互联网网关关联。"
+      }
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "type": "multiple",
+    "source": "屏幕截图 2026-05-02 180428.png",
+    "screenshotPath": "C:\\Users\\19612\\Pictures\\Screenshots\\屏幕截图 2026-05-02 180428.png"
+  }
+]

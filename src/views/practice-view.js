@@ -1,3 +1,5 @@
+import { renderQuestionAnalysis } from './question-analysis-view.js';
+
 export function renderPracticeView(question, session, feedback, selectedAnswer = [], bankLabel = '') {
   const currentNumber = session.currentIndex + 1;
   const total = session.order.length;
@@ -33,6 +35,7 @@ export function renderPracticeView(question, session, feedback, selectedAnswer =
             <strong>${feedback.correct ? '回答正确' : '回答错误'}</strong>
             <p>正确答案：${feedback.correctAnswer.join(', ')}</p>
           </div>
+          ${renderQuestionAnalysis(question.analysis)}
         ` : ''}
       </article>
       <aside class="panel navigator-panel" id="practice-nav">

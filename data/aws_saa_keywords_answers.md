@@ -1,0 +1,149 @@
+# AWS SAA Keywords and Answers
+
+- Source bank: `data/questions.aws-saa.json`
+- Question count: 143
+- Format: `Qxxx | stem keywords | answer`
+
+- Q001 | Amazon EKS；Kubernetes HPA；节点自动扩展；集群最大容量；最少管理负担 | 答案：B
+- Q002 | AWS Organizations；Cost and Usage Report；S3 复制数据收集账户；NAT 网关费用；自定义成本仪表板 | 答案：B
+- Q003 | 本地卷备份；AWS 备份迁移；本地数据访问；自动安全传输；备份生命周期替换 | 答案：D
+- Q004 | AWS Lake Formation；Amazon S3 数据湖；Aurora MySQL 运营数据；Amazon QuickSight 可视化；列级授权 | 答案：D
+- Q005 | EC2 按需实例；前端全天运行；后端短时工作负载；按负载扩展；成本优化 | 答案：B
+- Q006 | 多区域多账户资源；资源库存缺失；工作负载关系映射；跨账户可视化；运营效率 | 答案：C
+- Q007 | TCP/UDP 多人在线游戏；Amazon Route 53；多区域 NLB；低延迟；应用性能提升 | 答案：C
+- Q008 | SFTP 报告文件；夜间批处理；本地文件系统迁移；高可用弹性；最少运维负担 | 答案：D
+- Q009 | AWS Lake Formation；数据分析平台；Amazon S3 和 Amazon RDS 数据源；敏感数据访问控制；最少运维开销 | 答案：B
+- Q010 | Application Load Balancer；互联网应用；异常流量模式；基础设施可视性；运营效率 | 答案：B
+- Q011 | AWS Direct Connect；多 VPC 多区域；本地数据中心互连；CIDR 不重叠；可扩展低运维 | 答案：D
+- Q012 | 多可用区 EC2；第三方实时数据；数据摄取；原始数据写入 S3；实时收集 | 答案：A
+- Q013 | 灾害响应无人机影像；边缘计算存储不足；网络间歇不稳定；EC2 处理 S3 存储；离线影像处理 | 答案：A
+- Q014 | 电商应用；多区域主动主动；微服务；区域故障流量重定向；故障切换容量 | 答案：A
+- Q015 | 社交媒体应用；不可预测快速增长；长时间运行流程；关系型用户内容资料；有序流程；组件独立演进 | 答案：A
+- Q016 | 双区域应用部署；区域故障切换；避免 DNS 客户端缓存；单一端点；高可用访问 | 答案：C
+- Q017 | 在线照片分享；集中式 Amazon S3 存储桶；跨账户访问；账户 A 到账户 B；S3 权限授予 | 答案：D
+- Q018 | Amazon RDS for PostgreSQL；Multi-AZ 数据库实例；高流量读查询；读取延迟增加；应用性能提升 | 答案：C
+- Q019 | AWS 成本优化；AWS Budgets；实际成本通知；预测成本通知；无定制方案 | 答案：D
+- Q020 | EC2 动态流量网站；计划缩放 Auto Scaling；Amazon EFS 共享卷；网站成本优化 | 答案：C
+- Q021 | SaaS 块存储分配；Amazon EC2；Amazon EBS；存储扩展；最经济 | 答案：D
+- Q022 | 无服务器移动数据处理；AWS Lambda；Amazon DynamoDB；故障恢复；不丢失记录 | 答案：A
+- Q023 | Amazon Route 53 DNS；本地和 AWS 托管网站；美国西部数据中心；eu-central-1；优化加载时间 | 答案：C
+- Q024 | 医疗日志管理；JSON 日志；敏感患者信息；敏感数据识别；SQL 查询搜索 | 答案：A
+- Q025 | 全球网络应用；API 静态和动态内容；低延迟访问；全球用户；最经济 | 答案：A
+- Q026 | 托管 MySQL 数据库；非生产应用；多年运行；AWS 成本优化；最经济 | 答案：A
+- Q027 | Amazon RDS；不可预测工作负载；周期性注册激增；300 GiB 通用存储；存储空间不足 | 答案：A
+- Q028 | Amazon Linux EC2 网站；ALB 后端 Auto Scaling；EBS 产品手册；新实例数据过时；不修改应用代码 | 答案：C
+- Q029 | 容器化应用大规模部署；Kubernetes 开源社区；最小运营开销；容器编排 | 答案：B
+- Q030 | 移动金融应用；DynamoDB 用户信息和偏好；信用评分报告；删除请求一个月内删除；最少运营开销 | 答案：C
+- Q031 | AWS Organizations；数据驻留要求；限制 IAM 角色和用户；特定区域访问控制；防止跨区域数据操作 | 答案：A
+- Q032 | 夜间日志处理；数据科学存储；未知大小和数量；24 小时生命周期；最经济 | 答案：B
+- Q033 | 保险个人用户数据；私有子网运行应用；操作系统访问；低延迟 NoSQL 数据库；数据安全 | 答案：A
+- Q034 | Amazon S3 文件访问；防火墙 IP 地址限制；非 AWS 防火墙；S3 Block Public Access；对象访问控制 | 答案：B
+- Q035 | Amazon Aurora MySQL；数据库模式修改测试；不影响生产数据库；复制变更到生产；减少停机时间 | 答案：B
+- Q036 | Amazon S3 静态网站；AWS Lambda 别名特定版本；Aurora PostgreSQL；数据库凭证轮换；旧 Lambda 使用最新凭证 | 答案：A
+- Q037 | AWS Systems Manager；Amazon EC2 实例；无互联网访问；私有网络连接；VPC 终端节点 | 答案：B
+- Q038 | Amazon DynamoDB 客户行为；Amazon Redshift SQL 查询；定期更新客户趋势；自动数据复制；无 ETL 管理 | 答案：D
+- Q039 | AWS 三层应用；静态内容网页层；关系型数据库；高可用架构；全球低延迟 | 答案：B
+- Q040 | Amazon S3 图像桶；私有 VPC EC2；S3 Block Public Access；VPC 限定访问；us-west-2 账户桶 | 答案：A
+- Q041 | Amazon EC2 多应用；Amazon S3 配置文件；应用访问权限；AWS 安全最佳实践；IAM 角色 | 答案：C
+- Q042 | Amazon RDS 只读历史记录；自定义视图和查询；性能提升；不改变数据库结构；最小管理开销 | 答案：C
+- Q043 | Amazon S3 敏感审计日志；审计员只读访问；IAM 用户；临时凭证自动轮换；月度访问失效；CloudTrail 个人追踪 | 答案：B
+- Q044 | Amazon Kinesis 数据流；AWS Lambda 流处理；联网设备流数据；分片级控制；自定义检查点；最小延迟 | 答案：C
+- Q045 | 应用负载均衡器；Amazon CloudFront 分发；DDoS 攻击防护；近实时攻击监控；AWS 专门响应团队 | 答案：D
+- Q046 | Docker 容器前端；订单流量波动；印刷机吞吐量限制；4MB 订单有效载荷；可扩展订单处理 | 答案：C
+- Q047 | 本地 Oracle 数据库迁移；Linux 服务器；AWS 迁移；年度数据库密码更换；最少运营开销 | 答案：B
+- Q048 | AWS 云低频访问数据；12 小时内取回；低每 GB 存储成本；Amazon S3 存储类别 | 答案：B
+- Q049 | 电子商务应用 API；移动和网页请求；每日流量波动；销售活动流量激增；松耦合；请求不丢失 | 答案：B
+- Q050 | AWS Organizations 多账户；Amazon EBS 敏感数据；EBS 快照备份；防止公开分享快照；最少运营开销 | 答案：B
+- Q051 | Amazon EC2 网页服务器；每日两次峰值流量；空闲时段；管理网络服务器；容错能力；成本效益 | 答案：A
+- Q052 | 单一 AZ 三层 Web 应用；单一 Amazon EC2 实例；流量增长；弹性架构；经济扩展 | 答案：D
+- Q053 | AWS Lambda 数据处理；同账户 VPC；Amazon RDS 通信；最安全连接；VPC 内数据库实例 | 答案：C
+- Q054 | 全球业务扩展；客户数据加密；不自管密钥；多区域密钥；密钥访问控制；最少运营开销 | 答案：A
+- Q055 | 金融数据 API；税务计算后端；年底季节性峰值；可扩展架构 | 答案：B
+- Q056 | 多层应用；EC2 Linux EBS；自定义 AMI；Auto Scaling 组；操作系统漏洞；部署新功能 | 答案：D
+- Q057 | 私有子网 EC2 远程管理；shell 会话集中审计；MFA 身份验证；无公共 IP；禁止互联网入站 | 答案：A
+- Q058 | Lambda SQS 事件源；第三方 ML API 60 秒；Lambda 超时 65 秒；SQS 重复消息；避免重复处理 | 答案：D
+- Q059 | ALB 后端 EC2；Auto Scaling 组；应用升级；特定流量测试；渐进式流量路由 | 答案：B
+- Q060 | AWS Lake Formation；数据分析平台；Amazon S3 Amazon RDS 数据源；敏感数据访问控制；最少运营开销 | 答案：B
+- Q061 | Amazon EKS 网页应用；DynamoDB 预置 RCU WCU；最终一致读取；突发流量；限速错误 | 答案：A
+- Q062 | 事件数据处理；按接收时处理；保持写入顺序；事件顺序保证；最少运营开销 | 答案：A
+- Q063 | 工厂仪器数据 10 TB/天；本地 SAN JSON 文件；Amazon S3 数据传输；近实时分析；敏感数据安全传输；可靠传输 | 答案：B
+- Q064 | 三层 Web 架构降本；EC2 开发测试生产；低 CPU 利用率；生产 24 小时运行；开发测试定时停止；EC2 购买方案 | 答案：B
+- Q065 | 图像分析上传应用；单个 EC2 实例；DynamoDB 元数据；并发用户波动；可扩展架构；增长用户群 | 答案：C
+- Q066 | Amazon EC2 应用；灾难恢复 DR；RTO 小于 4 小时；正常期最少 AWS 资源；运营高效恢复 | 答案：B
+- Q067 | 本地 Windows 文件服务器；5 TB 文件数据；Windows 工作负载迁移 AWS；低延迟文件访问；现有访问模式不变；Site-to-Site VPN | 答案：D
+- Q068 | Amazon API Gateway 区域端点；股票价格 Web API；HTTP 洪水攻击；API 请求激增；应用防护；最少运营开销 | 答案：B
+- Q069 | 游戏事件驱动系统；排行榜匹配身份验证服务；独特事件分发；保证事件顺序；AWS 事件处理 | 答案：B
+- Q070 | VPC 公共三层 Web；多可用区 EC2；私有子网出站互联网；许可证服务器通信；托管方案；最少运维 | 答案：C
+- Q071 | 天气数据 Web 应用；Amazon DynamoDB；新天气事件警报；四个内部团队经理；不影响应用性能；最少运营开销 | 答案：C
+- Q072 | 现有应用迁移 AWS；高可用和弹性；数据中心数据库崩溃；数据丢失；避免单点故障；可扩展架构 | 答案：A
+- Q073 | Application Load Balancer 粘性会话；Auto Scaling 组；Amazon EC2 Web 应用；用户会话状态；高可用避免会话丢失 | 答案：B
+- Q074 | Amazon S3；高分辨率图片；S3 对象版本；仅保留两个最新版本；降低 S3 成本；最少运营开销 | 答案：A
+- Q075 | 每日数据处理作业；最长 2 小时；作业中断需重启；成本效益 | 答案：C
+- Q076 | Amazon S3 生命周期规则；图像文件存储；前 180 天随时可用；360 天后立即可用归档；5 年后审计访问；12 小时检索 | 答案：C
+- Q077 | IAM 权限；拒绝访问错误；未经授权错误；AWS CloudTrail；最少努力排查 | 答案：C
+- Q078 | Amazon DynamoDB；产品详细信息检索；Web 应用响应时间；数百万请求；减少延迟；最少运营开销 | 答案：A
+- Q079 | AWS Organizations 全功能；所有账户 API 调用审计；登录审计；托管解决方案；降低成本；AWS FSBP 合规 | 答案：A
+- Q080 | Amazon RDS 多可用区集群；本地桌面客户端；直接连接数据库；办公室开发团队访问；安全连接 | 答案：B
+- Q081 | 共享存储解决方案；非本地数据中心；游戏应用；Lustre 客户端访问；全面托管 | 答案：D
+- Q082 | 使用模式不稳定；Web 服务器迁移 AWS；MySQL 数据库；成本效益；无需数据库修改 | 答案：C
+- Q083 | 外部供应商访问；跨 AWS 账户；供应商自动化工具；无 IAM 访问权限；授予访问权限 | 答案：A
+- Q084 | Amazon S3 照片上传；每日约 150 张；创建缩略图；第二个 S3 桶；最经济方案 | 答案：C
+- Q085 | AWS Organizations 全功能；所有账户 API 调用审计；登录审计；降低成本；AWS FSBP 合规；最少运营开销 | 答案：A
+- Q086 | AWS Web 应用；数据中心到 VPC VPN；Amazon Route 53 DNS；私有 DNS 记录；本地服务通信；安全方案 | 答案：A
+- Q087 | Amazon DynamoDB 表；请求未返回最新数据；数据一致性；无其他性能问题；延迟可接受 | 答案：C
+- Q088 | Amazon EKS；容器应用；客户管理微服务；下单微服务；请求路由；成本效益 | 答案：B
+- Q089 | Network Load Balancer；Auto Scaling 组；Amazon EC2；Amazon VPC；近实时网络接口流量；Amazon OpenSearch Service 分析 | 答案：B
+- Q090 | 在线视频游戏；Amazon EC2 游戏服务器；超低延迟；数百万 UDP 请求；互联网流量；经济方案 | 答案：C
+- Q091 | 图像内容审核；不受欢迎照片；网页展示过滤；无需训练 ML 模型 | 答案：B
+- Q092 | AWS 根用户凭证；MFA 设备丢失；电子商务平台；账户访问恢复 | 答案：B
+- Q093 | Amazon ECS；容器镜像扫描；CVE 漏洞；新镜像自动扫描；最少工作负载变化 | 答案：A
+- Q094 | 本地迁移 AWS；网页应用程序；Microsoft SQL 数据库；促销高流量；高可用可扩展；最少管理开销 | 答案：C
+- Q095 | 跨区域 Amazon S3；远程用户最近存储桶；避免公共网络拥堵；最少管理故障切换；关键存储应用 | 答案：D
+- Q096 | Amazon EC2 网站托管；Application Load Balancer；静态内容；流量增加；降低托管成本 | 答案：A
+- Q097 | 本地 SQL Server；敏感关键数据；迁移 AWS；提升安全性；减少数据库运营开销 | 答案：B
+- Q098 | Amazon RDS PostgreSQL；多可用区数据库集群；30 天备份保留；自动备份；手动备份；成本优化 | 答案：C
+- Q099 | 收据图片上传；Java 应用；Amazon EC2 按需实例；Auto Scaling；Amazon S3 原始图像；计算和存储成本 | 答案：D
+- Q100 | 弹性网页应用；客户订单处理；自动应对流量增长；不影响客户体验；防止订单丢失 | 答案：D
+- Q101 | 数据保留政策；监管合规；Amazon S3 敏感文档；删除保护；修改保护 | 答案：B
+- Q102 | 无服务器订单处理；电商网站；流量突发；高可用；按接收顺序异步处理 | 答案：B
+- Q103 | Amazon RDS for MySQL；关键应用高可用；自动恢复；事务性查询；分析性查询；延迟不超过 4 小时 | 答案：C
+- Q104 | 三层公开 Web 应用；前端 EC2 Auto Scaling；应用层 Auto Scaling；Amazon RDS；突发需求扩展延迟；成本优化 | 答案：B
+- Q105 | 保险费率计算；迁移 AWS；客户提交后立即计算；10 秒计算任务；应用架构设计 | 答案：A
+- Q106 | Amazon EC2 网站；Amazon S3 图片媒体；多区域部署自动化；IAM 访问权限；最安全访问 S3 | 答案：C
+- Q107 | 电商 Web 应用重构；静态网站内容；Microsoft SQL Server；客户数据；多可用区弹性部署 | 答案：B
+- Q108 | Amazon EFS 标准存储；EC2 Linux 分析应用；30 天后低频访问；TransitionToIA 生命周期策略；EFS IA；吞吐量按文件系统大小调整 | 答案：C
+- Q109 | 本地两层 Web 应用迁移；有状态应用服务器；Amazon Aurora PostgreSQL；Amazon EC2 Auto Scaling；弹性负载均衡；一致用户体验 | 答案：C
+- Q110 | 单一区域 ERP 系统；Amazon EC2 公共 API；国际用户 API 响应慢；全球响应时间优化；成本最低 | 答案：C
+- Q111 | Amazon EC2 Web 应用；Amazon DynamoDB 按需模式；HTTP 500 错误；不干扰应用排障 | 答案：C
+- Q112 | Linux Web 服务器迁移；NFS 协议；共享文件访问；无需修改应用；AWS 文件存储 | 答案：C
+- Q113 | AWS Systems Manager；Amazon EC2 管理；无互联网访问；私有网络连接；安全要求 | 答案：B
+- Q114 | 三层架构；Web 层自动扩展；公共子网和私有子网；层间最小通信；阻断其他流量 | 答案：C
+- Q115 | Amazon EBS 数据；2.5 TB 长期备份；成本效益存储；审计几分钟检索；AWS 托管应用 | 答案：C
+- Q116 | AWS Direct Connect；本地网络连接 AWS；单一区域多 VPC；数百 VPC 扩展；简化网络基础设施 | 答案：B
+- Q117 | 多层电商应用；Amazon EC2 前后端；RDS for MySQL；重复数据库查询；后端性能提升 | 答案：B
+- Q118 | Amazon S3 数据湖；大型多格式数据集；S3 对象查询过滤；避免下载整个对象；转换时间优化 | 答案：A
+- Q119 | 第三方 SSL 证书；AWS Certificate Manager ACM；导入证书到期前 30 天；Amazon SQS；Amazon SNS 邮件通知 | 答案：D
+- Q120 | EC2 Auto Scaling 组；硬编码数据库凭证；Amazon RDS；90 天自动轮换密码；合规要求 | 答案：B
+- Q121 | Amazon EC2 应用；Amazon Aurora 数据库；文件存储用户名密码；每月凭证变更；降低凭证管理开销 | 答案：A
+- Q122 | 私有子网 Amazon EC2；Amazon Linux AMI；开发者 SSH 连接；不暴露互联网；AWS 管理控制台连接 | 答案：C
+- Q123 | Amazon EC2 网站；Application Load Balancer；Auto Scaling 多可用区；Amazon CloudFront；高频源 IP 请求；性能问题 | 答案：D
+- Q124 | Active Directory 身份服务；SAML 2.0；AWS 管理控制台访问；现有认证方案；联邦认证 | 答案：D
+- Q125 | AWS 云关键业务应用；耐用存储；稳定性能；低延迟；存储类型选择 | 答案：C
+- Q126 | 金融交易处理；高额交易欺诈检测；失败事务重试队列；国际交易合规监控；交易归档审计；最低运营开销 | 答案：C
+- Q127 | Amazon MySQL 数据库；灾难恢复 DR；定期备份；本地 DR 数据中心副本；最低运营开销 | 答案：A
+- Q128 | 单个 VPC；Amazon EC2 应用；应用间记录交换；特定数据项加密解密 | 答案：C
+- Q129 | Amazon S3 多桶；数百万文档；多 AWS 区域；PII 检测；最低运营开销 | 答案：C
+- Q130 | 近实时流数据处理；Amazon EC2 工作负载；节点间最低延迟；可配置网络架构 | 答案：B
+- Q131 | Amazon CloudFront 内容分发；网站 TLS 证书；证书自动创建续期；最高运营效率 | 答案：C
+- Q132 | AWS Lambda；内部数据科学库；参考数据；独立团队更新上传；中央 VPC | 答案：C
+- Q133 | Amazon RDS for Oracle；On-Demand 高利用率；AWS Organizations 成员账户；AWS Trusted Advisor；成本优化 | 答案：AC
+- Q134 | Microsoft SQL Server；Aurora PostgreSQL 迁移；应用代码少改动；数据库兼容迁移 | 答案：BC
+- Q135 | AWS Organizations；根 OU；非生产账户；EC2 实例规格限制；SCP 拒绝启动实例 | 答案：BE
+- Q136 | Amazon ECS 任务；Amazon S3 桶读写；同账户同区域；最小权限；应用访问授权 | 答案：BE
+- Q137 | 多 VPC；AWS Direct Connect；internal.example.com；本地权威 DNS；私有通信；EC2 DNS 解析 | 答案：BCE
+- Q138 | Amazon S3 敏感用户信息；VPC 内 EC2 应用层；安全访问存储桶；私有访问；存储桶访问控制 | 答案：AC
+- Q139 | 图片上传；Amazon EC2 网站；图片调整大小；Amazon S3 存储；降低耦合；提升上传性能 | 答案：CD
+- Q140 | Amazon EKS；IRSA；Kubernetes 服务账户；IAM 角色；细粒度 AWS 资源访问 | 答案：DE
+- Q141 | Amazon CloudFront；自定义域名；照片上传；Amazon S3 桶；欧洲西部 1 区 | 答案：AD
+- Q142 | AWS Organizations 管理账户；新账户持续创建；CI/CD 部门标签；AWS Cost Explorer；按部门服务成本 | 答案：BC
+- Q143 | VPC 公有私有子网；Internet Gateway；公网 ALB；私有子网 EC2；下载 OS 应用更新；禁止互联网入站 | 答案：ABC

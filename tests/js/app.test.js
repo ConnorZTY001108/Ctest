@@ -40,6 +40,135 @@ const sampleEnglishQuestions = [
   },
 ];
 
+const sampleAwsSaaQuestions = [
+  {
+    id: 1,
+    topic: 'AWS SAA Screenshots',
+    stem: 'An application runs on Amazon EKS. Which option adds nodes with the least operational overhead?',
+    options: [
+      { key: 'A', text: 'Track memory manually' },
+      { key: 'B', text: 'Use Kubernetes Cluster Autoscaler' },
+      { key: 'C', text: 'Resize the cluster with Lambda' },
+      { key: 'D', text: 'Replace the cluster with an Auto Scaling group' },
+    ],
+    answer: ['B'],
+    type: 'single',
+  },
+];
+
+const sampleCore2Questions = [
+  {
+    id: 2,
+    topic: 'Topic 2',
+    stem: 'A technician needs to provide remote support for a legacy Linux-based operating system from their Windows laptop. The solution needs to allow the technician to see what the user is doing and provide the ability to interact with the user session. Which of the following remote access technologies would support the use case?',
+    options: [
+      { key: 'A', text: 'VPN' },
+      { key: 'B', text: 'VNC' },
+      { key: 'C', text: 'SSH' },
+      { key: 'D', text: 'RDP' },
+    ],
+    answer: ['B'],
+    type: 'single',
+  },
+  {
+    id: 64,
+    topic: 'Topic 64',
+    stem: 'A customer wants to work from home without carrying company hardware back and forth. Which of the following would allow the user to remotely access and use a Windows PC at the main office? (Choose two.)',
+    options: [
+      { key: 'A', text: 'SSH' },
+      { key: 'B', text: 'VNC' },
+      { key: 'C', text: 'RDP' },
+      { key: 'D', text: 'VPN' },
+    ],
+    answer: ['C', 'D'],
+    type: 'multiple',
+  },
+];
+
+const sampleCorruptedCore2Questions = [
+  {
+    id: 313,
+    topic: 'Topic 313',
+    stem: 'An end user is unable to access the intranet. A technician needs to confirm whether the Windows web ^úÿ\u001a\u0000I\u0000T¤Á\u0003Õg R¡ 54043FF735CC37177B5E4FEBD0383508 server is online and functioning. Which of the following default remote access technologies would the technician most likely use to remotely connect to the server?',
+    options: [
+      { key: 'A', text: 'SPICE' },
+      { key: 'B', text: 'VNC' },
+      { key: 'C', text: 'RDP' },
+      { key: 'D', text: 'SSH' },
+    ],
+    answer: ['C'],
+    type: 'single',
+  },
+];
+
+const sampleCore2AnalysisRecords = [
+  {
+    id: 2,
+    explanation: '选 B. VNC。因为题干明确要看见并操作 Linux 图形会话。',
+    analysis: {
+      outline: [
+        '题干情境：技术员要远程查看并操作 Linux 图形桌面。',
+        '知识点：图形远控和命令行远控不是一回事。',
+        '判断关键：答案必须直接提供图形化远程控制能力。',
+      ],
+      whyChoose: '选 B. VNC。因为题干明确要看见并操作 Linux 图形会话。',
+      whyNotChoose: [
+        { key: 'A', text: 'VPN', reason: 'VPN 只负责通道，不负责桌面画面。' },
+        { key: 'C', text: 'SSH', reason: 'SSH 偏命令行，不是图形桌面远控。' },
+        { key: 'D', text: 'RDP', reason: 'RDP 更典型地用于 Windows 图形桌面。' },
+      ],
+    },
+  },
+  {
+    id: 64,
+    explanation: '选 C. RDP 和 D. VPN。前者给桌面，后者给内网通路。',
+    analysis: {
+      outline: [
+        '题干情境：用户在家办公，要远程使用办公室 Windows 电脑。',
+        '知识点：远程桌面和安全接入通常要同时满足。',
+        '判断关键：多选题里两项必须分别解决桌面呈现和网络接入。',
+      ],
+      whyChoose: '选 C. RDP 和 D. VPN。前者给桌面，后者给内网通路。',
+      whyNotChoose: [
+        { key: 'A', text: 'SSH', reason: 'SSH 偏命令行，不适合普通图形化办公。' },
+        { key: 'B', text: 'VNC', reason: '本题给定答案不是它。' },
+      ],
+    },
+  },
+];
+
+const sampleCore2CuratedAnalysisRecords = [
+  {
+    id: 2,
+    explanation: '人工复核：选 B. VNC。题干要的是 Linux 图形界面远控，不是单纯进内网或命令行。',
+    analysis: {
+      outline: [
+        '题干情境：技术员要远程看到并操作 Linux 用户当前的图形界面。',
+        '知识点：图形远控、命令行远控和网络通道是三件不同的事。',
+        '判断关键：答案必须直接把远端桌面画面呈现出来。',
+      ],
+      whyChoose: '人工复核：选 B. VNC。题干要的是 Linux 图形界面远控，不是单纯进内网或命令行。',
+      whyNotChoose: [
+        { key: 'A', text: 'VPN', reason: 'VPN 只负责安全通道，不负责桌面画面。' },
+        { key: 'C', text: 'SSH', reason: 'SSH 偏命令行，不能直接看图形桌面。' },
+        { key: 'D', text: 'RDP', reason: 'RDP 更常见于 Windows 桌面场景。' },
+      ],
+    },
+  },
+];
+
+const sampleLargeQuestions = Array.from({ length: 120 }, (_, index) => ({
+  id: index + 1,
+  topic: `Topic ${index + 1}`,
+  stem: `Question ${index + 1}`,
+  options: [
+    { key: 'A', text: `Option A${index + 1}` },
+    { key: 'B', text: `Option B${index + 1}` },
+  ],
+  answer: ['A'],
+  type: 'single',
+}));
+
 function createClassList() {
   const classes = new Set();
   return {
@@ -393,6 +522,152 @@ test('bootstrapApp loads the active question bank from preferences', async () =>
   assert.match(env.appElement.innerHTML, /English Question Bank/);
 });
 
+test('bootstrapApp loads the AWS SAA screenshot question bank from preferences', async () => {
+  const fetchImpl = createQuestionBankFetch({
+    './data/questions.zh.json': sampleQuestions,
+    './data/questions.aws-saa.json': sampleAwsSaaQuestions,
+  });
+  const env = setupBootstrapEnvironment({ fetchImpl });
+  const storage = {
+    get(key, fallback) {
+      if (key === 'question-app.preferences') {
+        return { activeBankId: 'awsSaa', practiceMode: 'sequential' };
+      }
+      return fallback;
+    },
+    set() {},
+    remove() {},
+  };
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: fetchImpl,
+    storage,
+    window: env.windowStub,
+    document: env.documentStub,
+  });
+
+  assert.equal(fetchImpl.calls.at(-1), './data/questions.aws-saa.json');
+  assert.match(env.appElement.innerHTML, /AWS SAA Screenshots/);
+  assert.match(env.appElement.innerHTML, /<strong>1<\/strong>/);
+});
+
+test('bootstrapApp loads the core2 question bank from preferences', async () => {
+  const fetchImpl = createQuestionBankFetch({
+    './data/questions.zh.json': sampleQuestions,
+    './data/questions.en.json': sampleEnglishQuestions,
+    './data/questions.core2.json': sampleCore2Questions,
+    './data/questions.core2.analysis.json': sampleCore2AnalysisRecords,
+    './data/questions.core2.curated.analysis.json': sampleCore2CuratedAnalysisRecords,
+  });
+  const env = setupBootstrapEnvironment({ fetchImpl });
+  const storage = {
+    get(key, fallback) {
+      if (key === 'question-app.preferences') {
+        return { activeBankId: 'core2', practiceMode: 'sequential' };
+      }
+      return fallback;
+    },
+    set() {},
+    remove() {},
+  };
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: fetchImpl,
+    storage,
+    window: env.windowStub,
+    document: env.documentStub,
+  });
+
+  assert.deepEqual(fetchImpl.calls.slice(-3), [
+    './data/questions.core2.json',
+    './data/questions.core2.analysis.json',
+    './data/questions.core2.curated.analysis.json',
+  ]);
+  assert.match(env.appElement.innerHTML, /core2/);
+  assert.match(env.appElement.innerHTML, /<strong>2<\/strong>/);
+});
+
+test('bootstrapApp sanitizes corrupted core2 stems before rendering practice', async () => {
+  const fetchImpl = createQuestionBankFetch({
+    './data/questions.zh.json': sampleQuestions,
+    './data/questions.en.json': sampleEnglishQuestions,
+    './data/questions.core2.json': sampleCorruptedCore2Questions,
+    './data/questions.core2.analysis.json': [],
+    './data/questions.core2.curated.analysis.json': [],
+  });
+  const env = setupBootstrapEnvironment({
+    hash: '#/practice',
+    fetchImpl,
+  });
+  const storage = {
+    get(key, fallback) {
+      if (key === 'question-app.preferences') {
+        return { activeBankId: 'core2', practiceMode: 'sequential' };
+      }
+      return fallback;
+    },
+    set() {},
+    remove() {},
+  };
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: fetchImpl,
+    storage,
+    window: env.windowStub,
+    document: env.documentStub,
+  });
+
+  assert.match(env.appElement.innerHTML, /Windows web server is online and functioning/);
+  assert.doesNotMatch(env.appElement.innerHTML, /54043FF735CC37177B5E4FEBD0383508/);
+  assert.doesNotMatch(env.appElement.innerHTML, /\^/);
+});
+
+test('submitting a core2 practice answer renders the curated explanation when present', async () => {
+  const env = setupAppEnvironment('#/practice', {
+    querySelectorAllImpl(selector) {
+      if (selector === 'input[name="answer"]:checked') {
+        return [{ value: 'A' }];
+      }
+      return null;
+    },
+  });
+  const fetchImpl = createQuestionBankFetch({
+    './data/questions.zh.json': sampleQuestions,
+    './data/questions.en.json': sampleEnglishQuestions,
+    './data/questions.core2.json': sampleCore2Questions,
+    './data/questions.core2.analysis.json': sampleCore2AnalysisRecords,
+    './data/questions.core2.curated.analysis.json': sampleCore2CuratedAnalysisRecords,
+  });
+  const storage = createMutableStorage({
+    'question-app.preferences': { activeBankId: 'core2', practiceMode: 'sequential' },
+  });
+  globalThis.fetch = fetchImpl;
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: fetchImpl,
+    storage,
+    window: globalThis.window,
+    document: globalThis.document,
+  });
+
+  env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'practice-submit' } }
+          : null;
+      },
+    },
+  });
+
+  assert.match(env.appElement.innerHTML, /人工复核/);
+  assert.match(env.appElement.innerHTML, /Linux 图形界面远控/);
+});
+
 test('binding a learning archive writes the current full state without clearing mistakes', async () => {
   const fetchImpl = createQuestionBankFetch({
     './data/questions.zh.json': sampleQuestions,
@@ -402,7 +677,7 @@ test('binding a learning archive writes the current full state without clearing 
   const env = setupAppEnvironment('#/mistakes');
   const storage = createMutableStorage({
     'question-app.preferences': { activeBankId: 'zh', practiceMode: 'sequential' },
-    'question-app.mistakes': { zh: [2, 1], en: [] },
+    'question-app.mistakes': { zh: [2, 1], en: [], core2: [] },
   });
   globalThis.fetch = fetchImpl;
 
@@ -431,7 +706,7 @@ test('binding a learning archive writes the current full state without clearing 
   assert.equal(archive.calls.bind, 1);
   assert.equal(archive.calls.syncPayloads.length, 1);
   assert.deepEqual(archive.calls.syncPayloads[0].banks.zh.mistakes, [2, 1]);
-  assert.deepEqual(storage.dump()['question-app.mistakes'], { zh: [2, 1], en: [] });
+  assert.deepEqual(storage.dump()['question-app.mistakes'], { zh: [2, 1], en: [], core2: [] });
   assert.match(env.appElement.innerHTML, /question-archive\.json/);
 });
 
@@ -472,6 +747,59 @@ test('selecting a different question bank updates preferences and reloads home s
   assert.equal(fetchImpl.calls.at(-1), './data/questions.en.json');
   assert.match(env.appElement.innerHTML, /English Question Bank/);
   assert.match(env.appElement.innerHTML, /题库总量<\/span><strong>1<\/strong>/);
+});
+
+test('selecting core2 updates preferences and isolates the displayed stats', async () => {
+  const fetchImpl = createQuestionBankFetch({
+    './data/questions.zh.json': sampleQuestions,
+    './data/questions.en.json': sampleEnglishQuestions,
+    './data/questions.core2.json': sampleCore2Questions,
+    './data/questions.core2.analysis.json': sampleCore2AnalysisRecords,
+    './data/questions.core2.curated.analysis.json': sampleCore2CuratedAnalysisRecords,
+  });
+  const env = setupAppEnvironment('#/');
+  const storage = createMutableStorage({
+    'question-app.preferences': { activeBankId: 'zh', practiceMode: 'sequential' },
+    'question-app.progress': {
+      zh: { 1: { correct: true, selectedAnswer: ['A'] } },
+      en: {},
+      core2: { 2: { correct: false, selectedAnswer: ['A'] } },
+    },
+    'question-app.mistakes': {
+      zh: [],
+      en: [],
+      core2: [2],
+    },
+  });
+  globalThis.fetch = fetchImpl;
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: fetchImpl,
+    storage,
+    window: globalThis.window,
+    document: globalThis.document,
+  });
+
+  await env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'select-bank', bankId: 'core2' } }
+          : null;
+      },
+    },
+  });
+
+  assert.equal(storage.dump()['question-app.preferences']?.activeBankId, 'core2');
+  assert.deepEqual(fetchImpl.calls.slice(-3), [
+    './data/questions.core2.json',
+    './data/questions.core2.analysis.json',
+    './data/questions.core2.curated.analysis.json',
+  ]);
+  assert.match(env.appElement.innerHTML, /core2/);
+  assert.match(env.appElement.innerHTML, /<strong>2<\/strong>/);
+  assert.match(env.appElement.innerHTML, /<strong>1<\/strong>/);
 });
 
 test('bootstrapApp renders failure UI when loading questions fails', async () => {
@@ -562,6 +890,8 @@ test('clicking the home primary CTA routes into practice mode', async () => {
     {
       zh: { mode: 'sequential', order: [1, 2], currentIndex: 0 },
       en: null,
+      core2: null,
+      awsSaa: null,
     },
   ]);
 });
@@ -614,12 +944,16 @@ test('submitting a practice answer shows immediate feedback and persists progres
   assert.match(env.appElement.innerHTML, /回答错误/);
   assert.match(env.appElement.innerHTML, /正确答案：A/);
   assert.deepEqual(storageEvents, [
-    ['question-app.progress', { zh: { 1: { correct: false, selectedAnswer: ['B'] } }, en: {} }],
-    ['question-app.mistakes', { zh: [1], en: [] }],
-    ['question-app.exam-history', { zh: [], en: [] }],
-    ['question-app.preferences', { practiceMode: 'sequential', activeBankId: 'zh' }],
-    ['question-app.current-practice', { zh: { mode: 'sequential', order: [1, 2], currentIndex: 0 }, en: null }],
-    ['question-app.current-exam', { zh: null, en: null }],
+    ['question-app.progress', { zh: { 1: { correct: false, selectedAnswer: ['B'] } }, en: {}, core2: {}, awsSaa: {} }],
+    ['question-app.mistakes', { zh: [1], en: [], core2: [], awsSaa: [] }],
+    ['question-app.exam-history', { zh: [], en: [], core2: [], awsSaa: [] }],
+    ['question-app.preferences', {
+      practiceMode: 'sequential',
+      activeBankId: 'zh',
+      autoRemoveCorrectMistakes: true,
+    }],
+    ['question-app.current-practice', { zh: { mode: 'sequential', order: [1, 2], currentIndex: 0 }, en: null, core2: null, awsSaa: null }],
+    ['question-app.current-exam', { zh: null, en: null, core2: null, awsSaa: null }],
   ]);
 });
 
@@ -752,6 +1086,8 @@ test('practice navigation persists currentIndex on next and prev', async () => {
     {
       zh: { mode: 'sequential', order: [1, 2], currentIndex: 1 },
       en: null,
+      core2: null,
+      awsSaa: null,
     },
   ]);
 
@@ -771,12 +1107,18 @@ test('practice navigation persists currentIndex on next and prev', async () => {
     {
       zh: { mode: 'sequential', order: [1, 2], currentIndex: 0 },
       en: null,
+      core2: null,
+      awsSaa: null,
     },
   ]);
 });
 
 test('exam route renders unanswered questions and supports prev/next navigation', async () => {
-  let selectedAnswers = ['A'];
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+
+  try {
+    let selectedAnswers = ['A'];
   const env = setupAppEnvironment('#/exam', {
     querySelectorAllImpl(selector) {
       if (selector === 'input[name="answer"]:checked') {
@@ -804,7 +1146,7 @@ test('exam route renders unanswered questions and supports prev/next navigation'
     document: globalThis.document,
   });
 
-  assert.match(env.appElement.innerHTML, /Question 1/);
+  assert.match(env.appElement.innerHTML, /Question 2/);
   assert.doesNotMatch(env.appElement.innerHTML, /正确答案/);
 
   env.listeners.click({
@@ -818,7 +1160,7 @@ test('exam route renders unanswered questions and supports prev/next navigation'
   });
 
   selectedAnswers = ['D'];
-  assert.match(env.appElement.innerHTML, /Question 2/);
+  assert.match(env.appElement.innerHTML, /Question 1/);
 
   env.listeners.click({
     target: {
@@ -830,11 +1172,62 @@ test('exam route renders unanswered questions and supports prev/next navigation'
     },
   });
 
-  assert.match(env.appElement.innerHTML, /Question 1/);
+  assert.match(env.appElement.innerHTML, /Question 2/);
+  } finally {
+    Math.random = originalRandom;
+  }
+});
+
+test('starting an exam creates a fresh randomized 90-question paper', async () => {
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+
+  try {
+    const storage = createMutableStorage({
+      'question-app.preferences': { activeBankId: 'zh', practiceMode: 'sequential' },
+    });
+    const fetchImpl = createQuestionBankFetch({
+      './data/questions.zh.json': sampleLargeQuestions,
+      './data/questions.en.json': sampleEnglishQuestions,
+    });
+    const env = setupAppEnvironment('#/');
+    globalThis.fetch = fetchImpl;
+
+    const app = await loadAppModule();
+    await app.bootstrapApp({
+      fetch: fetchImpl,
+      storage,
+      window: globalThis.window,
+      document: globalThis.document,
+    });
+
+    env.listeners.click({
+      target: {
+        closest(selector) {
+          return selector === '[data-action]'
+            ? { dataset: { action: 'start-exam' } }
+            : null;
+        },
+      },
+    });
+
+    const persistedExam = storage.dump()['question-app.current-exam'].zh;
+    assert.equal(persistedExam.order.length, 90);
+    assert.notDeepEqual(
+      persistedExam.order,
+      sampleLargeQuestions.slice(0, 90).map((question) => question.id),
+    );
+  } finally {
+    Math.random = originalRandom;
+  }
 });
 
 test('submitting an exam stores the result and restores it on the results route after reload', async () => {
-  let selectedAnswers = ['A'];
+  const originalRandom = Math.random;
+  Math.random = () => 0.999;
+
+  try {
+    let selectedAnswers = ['A'];
   const storageEvents = [];
   const storage = {
     get(key, fallback) {
@@ -908,7 +1301,7 @@ test('submitting an exam stores the result and restores it on the results route 
   const reloadedStorage = {
     get(key, fallback) {
       if (key === 'question-app.exam-history') {
-        return { zh: latestExamHistory, en: [] };
+        return { zh: latestExamHistory, en: [], core2: [] };
       }
       return fallback;
     },
@@ -930,6 +1323,64 @@ test('submitting an exam stores the result and restores it on the results route 
 
   assert.match(reloadEnv.appElement.innerHTML, /考试结果/);
   assert.match(reloadEnv.appElement.innerHTML, /得分：1 \/ 2/);
+  } finally {
+    Math.random = originalRandom;
+  }
+});
+
+test('submitting an exam adds wrong answers to the mistake notebook', async () => {
+  const originalRandom = Math.random;
+  Math.random = () => 0.999;
+
+  try {
+    let selectedAnswers = ['A'];
+  const storage = createMutableStorage();
+  const env = setupAppEnvironment('#/exam', {
+    querySelectorAllImpl(selector) {
+      if (selector === 'input[name="answer"]:checked') {
+        return selectedAnswers.map((value) => ({ value }));
+      }
+      return null;
+    },
+  });
+  globalThis.fetch = async () => ({
+    ok: true,
+    json: async () => sampleQuestions,
+  });
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: globalThis.fetch,
+    storage,
+    window: globalThis.window,
+    document: globalThis.document,
+  });
+
+  env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'exam-next' } }
+          : null;
+      },
+    },
+  });
+
+  selectedAnswers = ['D'];
+  env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'exam-submit' } }
+          : null;
+      },
+    },
+  });
+
+  assert.deepEqual(storage.dump()['question-app.mistakes'], { zh: [2], en: [], core2: [], awsSaa: [] });
+  } finally {
+    Math.random = originalRandom;
+  }
 });
 
 test('existing practice session survives exam submission and reload', async () => {
@@ -1003,7 +1454,11 @@ test('existing practice session survives exam submission and reload', async () =
 });
 
 test('retry wrong questions starts a focused practice session from the results screen', async () => {
-  let selectedAnswers = ['A'];
+  const originalRandom = Math.random;
+  Math.random = () => 0.999;
+
+  try {
+    let selectedAnswers = ['A'];
   const storage = createMutableStorage();
   const env = setupAppEnvironment('#/exam', {
     querySelectorAllImpl(selector) {
@@ -1065,13 +1520,23 @@ test('retry wrong questions starts a focused practice session from the results s
       mode: 'sequential',
       order: [2],
       currentIndex: 0,
+      hydrateFromProgress: false,
     },
     en: null,
+    core2: null,
+    awsSaa: null,
   });
+  } finally {
+    Math.random = originalRandom;
+  }
 });
 
 test('restart exam replaces any saved in-progress exam with a clean session', async () => {
-  const storage = createMutableStorage({
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+
+  try {
+    const storage = createMutableStorage({
     'question-app.exam-history': [{ score: 1, total: 2, wrongIds: [2], durationSeconds: 3 }],
     'question-app.current-exam': {
       order: [1, 2],
@@ -1105,70 +1570,80 @@ test('restart exam replaces any saved in-progress exam with a clean session', as
   });
 
   assert.equal(window.location.hash, '#/exam');
-  assert.match(env.appElement.innerHTML, /Question 1/);
+  assert.match(env.appElement.innerHTML, /Question 2/);
   assert.match(env.appElement.innerHTML, /0 \/ 2/);
   assert.doesNotMatch(env.appElement.innerHTML, /checked/);
 
   const persistedExam = storage.dump()['question-app.current-exam'].zh;
-  assert.deepEqual(persistedExam.order, [1, 2]);
+  assert.deepEqual(persistedExam.order, [2, 1]);
   assert.deepEqual(persistedExam.answers, {});
   assert.equal(persistedExam.currentIndex, 0);
+  } finally {
+    Math.random = originalRandom;
+  }
 });
 
 test('blank exam navigation does not count a question as answered and exam resumes after reload', async () => {
-  const storage = createMutableStorage();
-  const env = setupAppEnvironment('#/exam', {
-    querySelectorAllImpl(selector) {
-      if (selector === 'input[name="answer"]:checked') {
-        return [];
-      }
-      return null;
-    },
-  });
-  globalThis.fetch = async () => ({
-    ok: true,
-    json: async () => sampleQuestions,
-  });
+  const originalRandom = Math.random;
+  Math.random = () => 0;
 
-  const app = await loadAppModule();
-  await app.bootstrapApp({
-    fetch: globalThis.fetch,
-    storage,
-    window: globalThis.window,
-    document: globalThis.document,
-  });
-
-  env.listeners.click({
-    target: {
-      closest(selector) {
-        return selector === '[data-action]'
-          ? { dataset: { action: 'exam-next' } }
-          : null;
+  try {
+    const storage = createMutableStorage();
+    const env = setupAppEnvironment('#/exam', {
+      querySelectorAllImpl(selector) {
+        if (selector === 'input[name="answer"]:checked') {
+          return [];
+        }
+        return null;
       },
-    },
-  });
+    });
+    globalThis.fetch = async () => ({
+      ok: true,
+      json: async () => sampleQuestions,
+    });
 
-  assert.match(env.appElement.innerHTML, /0 \/ 2/);
-  assert.deepEqual(storage.dump()['question-app.current-exam']?.zh?.answers, {});
+    const app = await loadAppModule();
+    await app.bootstrapApp({
+      fetch: globalThis.fetch,
+      storage,
+      window: globalThis.window,
+      document: globalThis.document,
+    });
 
-  cleanupAppEnvironment();
+    env.listeners.click({
+      target: {
+        closest(selector) {
+          return selector === '[data-action]'
+            ? { dataset: { action: 'exam-next' } }
+            : null;
+        },
+      },
+    });
 
-  const reloadEnv = setupAppEnvironment('#/exam');
-  globalThis.fetch = async () => ({
-    ok: true,
-    json: async () => sampleQuestions,
-  });
+    assert.match(env.appElement.innerHTML, /0 \/ 2/);
+    assert.deepEqual(storage.dump()['question-app.current-exam']?.zh?.answers, {});
 
-  const reloadedApp = await loadAppModule();
-  await reloadedApp.bootstrapApp({
-    fetch: globalThis.fetch,
-    storage,
-    window: globalThis.window,
-    document: globalThis.document,
-  });
+    cleanupAppEnvironment();
 
-  assert.match(reloadEnv.appElement.innerHTML, /Question 2/);
-  assert.match(reloadEnv.appElement.innerHTML, /0 \/ 2/);
+    const reloadEnv = setupAppEnvironment('#/exam');
+    globalThis.fetch = async () => ({
+      ok: true,
+      json: async () => sampleQuestions,
+    });
+
+    const reloadedApp = await loadAppModule();
+    await reloadedApp.bootstrapApp({
+      fetch: globalThis.fetch,
+      storage,
+      window: globalThis.window,
+      document: globalThis.document,
+    });
+
+    assert.match(reloadEnv.appElement.innerHTML, /Question 1/);
+    assert.match(reloadEnv.appElement.innerHTML, /0 \/ 2/);
+  } finally {
+    Math.random = originalRandom;
+  }
 });
 
 test('render updates active nav classes after hashchange', async () => {
@@ -1209,7 +1684,41 @@ test('mistakes route renders notebook entries from persisted state', async () =>
   assert.match(env.appElement.innerHTML, /Question 2/);
   assert.match(env.appElement.innerHTML, /Question 1/);
   assert.match(env.appElement.innerHTML, /data-action="retry-mistakes"/);
+  assert.match(env.appElement.innerHTML, /data-action="toggle-auto-remove-mistakes"/);
+  assert.match(env.appElement.innerHTML, /答对自动移除：开/);
   assert.match(env.appElement.innerHTML, /data-action="remove-mistake" data-question-id="2"/);
+});
+
+test('toggling auto-remove on the mistakes page persists the preference and updates the label', async () => {
+  const env = setupAppEnvironment('#/mistakes');
+  const storage = createMutableStorage({
+    'question-app.mistakes': [2, 1],
+  });
+  globalThis.fetch = async () => ({
+    ok: true,
+    json: async () => sampleQuestions,
+  });
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: globalThis.fetch,
+    storage,
+    window: globalThis.window,
+    document: globalThis.document,
+  });
+
+  env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'toggle-auto-remove-mistakes' } }
+          : null;
+      },
+    },
+  });
+
+  assert.equal(storage.dump()['question-app.preferences']?.autoRemoveCorrectMistakes, false);
+  assert.match(env.appElement.innerHTML, /答对自动移除：关/);
 });
 
 test('retrying mistakes from the notebook starts a focused practice session', async () => {
@@ -1242,14 +1751,175 @@ test('retrying mistakes from the notebook starts a focused practice session', as
 
   assert.equal(window.location.hash, '#/practice');
   assert.match(env.appElement.innerHTML, /Question 2/);
+  assert.doesNotMatch(env.appElement.innerHTML, /checked/);
   assert.deepEqual(storage.dump()['question-app.current-practice'], {
     zh: {
       mode: 'sequential',
       order: [2, 1],
       currentIndex: 0,
+      hydrateFromProgress: false,
     },
     en: null,
+    core2: null,
+    awsSaa: null,
   });
+});
+
+test('retrying mistakes stays blank after reload instead of restoring previous wrong choices', async () => {
+  const storage = createMutableStorage({
+    'question-app.mistakes': { zh: [2], en: [], core2: [] },
+    'question-app.progress': {
+      zh: {
+        2: { correct: false, selectedAnswer: ['D'] },
+      },
+      en: {},
+      core2: {},
+    },
+  });
+  const env = setupAppEnvironment('#/mistakes');
+  globalThis.fetch = async () => ({
+    ok: true,
+    json: async () => sampleQuestions,
+  });
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: globalThis.fetch,
+    storage,
+    window: globalThis.window,
+    document: globalThis.document,
+  });
+
+  env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'retry-mistakes' } }
+          : null;
+      },
+    },
+  });
+
+  cleanupAppEnvironment();
+
+  const reloadEnv = setupAppEnvironment('#/practice');
+  globalThis.fetch = async () => ({
+    ok: true,
+    json: async () => sampleQuestions,
+  });
+
+  const reloadedApp = await loadAppModule();
+  await reloadedApp.bootstrapApp({
+    fetch: globalThis.fetch,
+    storage,
+    window: globalThis.window,
+    document: globalThis.document,
+  });
+
+  assert.match(reloadEnv.appElement.innerHTML, /Question 2/);
+  assert.doesNotMatch(reloadEnv.appElement.innerHTML, /value="D"[\s\S]*checked/);
+  assert.doesNotMatch(reloadEnv.appElement.innerHTML, /回答错误/);
+});
+
+test('answering a retried mistake correctly removes it from the notebook', async () => {
+  const env = setupAppEnvironment('#/mistakes', {
+    querySelectorAllImpl(selector) {
+      if (selector === 'input[name="answer"]:checked') {
+        return [{ value: 'C' }];
+      }
+      return null;
+    },
+  });
+  const storage = createMutableStorage({
+    'question-app.mistakes': [2, 1],
+  });
+  globalThis.fetch = async () => ({
+    ok: true,
+    json: async () => sampleQuestions,
+  });
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: globalThis.fetch,
+    storage,
+    window: globalThis.window,
+    document: globalThis.document,
+  });
+
+  env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'retry-mistakes' } }
+          : null;
+      },
+    },
+  });
+
+  env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'practice-submit' } }
+          : null;
+      },
+    },
+  });
+
+  assert.deepEqual(storage.dump()['question-app.mistakes'], { zh: [1], en: [], core2: [], awsSaa: [] });
+});
+
+test('answering a retried mistake correctly keeps it in the notebook when auto-remove is disabled', async () => {
+  const env = setupAppEnvironment('#/mistakes', {
+    querySelectorAllImpl(selector) {
+      if (selector === 'input[name="answer"]:checked') {
+        return [{ value: 'C' }];
+      }
+      return null;
+    },
+  });
+  const storage = createMutableStorage({
+    'question-app.mistakes': [2, 1],
+    'question-app.preferences': {
+      activeBankId: 'zh',
+      practiceMode: 'sequential',
+      autoRemoveCorrectMistakes: false,
+    },
+  });
+  globalThis.fetch = async () => ({
+    ok: true,
+    json: async () => sampleQuestions,
+  });
+
+  const app = await loadAppModule();
+  await app.bootstrapApp({
+    fetch: globalThis.fetch,
+    storage,
+    window: globalThis.window,
+    document: globalThis.document,
+  });
+
+  env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'retry-mistakes' } }
+          : null;
+      },
+    },
+  });
+
+  env.listeners.click({
+    target: {
+      closest(selector) {
+        return selector === '[data-action]'
+          ? { dataset: { action: 'practice-submit' } }
+          : null;
+      },
+    },
+  });
+
+  assert.deepEqual(storage.dump()['question-app.mistakes'], { zh: [2, 1], en: [], core2: [], awsSaa: [] });
 });
 
 test('retrying mistakes ignores stale and duplicate persisted ids', async () => {
@@ -1291,8 +1961,11 @@ test('retrying mistakes ignores stale and duplicate persisted ids', async () => 
       mode: 'sequential',
       order: [1],
       currentIndex: 0,
+      hydrateFromProgress: false,
     },
     en: null,
+    core2: null,
+    awsSaa: null,
   });
 });
 
@@ -1326,7 +1999,7 @@ test('removing a mistake updates persisted notebook state and the rendered list'
 
   assert.doesNotMatch(env.appElement.innerHTML, /Question 2/);
   assert.match(env.appElement.innerHTML, /Question 1/);
-  assert.deepEqual(storage.dump()['question-app.mistakes'], { zh: [1], en: [] });
+  assert.deepEqual(storage.dump()['question-app.mistakes'], { zh: [1], en: [], core2: [], awsSaa: [] });
 });
 
 test('removing the last mistake shows the empty notebook state', async () => {
@@ -1358,7 +2031,7 @@ test('removing the last mistake shows the empty notebook state', async () => {
   });
 
   assert.match(env.appElement.innerHTML, /data-empty-state="mistakes"/);
-  assert.deepEqual(storage.dump()['question-app.mistakes'], { zh: [], en: [] });
+  assert.deepEqual(storage.dump()['question-app.mistakes'], { zh: [], en: [], core2: [], awsSaa: [] });
 });
 
 test('practice view responds to ArrowRight and ArrowLeft keyboard navigation', async () => {

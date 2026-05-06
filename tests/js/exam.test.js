@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  DEFAULT_EXAM_SIZE,
   createExamSession,
   gradeExamSession,
   restoreExamSession,
@@ -16,6 +17,27 @@ const questions = [
 test('createExamSession trims to the requested size', () => {
   const session = createExamSession(questions, 2);
   assert.equal(session.order.length, 2);
+});
+
+test('createExamSession defaults to a randomized 90-question exam', () => {
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+
+  try {
+    const largeQuestionSet = Array.from({ length: 100 }, (_, index) => ({
+      id: index + 1,
+      answer: ['A'],
+    }));
+    const session = createExamSession(largeQuestionSet);
+
+    assert.equal(session.order.length, DEFAULT_EXAM_SIZE);
+    assert.notDeepEqual(
+      session.order,
+      largeQuestionSet.slice(0, DEFAULT_EXAM_SIZE).map((question) => question.id),
+    );
+  } finally {
+    Math.random = originalRandom;
+  }
 });
 
 test('gradeExamSession counts correct answers', () => {

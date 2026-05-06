@@ -28,6 +28,7 @@ export function createPracticeSession(questions, mode = 'sequential') {
     mode,
     order: mode === 'random' ? shuffleIds(ids) : ids,
     currentIndex: 0,
+    hydrateFromProgress: true,
     answers: {},
     feedback: {},
   };
@@ -55,20 +56,31 @@ export function restorePracticeSession(questions, persistedSession, progress = {
     mode: persistedSession?.mode === 'random' ? 'random' : 'sequential',
     order: validOrder,
     currentIndex,
+    hydrateFromProgress: persistedSession?.hydrateFromProgress !== false,
     answers: {},
     feedback: {},
   };
+
+  if (session.hydrateFromProgress === false) {
+    return session;
+  }
 
   return hydrateProgress(session, questions, progress);
 }
 
 export function snapshotPracticeSession(session) {
   if (!session) return null;
-  return {
+  const snapshot = {
     mode: session.mode,
     order: [...session.order],
     currentIndex: session.currentIndex,
   };
+
+  if (session.hydrateFromProgress === false) {
+    snapshot.hydrateFromProgress = false;
+  }
+
+  return snapshot;
 }
 
 export function gradePracticeAnswer(question, selectedKeys) {

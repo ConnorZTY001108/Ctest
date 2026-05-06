@@ -7,18 +7,28 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
-QUESTION_SPLIT_RE = re.compile(r"(?=Question #\d+ Topic \d+)")
+QUESTION_SPLIT_RE = re.compile(r"(?=Question #\d+ Topic \d+|QUESTION \d+)")
 HEADER_RE = re.compile(r"Question #(\d+)\s+(Topic \d+)")
+ALT_HEADER_RE = re.compile(r"QUESTION\s+(\d+)")
 OPTION_RE = re.compile(r"^([A-H])\.\s*(.+)$")
 BLANK_OPTION_RE = re.compile(r"^([A-H])\.\s*$")
 ANSWER_RE = re.compile(r"(?:正确答案|Correct Answer)[:：]\s*([A-H]+)")
 ANSWER_PREFIX_RE = re.compile(r"^(?:正确答案|Correct Answer)[:：]")
 MOST_VOTED_SUFFIX_RE = re.compile(r"\s*Most Voted\s*$")
+PDF_GARBAGE_MARKER_RE = re.compile(r"\s*\^[\s\S]{0,160}?54043FF735CC37177B5E4FEBD0383508\s*")
+CONTROL_CHAR_RE = re.compile(r"[\x00-\x08\x0b-\x1f\x7f-\x9f]+")
 ANSWER_TRANSLATIONS = {
     "空调": "AC",
     "广告": "AD",
 }
 OPTION_KEYS = "ABCDEFGH"
+
+
+def sanitize_text(value: str) -> str:
+    value = PDF_GARBAGE_MARKER_RE.sub(" ", value)
+    value = CONTROL_CHAR_RE.sub(" ", value)
+    value = re.sub(r"\s{2,}", " ", value)
+    return value.strip()
 
 
 def parse_answer_keys(line: str) -> list[str]:
@@ -37,7 +47,20 @@ def parse_answer_keys(line: str) -> list[str]:
 
 
 def normalize_lines(block: str) -> list[str]:
-    return [line.strip() for line in block.splitlines() if line.strip()]
+    normalized = [sanitize_text(line) for line in block.splitlines()]
+    return [line for line in normalized if line]
+
+
+def parse_header(line: str) -> tuple[int, str | None] | None:
+    header_match = HEADER_RE.match(line)
+    if header_match:
+        return int(header_match.group(1)), header_match.group(2)
+
+    alt_match = ALT_HEADER_RE.match(line)
+    if alt_match:
+        return int(alt_match.group(1)), None
+
+    return None
 
 
 def get_question_id(block: str) -> int | None:
@@ -45,11 +68,11 @@ def get_question_id(block: str) -> int | None:
     if not lines:
         return None
 
-    header_match = HEADER_RE.match(lines[0])
-    if not header_match:
+    parsed_header = parse_header(lines[0])
+    if not parsed_header:
         return None
 
-    return int(header_match.group(1))
+    return parsed_header[0]
 
 
 def validate_option_sequence(options: list[dict]) -> None:
@@ -68,12 +91,11 @@ def parse_question_block(block: str) -> dict:
     if not lines:
         raise ValueError("empty question block")
 
-    header_match = HEADER_RE.match(lines[0])
-    if not header_match:
+    parsed_header = parse_header(lines[0])
+    if not parsed_header:
         raise ValueError(f"unexpected header: {lines[0]}")
 
-    question_id = int(header_match.group(1))
-    topic = header_match.group(2)
+    question_id, topic = parsed_header
 
     stem_lines = []
     options = []
@@ -86,7 +108,7 @@ def parse_question_block(block: str) -> dict:
 
         option_match = OPTION_RE.match(line)
         if option_match:
-            option_text = MOST_VOTED_SUFFIX_RE.sub("", option_match.group(2)).strip()
+            option_text = sanitize_text(MOST_VOTED_SUFFIX_RE.sub("", option_match.group(2)).strip())
             options.append({"key": option_match.group(1), "text": option_text})
             continue
 
@@ -114,7 +136,7 @@ def parse_question_block(block: str) -> dict:
     return {
         "id": question_id,
         "topic": topic,
-        "stem": " ".join(stem_lines),
+        "stem": sanitize_text(" ".join(stem_lines)),
         "options": options,
         "answer": answer,
         "type": "single" if len(answer) == 1 else "multiple",
@@ -131,7 +153,7 @@ def extract_questions_with_report(pdf_path: Path) -> tuple[list[dict], dict]:
     blocks = [
         chunk
         for chunk in QUESTION_SPLIT_RE.split(full_text)
-        if chunk.strip().startswith("Question #")
+        if normalize_lines(chunk) and parse_header(normalize_lines(chunk)[0])
     ]
     questions = []
     skipped_ids = []

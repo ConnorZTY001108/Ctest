@@ -15,6 +15,8 @@ import {
   snapshotExamSession,
 } from './exam.js';
 import { createArchivePayload, createLearningArchiveService } from './learning-archive.js';
+import { applyStoredCore2Analyses, decorateCore2Questions } from './core2-analysis.js';
+import { sanitizeQuestionBankData } from './question-bank-sanitizer.js';
 import { renderHomeView } from './views/home-view.js';
 import { renderExamView } from './views/exam-view.js';
 import { renderMistakesView } from './views/mistakes-view.js';
@@ -24,6 +26,16 @@ import { renderResultsView } from './views/results-view.js';
 const QUESTION_BANKS = [
   { id: 'zh', label: '中文题库', file: './data/questions.zh.json' },
   { id: 'en', label: 'English Question Bank', file: './data/questions.en.json' },
+  {
+    id: 'core2',
+    label: 'core2',
+    file: './data/questions.core2.json',
+    analysisFiles: [
+      './data/questions.core2.analysis.json',
+      './data/questions.core2.curated.analysis.json',
+    ],
+  },
+  { id: 'awsSaa', label: 'AWS SAA Screenshots', file: './data/questions.aws-saa.json' },
 ];
 const QUESTION_BANK_MAP = new Map(QUESTION_BANKS.map((bank) => [bank.id, bank]));
 
@@ -185,6 +197,7 @@ function createRetrySession(wrongIds) {
     mode: 'sequential',
     order: [...wrongIds],
     currentIndex: 0,
+    hydrateFromProgress: false,
     answers: {},
     feedback: {},
   };
@@ -276,7 +289,12 @@ function renderResults() {
 }
 
 function renderMistakes() {
-  return renderMistakesView(getMistakeQuestions(), getActiveBankLabel(), state.archiveStatus);
+  return renderMistakesView(
+    getMistakeQuestions(),
+    getActiveBankLabel(),
+    state.archiveStatus,
+    state.preferences.autoRemoveCorrectMistakes !== false,
+  );
 }
 
 function isTypingTarget(target) {
@@ -329,9 +347,29 @@ async function loadQuestions(fetchImpl, bankId = DEFAULT_BANK_ID) {
 
   const response = await fetchImpl(bank.file);
   if (!response.ok) throw new Error('题库加载失败');
-  const questions = await response.json();
-  questionBankCache.set(bank.id, questions);
-  return questions;
+  const questions = sanitizeQuestionBankData(await response.json());
+  let hydratedQuestions = questions;
+
+  if (bank.id === 'core2') {
+    if (bank.analysisFiles?.length) {
+      const analysisRecords = [];
+
+      for (const analysisFile of bank.analysisFiles) {
+        const analysisResponse = await fetchImpl(analysisFile);
+        if (!analysisResponse.ok) throw new Error('题库解析加载失败');
+        const records = sanitizeQuestionBankData(await analysisResponse.json());
+        analysisRecords.push(...records);
+      }
+
+      hydratedQuestions = applyStoredCore2Analyses(questions, analysisRecords);
+    } else {
+      hydratedQuestions = decorateCore2Questions(questions);
+    }
+  }
+
+  hydratedQuestions = sanitizeQuestionBankData(hydratedQuestions);
+  questionBankCache.set(bank.id, hydratedQuestions);
+  return hydratedQuestions;
 }
 
 async function switchQuestionBank(bankId, windowObject, documentObject) {
@@ -383,6 +421,13 @@ function ensureEventBindings(windowObject, documentObject) {
         return;
       }
 
+      if (action === 'toggle-auto-remove-mistakes') {
+        state.preferences.autoRemoveCorrectMistakes = state.preferences.autoRemoveCorrectMistakes === false;
+        persistState();
+        renderApp(windowObject, documentObject);
+        return;
+      }
+
       if (action === 'start-exam') {
         state.currentExam = createExamSession(state.questions, DEFAULT_EXAM_SIZE);
         persistState();
@@ -404,6 +449,8 @@ function ensureEventBindings(windowObject, documentObject) {
 
         if (!result.correct && !state.mistakes.includes(currentId)) {
           state.mistakes.unshift(currentId);
+        } else if (result.correct && state.preferences.autoRemoveCorrectMistakes !== false) {
+          removeMistake(currentId);
         }
 
         persistState();

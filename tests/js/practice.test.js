@@ -47,3 +47,23 @@ test('restorePracticeSession preserves saved order and index while hydrating pro
   assert.equal(session.feedback[2].correct, false);
   assert.deepEqual(session.feedback[2].correctAnswer, ['C']);
 });
+
+test('restorePracticeSession keeps retry sessions blank instead of reusing old selected answers', () => {
+  const session = restorePracticeSession(
+    sampleQuestions,
+    {
+      mode: 'sequential',
+      order: [2, 1],
+      currentIndex: 0,
+      hydrateFromProgress: false,
+    },
+    {
+      2: { selectedAnswer: ['D'] },
+      1: { selectedAnswer: ['B'] },
+    },
+  );
+
+  assert.deepEqual(session.order, [2, 1]);
+  assert.deepEqual(session.answers, {});
+  assert.deepEqual(session.feedback, {});
+});

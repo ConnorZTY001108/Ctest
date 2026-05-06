@@ -1,8 +1,21 @@
-export const DEFAULT_EXAM_SIZE = 20;
+export const DEFAULT_EXAM_SIZE = 90;
+
+function shuffleIds(ids) {
+  const copy = [...ids];
+  for (let index = copy.length - 1; index > 0; index -= 1) {
+    const nextIndex = Math.floor(Math.random() * (index + 1));
+    [copy[index], copy[nextIndex]] = [copy[nextIndex], copy[index]];
+  }
+  return copy;
+}
+
+function createFallbackOrder(questions, size = DEFAULT_EXAM_SIZE) {
+  return shuffleIds(questions.map((question) => question.id)).slice(0, size);
+}
 
 function normalizeOrder(questions, order, size = DEFAULT_EXAM_SIZE) {
   const validIds = new Set(questions.map((question) => question.id));
-  const fallbackOrder = questions.slice(0, size).map((question) => question.id);
+  const fallbackOrder = createFallbackOrder(questions, size);
   const persistedOrder = Array.isArray(order)
     ? order.filter((questionId) => validIds.has(questionId))
     : [];

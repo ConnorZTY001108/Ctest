@@ -64,6 +64,7 @@ test('createInitialState normalizes malformed persisted values', () => {
   assert.deepEqual(state.preferences, {
     practiceMode: 'sequential',
     activeBankId: 'zh',
+    autoRemoveCorrectMistakes: true,
     theme: 'dark',
   });
 });
@@ -95,10 +96,48 @@ test('createInitialState scopes banked values to the active question bank', () =
   assert.deepEqual(state.progressByBank, {
     zh: { 1: { correct: true } },
     en: { 2: { correct: false } },
+    core2: {},
+    awsSaa: {},
   });
   assert.deepEqual(state.preferences, {
     activeBankId: 'en',
     practiceMode: 'random',
+    autoRemoveCorrectMistakes: true,
+  });
+});
+
+test('createInitialState supports a third configured bank bucket', () => {
+  const state = createInitialState([{ id: 201 }, { id: 202 }], {
+    progress: {
+      zh: {},
+      en: {},
+      core2: { 201: { correct: true } },
+    },
+    mistakes: {
+      zh: [],
+      en: [],
+      core2: [201, 999],
+    },
+    examHistory: {
+      zh: [],
+      en: [],
+      core2: [{ score: 1, total: 2 }],
+    },
+    preferences: {
+      activeBankId: 'core2',
+      practiceMode: 'sequential',
+    },
+  });
+
+  assert.equal(state.bankId, 'core2');
+  assert.deepEqual(state.progress, { 201: { correct: true } });
+  assert.deepEqual(state.mistakes, [201]);
+  assert.deepEqual(state.examHistory, [{ score: 1, total: 2 }]);
+  assert.deepEqual(state.progressByBank, {
+    zh: {},
+    en: {},
+    core2: { 201: { correct: true } },
+    awsSaa: {},
   });
 });
 
@@ -116,25 +155,36 @@ test('createInitialState migrates legacy single-bank records into zh buckets', (
   assert.deepEqual(state.progressByBank, {
     zh: { 1: { correct: true } },
     en: {},
+    core2: {},
+    awsSaa: {},
   });
   assert.deepEqual(state.mistakesByBank, {
     zh: [1],
     en: [],
+    core2: [],
+    awsSaa: [],
   });
   assert.deepEqual(state.examHistoryByBank, {
     zh: [{ score: 1, total: 1 }],
     en: [],
+    core2: [],
+    awsSaa: [],
   });
   assert.deepEqual(state.currentPracticeByBank, {
     zh: { mode: 'sequential', order: [1], currentIndex: 0 },
     en: null,
+    core2: null,
+    awsSaa: null,
   });
   assert.deepEqual(state.currentExamByBank, {
     zh: { order: [1], answers: {}, currentIndex: 0, startedAt: 10 },
     en: null,
+    core2: null,
+    awsSaa: null,
   });
   assert.deepEqual(state.preferences, {
     activeBankId: 'zh',
     practiceMode: 'random',
+    autoRemoveCorrectMistakes: true,
   });
 });

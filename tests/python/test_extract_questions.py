@@ -58,6 +58,26 @@ Correct Answer:C
         self.assertEqual(parsed["type"], "single")
         self.assertEqual(parsed["options"][2]["text"], "Reservation")
 
+    def test_parse_question_block_supports_question_number_format_without_topic(self):
+        block = """QUESTION 2
+A technician needs to provide remote support for a legacy Linux-based operating system from their
+Windows laptop. The solution needs to allow the technician to see what the user is doing and provide the
+ability to interact with the user's session. Which of the following remote access technologies would support
+the use case?
+A. VPN
+B. VNC
+C. SSH
+D. RDP
+Correct Answer: B
+Section: (none)
+Explanation/Reference:
+"""
+        parsed = parse_question_block(block)
+        self.assertEqual(parsed["id"], 2)
+        self.assertEqual(parsed["answer"], ["B"])
+        self.assertEqual(parsed["type"], "single")
+        self.assertEqual(parsed["options"][1]["text"], "VNC")
+
     def test_parse_question_block_preserves_valid_a_through_h_question(self):
         block = """Question #143 Topic 1
 一位技术人员正在设置工作站。为了确保用户可以连接到网络，技术人员应该配置以下哪些设置？（选择三项。）
@@ -214,6 +234,41 @@ H. MAC 过滤器
         self.assertEqual(report["skipped_count"], 1)
         self.assertEqual(report["skipped_ids"], [2])
         self.assertEqual(report["reason_counts"], {"blank option text for key": 1})
+
+    def test_extract_questions_supports_question_number_blocks_and_skips_simulations(self):
+        text = """Exam A
+QUESTION 1
+SIMULATION
+You are configuring a home network for a customer.
+Correct Answer: See explanation below.
+QUESTION 2
+A technician needs to provide remote support for a legacy Linux-based operating system from their
+Windows laptop. The solution needs to allow the technician to see what the user is doing and provide the
+ability to interact with the user's session. Which of the following remote access technologies would support
+the use case?
+A. VPN
+B. VNC
+C. SSH
+D. RDP
+Correct Answer: B
+Section: (none)
+Explanation/Reference:
+"""
+
+        class FakePage:
+            def extract_text(self):
+                return text
+
+        class FakeReader:
+            def __init__(self, _path):
+                self.pages = [FakePage()]
+
+        with patch("scripts.extract_questions.PdfReader", FakeReader):
+            questions, report = extract_questions_with_report(Path("ignored.pdf"))
+
+        self.assertEqual([question["id"] for question in questions], [2])
+        self.assertEqual(report["parsed_count"], 1)
+        self.assertEqual(report["skipped_ids"], [1])
 
     def test_main_writes_json_to_requested_output_path_and_reports_summary(self):
         questions = [{"id": 1, "answer": ["A"], "type": "single"}]

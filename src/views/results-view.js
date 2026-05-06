@@ -1,9 +1,17 @@
+import { renderQuestionAnalysis } from './question-analysis-view.js';
+
 export function renderResultsView(result, questionMap, bankLabel = '') {
   const accuracy = result.total ? Math.round((result.score / result.total) * 100) : 0;
   const wrongItems = result.wrongIds.length
-    ? result.wrongIds.map((id) => `
-        <li>第 ${id} 题，正确答案：${questionMap.get(id).answer.join(', ')}</li>
-      `).join('')
+    ? result.wrongIds.map((id) => {
+      const question = questionMap.get(id);
+      return `
+        <li>
+          <strong>第 ${id} 题，正确答案：${question.answer.join(', ')}</strong>
+          ${renderQuestionAnalysis(question.analysis)}
+        </li>
+      `;
+    }).join('')
     : '<li>本次考试全部答对。</li>';
 
   return `

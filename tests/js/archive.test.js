@@ -5,6 +5,7 @@ import { createArchivePayload, createLearningArchiveService } from '../../src/le
 const banks = [
   { id: 'zh', label: '中文题库' },
   { id: 'en', label: 'English Question Bank' },
+  { id: 'core2', label: 'core2' },
 ];
 
 function createWritableHandle(name = 'question-archive.json') {
@@ -29,26 +30,32 @@ test('createArchivePayload serializes the full learning state by bank', () => {
     preferences: {
       activeBankId: 'en',
       practiceMode: 'random',
+      autoRemoveCorrectMistakes: false,
     },
     progressByBank: {
       zh: { 1: { correct: false, selectedAnswer: ['B'] } },
       en: { 101: { correct: true, selectedAnswer: ['A'] } },
+      core2: { 201: { correct: true, selectedAnswer: ['A'] } },
     },
     mistakesByBank: {
       zh: [1],
       en: [],
+      core2: [201],
     },
     examHistoryByBank: {
       zh: [{ score: 18, total: 20 }],
       en: [{ score: 9, total: 10 }],
+      core2: [{ score: 1, total: 1 }],
     },
     currentPracticeByBank: {
       zh: { mode: 'sequential', order: [1], currentIndex: 0 },
       en: null,
+      core2: null,
     },
     currentExamByBank: {
       zh: null,
       en: { order: [101], answers: { 101: ['A'] }, currentIndex: 0, startedAt: 10 },
+      core2: null,
     },
   }, banks);
 
@@ -57,6 +64,7 @@ test('createArchivePayload serializes the full learning state by bank', () => {
   assert.deepEqual(payload.preferences, {
     activeBankId: 'en',
     practiceMode: 'random',
+    autoRemoveCorrectMistakes: false,
   });
   assert.match(payload.updatedAt, /^\d{4}-\d{2}-\d{2}T/);
   assert.deepEqual(payload.banks.zh.mistakes, [1]);
@@ -68,6 +76,13 @@ test('createArchivePayload serializes the full learning state by bank', () => {
     answers: { 101: ['A'] },
     currentIndex: 0,
     startedAt: 10,
+  });
+  assert.deepEqual(payload.banks.core2, {
+    progress: { 201: { correct: true, selectedAnswer: ['A'] } },
+    mistakes: [201],
+    examHistory: [{ score: 1, total: 1 }],
+    currentPractice: null,
+    currentExam: null,
   });
 });
 
@@ -104,10 +119,15 @@ test('createLearningArchiveService binds a file and writes archive payloads', as
     version: 1,
     updatedAt: '2026-04-16T12:34:56.000Z',
     activeBankId: 'zh',
-    preferences: { activeBankId: 'zh', practiceMode: 'sequential' },
+    preferences: {
+      activeBankId: 'zh',
+      practiceMode: 'sequential',
+      autoRemoveCorrectMistakes: true,
+    },
     banks: {
       zh: { progress: {}, mistakes: [], examHistory: [], currentPractice: null, currentExam: null },
       en: { progress: {}, mistakes: [], examHistory: [], currentPractice: null, currentExam: null },
+      core2: { progress: {}, mistakes: [], examHistory: [], currentPractice: null, currentExam: null },
     },
   });
 
@@ -117,10 +137,15 @@ test('createLearningArchiveService binds a file and writes archive payloads', as
     version: 1,
     updatedAt: '2026-04-16T12:34:56.000Z',
     activeBankId: 'zh',
-    preferences: { activeBankId: 'zh', practiceMode: 'sequential' },
+    preferences: {
+      activeBankId: 'zh',
+      practiceMode: 'sequential',
+      autoRemoveCorrectMistakes: true,
+    },
     banks: {
       zh: { progress: {}, mistakes: [], examHistory: [], currentPractice: null, currentExam: null },
       en: { progress: {}, mistakes: [], examHistory: [], currentPractice: null, currentExam: null },
+      core2: { progress: {}, mistakes: [], examHistory: [], currentPractice: null, currentExam: null },
     },
   });
 });

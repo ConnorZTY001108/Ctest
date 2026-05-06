@@ -1,4 +1,4 @@
-const BANK_IDS = ['zh', 'en'];
+const BANK_IDS = ['zh', 'en', 'core2', 'awsSaa'];
 const DEFAULT_BANK_ID = 'zh';
 
 function asObject(value) {
@@ -37,8 +37,10 @@ function normalizeBankBuckets(value, normalizeValue) {
   }
 
   return {
+    ...Object.fromEntries(
+      BANK_IDS.map((bankId) => [bankId, normalizeValue(undefined)]),
+    ),
     [DEFAULT_BANK_ID]: normalizeValue(value),
-    en: normalizeValue(undefined),
   };
 }
 
@@ -113,6 +115,7 @@ export function createInitialState(questions, persisted = {}) {
   const preferences = {
     practiceMode: 'sequential',
     activeBankId: DEFAULT_BANK_ID,
+    autoRemoveCorrectMistakes: true,
     ...asObject(persisted.preferences),
   };
 

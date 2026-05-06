@@ -1,3 +1,5 @@
+import { renderQuestionAnalysis } from './question-analysis-view.js';
+
 function renderCorrectAnswerList(question) {
   return question.answer.map((key) => {
     const option = question.options.find((item) => item.key === key);
@@ -19,6 +21,7 @@ function renderMistakeCard(question) {
         <strong>Correct answer</strong>
         <ul>${renderCorrectAnswerList(question)}</ul>
       </div>
+      ${renderQuestionAnalysis(question.analysis)}
       <div class="toolbar">
         <button class="secondary-btn" data-action="remove-mistake" data-question-id="${question.id}">Remove</button>
       </div>
@@ -57,7 +60,20 @@ function renderArchivePanel(archiveStatus) {
   `;
 }
 
-export function renderMistakesView(mistakes, bankLabel = '', archiveStatus = {}) {
+function renderAutoRemoveButton(isEnabled) {
+  return `
+    <button class="secondary-btn" data-action="toggle-auto-remove-mistakes">
+      答对自动移除：${isEnabled ? '开' : '关'}
+    </button>
+  `;
+}
+
+export function renderMistakesView(
+  mistakes,
+  bankLabel = '',
+  archiveStatus = {},
+  autoRemoveCorrectMistakes = true,
+) {
   const archivePanel = renderArchivePanel(archiveStatus);
 
   if (!mistakes.length) {
@@ -68,6 +84,9 @@ export function renderMistakesView(mistakes, bankLabel = '', archiveStatus = {})
           <h2>错题本</h2>
           <p>当前题库：${bankLabel}</p>
           <p>当前没有错题记录，可以先去练习或考试。</p>
+          <div class="hero-actions">
+            ${renderAutoRemoveButton(autoRemoveCorrectMistakes)}
+          </div>
         </section>
       </section>
     `;
@@ -84,6 +103,7 @@ export function renderMistakesView(mistakes, bankLabel = '', archiveStatus = {})
         </div>
         <div class="hero-actions">
           <button class="primary-btn" data-action="retry-mistakes">重练错题</button>
+          ${renderAutoRemoveButton(autoRemoveCorrectMistakes)}
         </div>
       </article>
       ${archivePanel}
